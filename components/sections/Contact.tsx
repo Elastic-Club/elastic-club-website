@@ -30,10 +30,10 @@ export default function Contact({ dict }: { dict: any }) {
                   {'// Electronic Mail'}
                 </span>
                 <a
-                  href="mailto:contact@elasticlabs.io"
+                  href="mailto:team@elasticlabs.org"
                   className="text-3xl font-bold text-white transition-colors hover:text-cyan-400"
                 >
-                  contact@elasticlabs.io
+                  team@elasticlabs.org
                 </a>
               </div>
             </div>

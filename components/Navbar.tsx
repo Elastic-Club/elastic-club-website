@@ -30,6 +30,7 @@ export default function Navbar({ dict, lang }: { dict: any; lang: string }) {
     { name: dict.nav.home, href: `/${lang}` },
     { name: dict.nav.services, href: `/${lang}#services` },
     { name: dict.nav.expertise, href: `/${lang}#expertise` },
+    { name: dict.nav.products, href: `/${lang}/products` },
     { name: dict.nav.cases, href: `/${lang}#cases` },
     { name: dict.nav.process, href: `/${lang}#process` },
     { name: dict.nav.blog, href: `/${lang}/blog` },

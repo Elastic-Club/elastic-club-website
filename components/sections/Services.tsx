@@ -1,18 +1,20 @@
 'use client'
 
+import { BrainCircuit, Workflow, Bot, Cpu, GraduationCap } from 'lucide-react'
+
 const icons = {
-  0: '🧠',
-  1: '🔄',
-  2: '🤖',
-  3: '📚',
-  4: '🚀',
+  0: BrainCircuit,
+  1: Workflow,
+  2: Bot,
+  3: Cpu,
+  4: GraduationCap,
 }
 
 export default function Services({ dict }: { dict: any }) {
   return (
     <section id="services" className="border-b border-white/5 bg-[#080808] px-6 py-32">
       <div className="container mx-auto">
-        <div className="mb-24 flex flex-col items-end justify-between gap-12 lg:flex-row">
+        <div className="mb-24 flex flex-col gap-12 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-2xl">
             <div className="section-label">{dict.services.title}</div>
             <h2 className="text-5xl font-black uppercase leading-[0.9] md:text-7xl">
@@ -27,19 +29,19 @@ export default function Services({ dict }: { dict: any }) {
 
         <div className="grid grid-cols-1 border-l border-t border-white/10 md:grid-cols-2 lg:grid-cols-3">
           {dict.services.items.map((item: any, i: number) => {
-            const Icon = icons[i as keyof typeof icons] || '⚙️'
+            const Icon = icons[i as keyof typeof icons] || Cpu
             return (
               <div
                 key={i}
-                className="card-base group cursor-default !border-0 !border-b border-r border-white/10 !bg-transparent !p-12"
+                className="card-base group cursor-default !border-0 !border-b border-r border-white/10 !bg-transparent p-12"
               >
                 <div className="absolute left-0 top-0 h-[1px] w-full overflow-hidden bg-cyan-500/0 transition-colors group-hover:bg-cyan-500/50">
                   <div className="beam-line h-full w-full opacity-50" />
                 </div>
 
                 <div className="mb-12 flex items-start justify-between">
-                  <div className="text-5xl grayscale transition-all duration-500 group-hover:scale-110 group-hover:grayscale-0">
-                    {Icon}
+                  <div className="text-cyan-500 transition-all duration-500 group-hover:scale-110 group-hover:text-white">
+                    <Icon size={48} strokeWidth={1} />
                   </div>
                   <span className="font-mono text-xs font-bold text-gray-700">0{i + 1}</span>
                 </div>

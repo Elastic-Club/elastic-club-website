@@ -4,6 +4,8 @@ export const dictionaries = {
       home: 'Home',
       services: 'Services',
       expertise: 'Capabilities & Tech Stack',
+      products: 'Products',
+      team: 'Team',
       cases: 'Case Studies',
       process: 'Process',
       blog: 'Blog',
@@ -22,26 +24,9 @@ export const dictionaries = {
       ],
     },
     vision: {
-      title: 'Elastic Labs Vision',
+      title: 'Strategic AI Vision',
       description:
         "In the digital era, sustainable growth doesn't necessarily mean excessive scaling of personnel, but rather optimizing technology leverage. Elastic Labs acts as a Strategic AI Integration Partner, helping businesses unlock their own new limits.",
-    },
-    whyUs: {
-      title: 'Why Partner with Elastic Labs?',
-      description:
-        'Instead of theoretical reports, we deliver executable solutions. Our goal is for you to see impact within weeks.',
-      points: [
-        {
-          title: 'Speed to Impact',
-          description:
-            'We focus on rapid deployment, typically seeing measurable results within weeks, not months.',
-        },
-        {
-          title: 'Executable Solutions',
-          description:
-            'No more thick reports. We handover fully functional systems integrated into your existing workflows.',
-        },
-      ],
     },
     services: {
       title: 'Service Portfolio',
@@ -90,6 +75,67 @@ export const dictionaries = {
         },
       ],
     },
+    products: {
+      title: 'Our Products',
+      subtitle: 'Open-source tools and platforms built by Elastic Labs to accelerate AI adoption.',
+      items: [
+        {
+          title: 'Polkadot Agent Kit',
+          description:
+            'A powerful toolkit for building AI agents that can interact seamlessly with the Polkadot ecosystem.',
+          link: 'https://github.com/elasticlabs-org/polkadot-agent-kit',
+          banner: '/logo/products/polkadot-agent-kit-banner.png',
+        },
+        {
+          title: 'Speedgrowth.ai',
+          description:
+            'An AI-powered growth platform designed to automate marketing workflows and scale startups effectively.',
+          link: 'https://speedgrowth.ai',
+          banner: '/logo/products/speedgrowth-banner.png',
+        },
+      ],
+    },
+    team: {
+      title: 'The Core Team',
+      subtitle: 'Meet the architects of automation behind Elastic Labs.',
+      readMore: 'Read More',
+      readLess: 'Show Less',
+      members: [
+        {
+          name: 'Cris Nguyen',
+          role: 'CEO & Founder',
+          bio: "Cris is a tech leader focused on leveling up the human experience through AI and blockchain. He is currently the Founder of Elastic Labs, an AI-native integration agency, and SpeedGrowth, an AI command center that automates customer support into a revenue channel for e-commerce brands.\n\nBeyond building, Cris is an active angel investor with Guidance Ventures, where he supports projects such as RiseChain, Infinit, Xyber, and GRVT.\n\nHis expertise lies at the intersection of large-scale multi-department operations and emerging technology partnerships. For the past three years, Cris led full-stack growth for Polkadot SEA and the APAC team. He served as the primary filter for the ecosystem's grants program, mentoring developer teams and managing a team of seven to bridge the gap between technical developer relations and regional expansion.",
+          avatar: '/founders/cris-nguyen-avatar.png',
+          linkedin: 'https://www.linkedin.com/in/truongnguyen99/',
+          github: 'https://github.com/ngquangtruong',
+        },
+        {
+          name: 'Tin Chung',
+          role: 'CTO & Co-Founder',
+          bio: 'Tin is a systems architect specializing in distributed networks and high-performance data infrastructure. He has a proven track record of building core systems from the ground up, ranging from real-time blockchain ingestion frameworks in Rust to custom DSL compilers for complex OLAP operations. Previously a founding engineer at Rover and R0GUE, Tin optimized Layer 1 runtime modules and managed massive 60TB+ state migrations that significantly reduced infrastructure overhead.\n\nA graduate of the Polkadot Blockchain Academy and a hackathon champion from Safe, Base, and Chainlink, his expertise spans the Polkadot SDK, Solana, and Ethereum. He is a frequent contributor to open-source software and serves as a technical mentor for the global developer community.',
+          avatar: '/founders/tin-chung-avatar.png',
+          linkedin: 'https://www.linkedin.com/in/chungquantin/',
+          github: 'https://github.com/chungquantin',
+        },
+      ],
+    },
+    whyUs: {
+      title: 'Why Partner with Elastic Labs?',
+      description:
+        'Instead of theoretical reports, we deliver executable solutions. Our goal is for you to see impact within weeks.',
+      points: [
+        {
+          title: 'Speed to Impact',
+          description:
+            'We focus on rapid deployment, typically seeing measurable results within weeks, not months.',
+        },
+        {
+          title: 'Executable Solutions',
+          description:
+            'No more thick reports. We handover fully functional systems integrated into your existing workflows.',
+        },
+      ],
+    },
     cases: {
       title: 'Typical Projects',
       items: [
@@ -113,6 +159,36 @@ export const dictionaries = {
     },
     techStack: {
       title: 'Technical Capabilities',
+      categories: [
+        {
+          title: 'GenAI / LLM',
+          techs: [
+            { name: 'Gemini', logo: '' },
+            { name: 'Claude', logo: '' },
+            { name: 'LangGraph', logo: '/logo/technologies/langgraph-logo.png' },
+            { name: 'CrewAI', logo: '/logo/technologies/crewai-logo.png' },
+            { name: 'vLLM', logo: '/logo/technologies/vllm-logo.png' },
+            { name: 'SGLang', logo: '/logo/technologies/sglang-logo.png' },
+          ],
+        },
+        {
+          title: 'Blockchain',
+          techs: [
+            { name: 'Polkadot Substrate', logo: '' },
+            { name: 'Ethereum', logo: '' },
+            { name: 'Rust', logo: '/logo/technologies/rust-logo.png' },
+          ],
+        },
+        {
+          title: 'Software Development',
+          techs: [
+            { name: 'TypeScript', logo: '/logo/technologies/typescript.png' },
+            { name: 'Node.js', logo: '/logo/technologies/nodejs-logo.svg' },
+            { name: 'React', logo: '/logo/technologies/react-logo.png' },
+            { name: 'Python', logo: '' },
+          ],
+        },
+      ],
     },
     expertise: {
       title: 'Deep Expertise',
@@ -159,6 +235,8 @@ export const dictionaries = {
       home: 'Trang chủ',
       services: 'Dịch vụ',
       expertise: 'Năng lực & Tech stack',
+      products: 'Sản phẩm',
+      team: 'Đội ngũ',
       cases: 'Dự án tiêu biểu',
       process: 'Quy trình hợp tác',
       blog: 'Blog',
@@ -177,26 +255,9 @@ export const dictionaries = {
       ],
     },
     vision: {
-      title: 'Tầm nhìn của Elastic Labs',
+      title: 'Tầm nhìn AI Chiến lược',
       description:
         'Trong kỷ nguyên số, tăng trưởng bền vững không nhất thiết phải đi đôi với việc gia tăng quy mô nhân sự quá mức, mà nằm ở việc tối ưu hóa đòn bẩy công nghệ. Elastic Labs đóng vai trò là Đối tác Tích hợp AI Chiến lược, giúp doanh nghiệp khai phá những giới hạn mới của chính mình.',
-    },
-    whyUs: {
-      title: 'Tại sao nên đồng hành cùng Elastic Labs?',
-      description:
-        'Thay vì báo cáo lý thuyết, chúng tôi bàn giao giải pháp thực thi. Mục tiêu là giúp bạn thấy tác động trong vài tuần.',
-      points: [
-        {
-          title: 'Thực thi nhanh chóng',
-          description:
-            'Chúng tôi tập trung vào việc triển khai nhanh, giúp doanh nghiệp thấy hiệu quả trong vài tuần thay vì vài tháng.',
-        },
-        {
-          title: 'Giải pháp thực thi',
-          description:
-            'Không chỉ là những bản báo cáo, chúng tôi bàn giao hệ thống hoàn chỉnh tích hợp sâu vào quy trình sẵn có.',
-        },
-      ],
     },
     services: {
       title: 'Danh mục dịch vụ',
@@ -244,6 +305,68 @@ export const dictionaries = {
         },
       ],
     },
+    products: {
+      title: 'Sản phẩm',
+      subtitle:
+        'Các công cụ và nền tảng nguồn mở được xây dựng bởi Elastic Labs để thúc đẩy ứng dụng AI.',
+      items: [
+        {
+          title: 'Polkadot Agent Kit',
+          description:
+            'Bộ công cụ mạnh mẽ để xây dựng các AI agent có thể tương tác mượt mà với hệ sinh thái Polkadot.',
+          link: 'https://github.com/elasticlabs-org/polkadot-agent-kit',
+          banner: '/logo/products/polkadot-agent-kit-banner.png',
+        },
+        {
+          title: 'Speedgrowth.ai',
+          description:
+            'Nền tảng tăng trưởng dựa trên AI được thiết kế để tự động hóa quy trình marketing và mở rộng quy mô startup hiệu quả.',
+          link: 'https://speedgrowth.ai',
+          banner: '/logo/products/speedgrowth-banner.png',
+        },
+      ],
+    },
+    team: {
+      title: 'Đội ngũ nòng cốt',
+      subtitle: 'Những kiến trúc sư tự động hóa tại Elastic Labs.',
+      readMore: 'Đọc thêm',
+      readLess: 'Thu gọn',
+      members: [
+        {
+          name: 'Cris Nguyen',
+          role: 'CEO & Founder',
+          bio: 'Cris là một nhà lãnh đạo công nghệ tập trung vào việc nâng tầm trải nghiệm con người thông qua AI và blockchain. Hiện tại, ông là Nhà sáng lập của Elastic Labs, một đại lý tích hợp AI-native, và SpeedGrowth, một trung tâm điều khiển AI giúp tự động hóa quy trình hỗ trợ khách hàng thành kênh doanh thu cho các thương hiệu thương mại điện tử.\n\nNgoài việc xây dựng sản phẩm, Cris còn là một nhà đầu tư thiên thần tích cực tại Guidance Ventures, nơi ông hỗ trợ các dự án như RiseChain, Infinit, Xyber và GRVT.\n\nChuyên môn của ông nằm ở điểm giao thoa giữa vận hành quy mô lớn đa bộ phận và quan hệ đối tác công nghệ mới nổi. Trong ba năm qua, Cris đã dẫn dắt tăng trưởng full-stack cho Polkadot khu vực Đông Nam Á và đội ngũ APAC. Ông đóng vai trò là bộ lọc chính cho chương trình tài trợ của hệ sinh thái, cố vấn cho các đội ngũ phát triển và quản lý một nhóm gồm bảy thành viên để thu hẹp khoảng cách giữa quan hệ nhà phát triển kỹ thuật và mở rộng khu vực.',
+          avatar: '/founders/cris-nguyen-avatar.png',
+          linkedin: 'https://www.linkedin.com/in/truongnguyen99/',
+          github: 'https://github.com/ngquangtruong',
+        },
+        {
+          name: 'Tin Chung',
+          role: 'CTO & Co-Founder',
+          bio: 'Tin là một kiến trúc sư hệ thống chuyên về mạng lưới phân tán và hạ tầng dữ liệu hiệu suất cao. Ông có bề dày thành tích trong việc xây dựng các hệ thống lõi từ sơ khai, từ các khung nạp dữ liệu blockchain thời gian thực bằng Rust đến các trình biên dịch DSL tùy chỉnh cho các hoạt động OLAP phức tạp. Trước đây là kỹ sư sáng lập tại Rover và R0GUE, Tin đã tối ưu hóa các mô hình runtime Layer 1 và quản lý các cuộc di chuyển trạng thái quy mô lớn lên tới 60TB+, giúp giảm đáng kể chi phí vận hành hạ tầng. Là tốt nghiệp viên của Polkadot Blockchain Academy và nhà vô địch hackathon từ Safe và Chainlink, chuyên môn của ông trải dài trên Polkadot SDK, Solana và Ethereum. Ông là người đóng góp tích cực cho phần mềm nguồn mở và đóng vai trò là cố vấn kỹ thuật cho cộng đồng nhà phát triển toàn cầu.',
+          avatar: '/founders/tin-chung-avatar.png',
+          linkedin: 'https://www.linkedin.com/in/chungquantin/',
+          github: 'https://github.com/chungquantin',
+        },
+      ],
+    },
+    whyUs: {
+      title: 'Tại sao nên đồng hành cùng Elastic Labs?',
+      description:
+        'Thay vì báo cáo lý thuyết, chúng tôi bàn giao giải pháp thực thi. Mục tiêu là giúp bạn thấy tác động trong vài tuần.',
+      points: [
+        {
+          title: 'Thực thi nhanh chóng',
+          description:
+            'Chúng tôi tập trung vào việc triển khai nhanh, giúp doanh nghiệp thấy hiệu quả trong vài tuần thay vì vài tháng.',
+        },
+        {
+          title: 'Giải pháp thực thi',
+          description:
+            'Không chỉ là những bản báo cáo, chúng tôi bàn giao hệ thống hoàn chỉnh tích hợp sâu vào quy trình sẵn có.',
+        },
+      ],
+    },
     cases: {
       title: 'Dự án tiêu biểu',
       items: [
@@ -266,6 +389,36 @@ export const dictionaries = {
     },
     techStack: {
       title: 'Năng lực Kỹ thuật',
+      categories: [
+        {
+          title: 'GenAI / LLM',
+          techs: [
+            { name: 'Gemini', logo: '' },
+            { name: 'Claude', logo: '' },
+            { name: 'LangGraph', logo: '/logo/technologies/langgraph-logo.png' },
+            { name: 'CrewAI', logo: '/logo/technologies/crewai-logo.png' },
+            { name: 'vLLM', logo: '/logo/technologies/vllm-logo.png' },
+            { name: 'SGLang', logo: '/logo/technologies/sglang-logo.png' },
+          ],
+        },
+        {
+          title: 'Blockchain',
+          techs: [
+            { name: 'Polkadot Substrate', logo: '' },
+            { name: 'Ethereum', logo: '' },
+            { name: 'Rust', logo: '/logo/technologies/rust-logo.png' },
+          ],
+        },
+        {
+          title: 'Software Development',
+          techs: [
+            { name: 'TypeScript', logo: '/logo/technologies/typescript.png' },
+            { name: 'Node.js', logo: '/logo/technologies/nodejs-logo.svg' },
+            { name: 'React', logo: '/logo/technologies/react-logo.png' },
+            { name: 'Python', logo: '' },
+          ],
+        },
+      ],
     },
     expertise: {
       title: 'Năng lực Chuyên sâu',

@@ -22,8 +22,17 @@ const techStack = [
 export default function Hero({ dict, lang }: { dict: any; lang: string }) {
   return (
     <section className="relative flex min-h-screen flex-col justify-center overflow-hidden px-6 pt-20">
+      {/* Video Background */}
+      <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
+        <video className="h-full w-full object-cover opacity-20" autoPlay muted loop playsInline>
+          <source src="/videos/upper-background.mp4" type="video/mp4" />
+        </video>
+        {/* Subtle overlay to blend video with background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#050505] via-transparent to-[#050505]" />
+      </div>
+
       {/* Background Frame Lines */}
-      <div className="pointer-events-none absolute inset-0">
+      <div className="pointer-events-none absolute inset-0 z-10">
         <div className="absolute left-10 top-10 h-20 w-20 border-l border-t border-white/20" />
         <div className="absolute right-10 top-10 h-20 w-20 border-r border-t border-white/20" />
         <div className="absolute bottom-10 left-10 h-20 w-20 border-b border-l border-white/20" />
@@ -35,7 +44,7 @@ export default function Hero({ dict, lang }: { dict: any; lang: string }) {
         <div className="absolute bottom-10 right-10 h-1.5 w-1.5 bg-cyan-500" />
       </div>
 
-      <div className="container z-10 mx-auto grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
+      <div className="container z-20 mx-auto grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
         <div className="order-2 pt-10 lg:order-1">
           <div className="section-label">
             <span className="mr-2 inline-block animate-pulse">●</span>
@@ -79,14 +88,14 @@ export default function Hero({ dict, lang }: { dict: any; lang: string }) {
           </div>
         </div>
 
-        <div className="relative order-1 flex justify-center lg:order-2 lg:justify-end">
+        <div className="relative order-1 flex justify-center lg:order-2 lg:justify-between">
           <div className="pointer-events-none absolute inset-0 rounded-full bg-cyan-500/10 blur-[120px]" />
-          <div className="relative aspect-square w-full max-w-[500px]">
+          <div className="relative aspect-square w-full max-w-[550px]">
             <Image
-              src="/images/3D_Illustration1.png"
+              src="/images/3D_Illustration5.webp"
               alt="AI Core"
               fill
-              className="animate-float bw-image object-contain"
+              className="animate-float rotate-12 object-contain opacity-90"
               priority
             />
           </div>
@@ -94,7 +103,7 @@ export default function Hero({ dict, lang }: { dict: any; lang: string }) {
       </div>
 
       {/* Tech Marquee Strip */}
-      <div className="absolute bottom-0 left-0 right-0 overflow-hidden border-y border-white/5 bg-white/[0.02] py-6 backdrop-blur-sm">
+      <div className="absolute bottom-0 left-0 right-0 z-20 overflow-hidden border-y border-white/5 bg-white/[0.02] py-6 backdrop-blur-sm">
         <Marquee speed={40} gradient={false} pauseOnHover>
           <div className="flex gap-12 px-6">
             {techStack.map((tech) => (
