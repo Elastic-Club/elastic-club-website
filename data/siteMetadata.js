@@ -14,7 +14,7 @@ const siteMetadata = {
   siteUrl: 'https://elasticlabs.org',
   siteRepo: 'https://github.com/elasticlabs-org/elasticlabs',
   siteLogo: '/logo/White_ShortLogo.png',
-  socialBanner: '/logo/White_FullLogo.png',
+  socialBanner: '/logo/White_ShortLogo.png',
   // mastodon: 'https://mastodon.social/@mastodonuser',
   email: 'elasticlabs@gmail.com',
   github: 'https://github.com/elasticlabs-org',

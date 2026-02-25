@@ -33,3 +33,22 @@ input:-webkit-autofill:focus {
 .katex-display {
   overflow: auto hidden;
 }
+
+.tech-logo-container {
+  @apply relative flex items-center justify-center bg-white p-2 rounded-full w-12 h-12 overflow-hidden;
+  filter: grayscale(100%) contrast(120%);
+  transition: all 0.3s ease;
+}
+
+.tech-logo-container:hover {
+  filter: grayscale(0%) contrast(100%);
+}
+
+.bw-image {
+  @apply grayscale contrast-125;
+  filter: grayscale(100%) contrast(110%);
+}
+
+.bw-image:hover {
+  filter: grayscale(0%) contrast(100%);
+}

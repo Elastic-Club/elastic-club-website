@@ -1,6 +1,5 @@
-import './globals.css'
-import ElasticMainPage from './elastic/page'
+import { redirect } from 'next/navigation'
 
-export default async function Page() {
-  return <ElasticMainPage />
+export default function Page() {
+  redirect('/en')
 }
