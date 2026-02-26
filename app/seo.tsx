@@ -13,7 +13,7 @@ export function genPageMetadata({ title, description, image, ...rest }: PageSEOP
   return {
     title,
     openGraph: {
-      title: `${title} | ${siteMetadata.title}`,
+      title: `${title} | ${siteMetadata.headerTitle}`,
       description: description || siteMetadata.description,
       url: './',
       siteName: siteMetadata.title,
@@ -22,7 +22,7 @@ export function genPageMetadata({ title, description, image, ...rest }: PageSEOP
       type: 'website',
     },
     twitter: {
-      title: `${title} | ${siteMetadata.title}`,
+      title: `${title} | ${siteMetadata.headerTitle}`,
       card: 'summary_large_image',
       images: image ? [image] : [siteMetadata.socialBanner],
     },

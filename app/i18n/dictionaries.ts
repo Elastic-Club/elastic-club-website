@@ -12,9 +12,9 @@ export const dictionaries = {
       contact: 'Contact',
     },
     hero: {
-      title: 'Elastic Labs — Strategic AI Integration Partner',
+      title: 'Elastic Labs | AI-native Integration Agency',
       subtitle:
-        'Helping businesses achieve breakthrough growth without bloating personnel by optimizing technology leverage, automating processes, and deploying modern AI.',
+        'Elastic Labs is an AI-native integration agency specialized in Marketing, Developer Activation, and Venture Building. We help blockchain ecosystems, startups, and enterprises scale their Web3 presence through strategic AI growth and innovative development.',
       cta: 'Book a 30-min Consultation',
       secondaryCta: 'View Services',
       usps: [
@@ -319,9 +319,9 @@ export const dictionaries = {
       contact: 'Liên hệ',
     },
     hero: {
-      title: 'Elastic Labs — Đối tác Tích hợp AI Chiến lược',
+      title: 'Elastic Labs | Đại lý tích hợp AI-native',
       subtitle:
-        'Giúp doanh nghiệp tăng trưởng bứt phá mà không cần phình to nhân sự bằng cách tối ưu đòn bẩy công nghệ, tự động hóa quy trình và triển khai AI hiện đại.',
+        'Elastic Labs là một đại lý tích hợp AI-native chuyên về Marketing, Kích hoạt Nhà phát triển và Xây dựng Dự án. Chúng tôi giúp các hệ sinh thái blockchain, startup và doanh nghiệp mở rộng quy mô Web3 thông qua tích hợp AI chiến lược và phát triển đổi mới.',
       cta: 'Đặt lịch tư vấn 30 phút',
       secondaryCta: 'Xem dịch vụ',
       usps: [

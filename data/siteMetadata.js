@@ -1,10 +1,10 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'Elastic Labs',
+  title: 'Elastic Labs | AI-native Integration Agency for Marketing, Developer Activation, & Venture Building',
   author: 'Elastic Labs',
   headerTitle: 'Elastic Labs',
   description:
-    'Marketing, Developer Activation, & Venture Building  for the Future of Decentralization',
+    'Elastic Labs is an AI-native integration agency specialized in Marketing, Developer Activation, and Venture Building. We help blockchain ecosystems, startups, and enterprises scale through strategic AI integration and innovative Web3 development.',
   expandedDescription:
     'Elastic Labs helps blockchain ecosystems, startups, and enterprises scale their Web3 presence through strategic marketing, developer activation, and innovative dApps development.',
   blogSectionDescription:
@@ -14,7 +14,7 @@ const siteMetadata = {
   siteUrl: 'https://elasticlabs.org',
   siteRepo: 'https://github.com/elasticlabs-org/elasticlabs',
   siteLogo: '/logo/White_ShortLogo.png',
-  socialBanner: '/logo/White_ShortLogo.png',
+  socialBanner: '/images/elasticlabs-banner.png',
   consultingUrl: 'https://calendar.app.google/2d7W1uZGk86YPLTk8',
   // mastodon: 'https://mastodon.social/@mastodonuser',
   email: 'elasticlabs@gmail.com',

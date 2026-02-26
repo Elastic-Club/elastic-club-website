@@ -9,9 +9,26 @@ export const metadata = {
   metadataBase: new URL(siteMetadata.siteUrl),
   title: {
     default: siteMetadata.title,
-    template: `%s | ${siteMetadata.title}`,
+    template: `%s | ${siteMetadata.headerTitle}`,
   },
   description: siteMetadata.description,
+  keywords: [
+    'Web3 Marketing',
+    'Blockchain Developer Activation',
+    'Venture Building',
+    'Web3 Strategy',
+    'dApp Development',
+    'Decentralization',
+    'Elastic Labs',
+  ],
+  authors: [{ name: 'Elastic Labs', url: 'https://elasticlabs.org' }],
+  creator: 'Elastic Labs',
+  applicationName: 'Elastic Labs',
+  appleWebApp: {
+    title: 'Elastic Labs',
+    statusBarStyle: 'default',
+    capable: true,
+  },
   openGraph: {
     title: siteMetadata.title,
     description: siteMetadata.description,
