@@ -48,13 +48,13 @@ export default function Navbar({ dict, lang }: { dict: any; lang: string }) {
     <nav
       className={clsx(
         'fixed left-0 right-0 top-0 z-50 border-b transition-all duration-300',
-        scrolled
-          ? 'border-white/10 bg-[#050505]/90 py-4 backdrop-blur-md'
+        scrolled || mobileMenuOpen
+          ? 'border-white/10 bg-[#050505]/95 py-4 backdrop-blur-md'
           : 'border-transparent bg-transparent py-6'
       )}
     >
       <div className="container mx-auto flex items-center justify-between px-6">
-        <Link href={`/${lang}`} className="relative h-16 w-16">
+        <Link href={`/${lang}`} className="relative z-[60] h-16 w-16">
           <Image
             src="/logo/White_ShortLogo.png"
             alt="Elastic Labs"
@@ -71,7 +71,7 @@ export default function Navbar({ dict, lang }: { dict: any; lang: string }) {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium text-gray-400 transition-colors hover:text-white"
+                className="text-sm font-medium text-gray-300 transition-colors hover:text-primary-400"
               >
                 {link.name}
               </Link>
@@ -83,13 +83,13 @@ export default function Navbar({ dict, lang }: { dict: any; lang: string }) {
           <div className="flex items-center gap-6">
             <Link
               href={toggleLang()}
-              className="font-mono text-xs text-gray-500 transition-colors hover:text-cyan-400"
+              className="font-mono text-xs text-gray-400 transition-colors hover:text-primary-400"
             >
               {lang === 'en' ? 'VN' : 'EN'}
             </Link>
             <Link
               href={`/${lang}#contact`}
-              className="bg-white px-5 py-2 text-sm font-bold uppercase tracking-wide text-black transition-colors hover:bg-cyan-400"
+              className="bg-white px-5 py-2 text-sm font-bold uppercase tracking-wide text-black transition-all hover:bg-solana-gradient hover:text-white"
             >
               {dict.nav.contact}
             </Link>
@@ -97,7 +97,10 @@ export default function Navbar({ dict, lang }: { dict: any; lang: string }) {
         </div>
 
         {/* Mobile Toggle */}
-        <button className="text-white md:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+        <button
+          className="relative z-[60] text-white md:hidden"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        >
           <div className="flex flex-col gap-1.5">
             <span
               className={clsx(
@@ -120,13 +123,13 @@ export default function Navbar({ dict, lang }: { dict: any; lang: string }) {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 top-[80px] z-50 flex flex-col bg-[#050505]/95 p-8 backdrop-blur-xl md:hidden">
+        <div className="fixed inset-0 z-50 flex flex-col bg-[#050505] p-8 pt-32 backdrop-blur-xl md:hidden">
           <div className="mb-auto flex flex-col gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-3xl font-black uppercase tracking-tighter text-white hover:text-cyan-400"
+                className="text-3xl font-akira uppercase tracking-tighter text-white hover:text-primary-400"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {link.name}
@@ -136,7 +139,7 @@ export default function Navbar({ dict, lang }: { dict: any; lang: string }) {
           <div className="flex flex-col gap-8 border-t border-white/10 pt-8 text-center">
             <Link
               href={toggleLang()}
-              className="font-mono text-xs uppercase tracking-widest text-gray-500 hover:text-cyan-400"
+              className="font-mono text-xs uppercase tracking-widest text-gray-400 hover:text-primary-400"
               onClick={() => setMobileMenuOpen(false)}
             >
               {lang === 'en' ? 'SWITCH TO VIETNAMESE' : 'CHUYỂN SANG TIẾNG ANH'}

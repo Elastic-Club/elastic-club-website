@@ -17,12 +17,15 @@ export default function Services({ dict }: { dict: any }) {
         <div className="mb-24 flex flex-col gap-12 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-2xl">
             <div className="section-label">{dict.services.title}</div>
-            <h2 className="text-4xl font-black uppercase leading-[0.9] sm:text-5xl md:text-7xl">
-              Executable <br />
-              <span className="text-gray-700">Intelligence.</span>
+            <h2 className="font-akira text-4xl font-black uppercase leading-[1.1] sm:text-5xl md:text-6xl">
+              {(dict.services.header || '').split(' ').map((word: string, i: number) => (
+                <span key={i} className={i > 0 ? 'text-gray-500' : ''}>
+                  {word}{' '}
+                </span>
+              ))}
             </h2>
           </div>
-          <p className="max-w-sm border-l border-white/10 pl-8 font-mono text-sm leading-relaxed text-gray-500">
+          <p className="max-w-sm border-l border-white/10 pl-8 font-mono text-sm leading-relaxed text-gray-400">
             {dict.services.description}
           </p>
         </div>
@@ -35,22 +38,22 @@ export default function Services({ dict }: { dict: any }) {
                 key={i}
                 className="card-base group cursor-default !border-0 !border-b border-r border-white/10 !bg-transparent p-8 sm:p-12"
               >
-                <div className="absolute left-0 top-0 h-[1px] w-full overflow-hidden bg-cyan-500/0 transition-colors group-hover:bg-cyan-500/50">
+                <div className="absolute left-0 top-0 h-[1px] w-full overflow-hidden bg-primary-500/0 transition-colors group-hover:bg-primary-500/50">
                   <div className="beam-line h-full w-full opacity-50" />
                 </div>
 
                 <div className="mb-12 flex items-start justify-between">
-                  <div className="text-cyan-500 transition-all duration-500 group-hover:scale-110 group-hover:text-white">
+                  <div className="text-primary-500 transition-all duration-500 group-hover:scale-110 group-hover:text-white">
                     <Icon size={48} strokeWidth={1} />
                   </div>
-                  <span className="font-mono text-xs font-bold text-gray-700">0{i + 1}</span>
+                  <span className="font-mono text-xs font-bold text-gray-500">0{i + 1}</span>
                 </div>
 
-                <h3 className="mb-6 text-2xl font-black uppercase tracking-tight text-white transition-colors group-hover:text-cyan-400">
+                <h3 className="group-hover:text-solana-gradient mb-6 text-2xl font-black uppercase tracking-tight text-white transition-colors">
                   {item.title}
                 </h3>
 
-                <p className="mb-8 text-base leading-relaxed text-gray-500 transition-colors group-hover:text-gray-400">
+                <p className="mb-8 text-base leading-relaxed text-gray-400 transition-colors group-hover:text-gray-200">
                   {item.description}
                 </p>
 
@@ -59,16 +62,16 @@ export default function Services({ dict }: { dict: any }) {
                     {item.details.map((detail: string, idx: number) => (
                       <li
                         key={idx}
-                        className="flex items-start gap-3 font-mono text-[10px] uppercase tracking-widest text-gray-600"
+                        className="flex items-start gap-3 font-mono text-[10px] uppercase tracking-widest text-gray-400"
                       >
-                        <span className="mt-0.5 text-cyan-500">»</span>
+                        <span className="mt-0.5 text-secondary-500">»</span>
                         {detail}
                       </li>
                     ))}
                   </ul>
                 )}
 
-                <div className="flex items-center text-[10px] font-bold uppercase tracking-[0.3em] text-gray-600 transition-colors group-hover:text-white">
+                <div className="flex items-center text-[10px] font-bold uppercase tracking-[0.3em] text-gray-500 transition-colors group-hover:text-white">
                   Initialize Protocol{' '}
                   <span className="ml-4 transition-transform group-hover:translate-x-2">→</span>
                 </div>

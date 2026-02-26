@@ -3,123 +3,123 @@ export const dictionaries = {
     nav: {
       home: 'Home',
       services: 'Services',
-      expertise: 'Capabilities & Tech Stack',
+      expertise: 'Capabilities',
       products: 'Products',
       team: 'Team',
-      cases: 'Case Studies',
+      cases: 'Projects',
       process: 'Process',
       blog: 'Blog',
       contact: 'Contact',
     },
     hero: {
-      title: 'Elastic Labs | AI-native Integration Agency',
+      title: 'Elastic Labs — AI Integration & Building Partner',
       subtitle:
-        'Elastic Labs is an AI-native integration agency specialized in Marketing, Developer Activation, and Venture Building. We help blockchain ecosystems, startups, and enterprises scale their Web3 presence through strategic AI growth and innovative development.',
-      cta: 'Book a 30-min Consultation',
-      secondaryCta: 'View Services',
+        'We help teams build and scale with AI. From automating repetitive workflows to deploying custom AI agents, we focus on practical implementation that actually works.',
+      cta: 'Book a 30-min Intro Call',
+      secondaryCta: 'See What We Build',
       usps: [
-        'Deploy in weeks',
-        'Focus on executable solutions with measurable impact',
-        'Secure, optimized performance, and operational costs',
+        'Ship in weeks, not months',
+        'Built for performance and security',
+        'Handover with documentation and training',
       ],
     },
     vision: {
-      title: 'Strategic AI Vision',
+      title: 'How we think about AI',
       description:
-        "In the digital era, sustainable growth doesn't necessarily mean excessive scaling of personnel, but rather optimizing technology leverage. Elastic Labs acts as a Strategic AI Integration Partner, helping businesses unlock their own new limits.",
+        'We believe AI is a tool to amplify what humans can do. Instead of complex theories, we focus on building systems that solve real bottlenecks and help your team do more with less friction.',
     },
     services: {
-      title: 'Service Portfolio',
+      title: 'Services',
+      header: 'Executable Intelligence.',
       description:
-        'Our technical solutions are designed to scale flexibly with your business growth.',
+        'Flexible solutions designed to fit your current stage and grow with you.',
       items: [
         {
-          title: 'AI Strategy & Performance Assessment',
+          title: '1) AI Strategy & Assessment',
           description:
-            'Diagnosis in 2–4 weeks to identify AI opportunities with best ROI. Handover a Technical Roadmap for fast deployment.',
+            'A 2–4 week diagnostic to find where AI can actually help. We provide a clear Technical Roadmap so you know exactly what to build first.',
           details: [
-            'AI Opportunity Map prioritized by ROI',
-            'Sprint-based Technical Roadmap',
-            'Fast implementation plan to measure impact',
+            'Identifying high-impact AI opportunities',
+            'Technical architecture design',
+            'Practical implementation planning',
           ],
         },
         {
-          title: 'AI Engineering & Transformation',
+          title: '2) AI Implementation & Automation',
           description:
-            'Apply AI to workflows, creating smooth connections between Marketing, Sales, and CS to reduce manual work.',
+            'We integrate AI into your existing workflows. Whether it is Marketing, Sales, or CS, we help sync your tools and automate manual tasks.',
           details: [
-            'Workflow redesign based on operational goals',
-            'Data & tool integration for Marketing, Sales, CS',
-            'Lightweight governance, easy to operate and scale',
+            'Workflow redesign for automation',
+            'Tool and data integration',
+            'Setting up lightweight governance',
           ],
         },
         {
-          title: 'AI Agent Development',
+          title: '3) Custom AI Agents',
           description:
-            'Build custom AI agents that understand your business, supporting drafting, data analysis, and customer interaction.',
+            'We build specialized AI agents that understand your business rules. They can help with drafting, data research, and handling routine customer queries.',
           details: [
-            'Agent design + business-specific guardrails',
-            'Knowledge Base / RAG integration',
-            'Monitoring + feedback loops',
+            'Bespoke agent design + guardrails',
+            'Internal knowledge base integration',
+            'Reliable feedback loops',
           ],
         },
         {
-          title: 'Applied Intelligence Ops',
+          title: '4) AI-Powered Apps',
           description:
-            'Build AI-integrated web/mobile apps (RAG, On-device AI) with optimized performance and user experience.',
+            'Building web and mobile apps with AI features built-in (RAG, localized AI) to ensure they are fast and useful.',
         },
         {
-          title: 'Capability Transfer & Training',
+          title: '5) Team Training & Handover',
           description:
-            'Hands-on workshops and operational playbooks to help your team become self-sufficient.',
+            'We do not just build and leave. We run workshops and provide playbooks so your team can manage and evolve the systems on their own.',
         },
       ],
     },
     products: {
-      title: 'Our Products',
-      subtitle: 'Open-source tools and platforms built by Elastic Labs to accelerate AI adoption.',
+      title: 'Products',
+      header: 'Recent Projects.',
+      subtitle: 'Projects and platforms we have built to make AI adoption easier.',
       items: [
         {
           slug: 'polkadot-agent-kit',
           title: 'Polkadot Agent Kit',
           description:
-            'A powerful toolkit for building AI agents that can interact seamlessly with the Polkadot ecosystem. It enables developers to create intelligent agents capable of performing on-chain operations, monitoring network events, and providing user-friendly interfaces for complex blockchain interactions.',
+            'A toolkit for building AI agents that can interact with the Polkadot ecosystem, making on-chain operations and data monitoring simpler.',
           link: 'https://github.com/elasticlabs-org/polkadot-agent-kit',
           banner: '/logo/products/polkadot-agent-kit-banner.png',
           howWeBuild: {
-            title: 'How we build Polkadot Agent Kit',
+            title: 'Building Polkadot Agent Kit',
             description:
-              'The Polkadot Agent Kit is engineered with a focus on modularity, security, and developer experience. We leverage the latest in AI and blockchain technologies to create a seamless bridge between intelligent agents and decentralized networks, ensuring high reliability and ease of integration.',
+              'We focused on making it modular and secure, so developers can bridge LLMs with decentralized protocols without the usual headache.',
             points: [
               {
-                title: 'Agentic Architecture',
+                title: 'Agentic Infrastructure',
                 description:
-                  'Utilizing LangChain and custom toolsets to allow LLMs to interact directly with Substrate-based chains, enabling autonomous decision-making and execution.',
+                  'Uses LangChain and custom Substrate tools for decision-making.',
               },
               {
-                title: 'Security First',
+                title: 'Security-First',
                 description:
-                  'Implementing robust guardrails, secure key management, and transaction signing protocols for safe and reliable on-chain operations.',
+                  'Safe key management and guardrails for on-chain actions.',
               },
               {
-                title: 'Developer Focused',
+                title: 'Developer Friendly',
                 description:
-                  'Providing clean TypeScript APIs, comprehensive documentation, and starter templates to get developers up and running in minutes.',
+                  'Clean TypeScript APIs and clear documentation.',
               },
               {
-                title: 'Real-time Monitoring',
+                title: 'Real-time Data',
                 description:
-                  'Integrated event listeners and indexer connections to provide agents with up-to-the-second blockchain state and data.',
+                  'Fast monitoring of blockchain state changes.',
               },
               {
-                title: 'Cross-Chain Support',
-                description:
-                  'Designed to support Polkadot, Kusama, and various parachains, facilitating seamless multi-chain agent interactions.',
+                title: 'Multi-Chain Support',
+                description: 'Works with Polkadot, Kusama, and Parachains.',
               },
               {
-                title: 'Extensible Design',
-                description:
-                  'A plugin-based architecture that allows developers to easily add new tools and capabilities to their AI agents.',
+                title: 'Extensible',
+                description: 'Add new capabilities via a simple plugin system.',
               },
             ],
           },
@@ -128,43 +128,37 @@ export const dictionaries = {
           slug: 'speedgrowth-ai',
           title: 'Speedgrowth.ai',
           description:
-            'An AI-powered growth platform designed to automate marketing workflows and scale startups effectively. By centralizing customer data and leveraging advanced AI agents, Speedgrowth.ai transforms operational bottlenecks into automated growth engines.',
+            'An AI command center to help startups automate marketing and scale operations by turning bottlenecks into growth engines.',
           link: 'https://speedgrowth.ai',
           banner: '/logo/products/speedgrowth-banner.png',
           howWeBuild: {
-            title: 'How we build Speedgrowth.ai',
+            title: 'Building Speedgrowth.ai',
             description:
-              'Speedgrowth.ai is built to scale. We combine high-performance web frameworks with cutting-edge LLMs to automate complex marketing and sales workflows, focusing on high conversion rates and operational efficiency.',
+              'We combined high-performance web frameworks with optimized LLM orchestration to handle complex marketing and sales tasks.',
             points: [
               {
-                title: 'Next.js & Edge Runtime',
-                description:
-                  'Built on Next.js for lightning-fast performance, SEO optimization, and global scalability using edge computing.',
+                title: 'Next.js Edge Architecture',
+                description: 'Fast performance and global scalability.',
               },
               {
-                title: 'Multi-Model Integration',
-                description:
-                  'Orchestrating multiple LLMs (GPT-4, Claude 3, Gemini) to handle specialized tasks like content generation, lead scoring, and sentiment analysis.',
+                title: 'Multi-Model Routing',
+                description: 'Uses the best LLM (GPT-4, Claude, Gemini) for each task.',
               },
               {
-                title: 'Workflow Automation',
-                description:
-                  'Sophisticated backend logic that connects marketing tools, CRM, and AI agents seamlessly to automate the entire customer journey.',
+                title: 'Deep Automation',
+                description: 'Connects your CRM and marketing stack with AI agents.',
               },
               {
-                title: 'Data-Driven Insights',
-                description:
-                  'Advanced analytics dashboards that provide real-time feedback on campaign performance and agent effectiveness.',
+                title: 'Real-time Analytics',
+                description: 'Track how agents and campaigns are performing.',
               },
               {
-                title: 'Customizable Agent Roles',
-                description:
-                  'Define specific roles for AI agents, from social media managers to sales representatives, tailored to your brand voice.',
+                title: 'Custom Agent Roles',
+                description: 'Define AI roles that match your brand voice.',
               },
               {
-                title: 'Secure Data Handling',
-                description:
-                  'Enterprise-grade security measures to ensure that customer data is protected and used ethically within AI workflows.',
+                title: 'Reliable Data Security',
+                description: 'Keeps your customer data safe and protected.',
               },
             ],
           },
@@ -172,15 +166,16 @@ export const dictionaries = {
       ],
     },
     team: {
-      title: 'The Core Team',
-      subtitle: 'Meet the architects of automation behind Elastic Labs.',
+      title: 'Team',
+      header: 'The Builders.',
+      subtitle: 'We are builders and systems architects who love automating complex things.',
       readMore: 'Read More',
       readLess: 'Show Less',
       members: [
         {
           name: 'Cris Nguyen',
           role: 'CEO & Founder',
-          bio: "Cris is a tech leader focused on leveling up the human experience through AI and blockchain. He is currently the Founder of Elastic Labs, an AI-native integration agency, and SpeedGrowth, an AI command center that automates customer support into a revenue channel for e-commerce brands.\n\nBeyond building, Cris is an active angel investor with Guidance Ventures, where he supports projects such as RiseChain, Infinit, Xyber, and GRVT.\n\nHis expertise lies at the intersection of large-scale multi-department operations and emerging technology partnerships. For the past three years, Cris led full-stack growth for Polkadot SEA and the APAC team. He served as the primary filter for the ecosystem's grants program, mentoring developer teams and managing a team of seven to bridge the gap between technical developer relations and regional expansion.",
+          bio: "Cris focuses on using AI and blockchain to make human work more efficient. As the founder of Elastic Labs and SpeedGrowth, he builds systems that turn operational tasks into growth channels.\n\nHe is also an angel investor with Guidance Ventures, supporting projects like RiseChain and GRVT.\n\nWith a background in growth for Polkadot SEA and APAC, he bridges the gap between technical innovation and practical market expansion.",
           avatar: '/founders/cris-nguyen-avatar.png',
           linkedin: 'https://www.linkedin.com/in/truongnguyen99/',
           github: 'https://github.com/ngquangtruong',
@@ -188,7 +183,7 @@ export const dictionaries = {
         {
           name: 'Tin Chung',
           role: 'CTO & Co-Founder',
-          bio: 'Tin is a systems architect specializing in distributed networks and high-performance data infrastructure. He has a proven track record of building core systems from the ground up, ranging from real-time blockchain ingestion frameworks in Rust to custom DSL compilers for complex OLAP operations. Previously a founding engineer at Rover and R0GUE, Tin optimized Layer 1 runtime modules and managed massive 60TB+ state migrations that significantly reduced infrastructure overhead.\n\nA graduate of the Polkadot Blockchain Academy and a hackathon champion from Safe, Base, and Chainlink, his expertise spans the Polkadot SDK, Solana, and Ethereum. He is a frequent contributor to open-source software and serves as a technical mentor for the global developer community.',
+          bio: 'Tin is a systems architect specializing in high-performance data infrastructure. He has built core systems like real-time blockchain ingestion frameworks and custom compilers from scratch.\n\nA hackathon champion and Polkadot Blockchain Academy graduate, his expertise covers the Polkadot SDK, Solana, and Ethereum. He is a frequent contributor to open-source software and a technical mentor.',
           avatar: '/founders/tin-chung-avatar.png',
           linkedin: 'https://www.linkedin.com/in/chungquantin/',
           github: 'https://github.com/chungquantin',
@@ -196,40 +191,41 @@ export const dictionaries = {
       ],
     },
     whyUs: {
-      title: 'Why Partner with Elastic Labs?',
+      title: 'Working with us',
       description:
-        'Instead of theoretical reports, we deliver executable solutions. Our goal is for you to see impact within weeks.',
+        'We skip the long theoretical reports and focus on delivering functional systems that your team can actually use.',
       points: [
         {
           title: 'Speed to Impact',
           description:
-            'We focus on rapid deployment, typically seeing measurable results within weeks, not months.',
+            'We focus on getting a working version deployed quickly so you can see the results in weeks.',
         },
         {
-          title: 'Executable Solutions',
+          title: 'Built to Last',
           description:
-            'No more thick reports. We handover fully functional systems integrated into your existing workflows.',
+            'We handover systems that are well-documented, secure, and integrated into your existing stack.',
         },
       ],
     },
     cases: {
-      title: 'Typical Projects',
+      title: 'Projects',
+      header: 'Battle Tested.',
       items: [
         {
           category: 'Insurance',
-          title: 'CRM + Multi-channel Support Automation',
+          title: 'CRM & Support Automation',
           description:
-            'Automating customer interactions and data management across all touchpoints.',
+            'Helping sync customer data and using AI to manage queries across different channels.',
         },
         {
           category: 'B2B SaaS',
-          title: 'Sales Ops AI Agent',
-          description: 'End-to-end automation: Lead → Quotation → Follow-up.',
+          title: 'Sales Operations Agent',
+          description: 'Automating the path from lead qualification to follow-ups.',
         },
         {
           category: 'Marketing Agency',
-          title: 'Content Workflow + Reporting',
-          description: 'Automating content creation and multi-client reporting workflows.',
+          title: 'Content & Reporting Workflow',
+          description: 'Using AI to speed up content creation and client reporting.',
         },
       ],
     },
@@ -237,7 +233,8 @@ export const dictionaries = {
       title: 'Technical Capabilities',
       categories: [
         {
-          title: 'GenAI / LLM',
+          title: 'Generative AI & LLM',
+          description: 'We go beyond basic prompts. We build custom multi-agent systems, implement RAG (Retrieval-Augmented Generation) for specialized knowledge, and optimize model performance using frameworks like vLLM and SGLang.',
           techs: [
             { name: 'Gemini', logo: '' },
             { name: 'Claude', logo: '' },
@@ -248,7 +245,8 @@ export const dictionaries = {
           ],
         },
         {
-          title: 'Blockchain',
+          title: 'Blockchain & Web3',
+          description: 'Expertise in building decentralized infrastructure and agentic kit for ecosystems like Polkadot and Ethereum. We specialize in Rust-based runtime development and secure on-chain automation.',
           techs: [
             { name: 'Polkadot Substrate', logo: '' },
             { name: 'Ethereum', logo: '' },
@@ -256,7 +254,8 @@ export const dictionaries = {
           ],
         },
         {
-          title: 'Software Development',
+          title: 'Full-Stack Engineering',
+          description: 'We build production-ready applications that scale. From high-performance Node.js backends to interactive React frontends, we ensure your AI solutions are reliable and user-friendly.',
           techs: [
             { name: 'TypeScript', logo: '/logo/technologies/typescript.png' },
             { name: 'Node.js', logo: '/logo/technologies/nodejs-logo.svg' },
@@ -272,35 +271,35 @@ export const dictionaries = {
         {
           title: 'Agentic Engineering',
           description:
-            'Design multi-agent systems that coordinate smoothly to automate complex business logic across departments.',
+            'We design AI systems that can coordinate and execute complex tasks across your business departments.',
         },
         {
           title: 'Internal Infrastructure',
           description:
-            'Set up on-premise hardware clusters and deploy/train internal AI models so businesses fully own data and absolute security.',
+            'Setting up specialized hardware and AI models locally so you have full control over your data.',
         },
         {
           title: 'Custom Automation',
           description:
-            'Develop virtual executive assistants and comprehensive governance platforms, helping to remove operational barriers so your team can focus on strategic goals.',
+            'Building digital assistants and governance tools that remove manual friction from your daily operations.',
         },
       ],
     },
     process: {
-      title: 'Trusted Collaboration Process',
-      subtitle: 'We work as part of your team, ensuring the most timely understanding and support.',
+      title: 'How we collaborate',
+      subtitle: 'We work as an extension of your team, making sure we are aligned on every step.',
     },
     blog: {
-      title: 'Our Blog',
-      description: 'Insights and thoughts from the Elastic Labs team.',
-      readMore: 'Read More',
+      title: 'The Blog',
+      description: 'Our thoughts on building with AI and automation.',
+      readMore: 'Read the Blog',
     },
     cta: {
-      title: 'Your next challenge is ours',
+      title: 'Ready to build?',
       description:
-        'Tell us what you want to automate. We will propose the fastest roadmap and implementation steps.',
-      primary: 'Schedule a Talk',
-      secondary: 'Send Project Request',
+        'Tell us what you want to automate or build. We will help you figure out the best roadmap and implementation steps.',
+      primary: 'Book a Talk',
+      secondary: 'Send a Message',
     },
     footer: {
       copyright: '© 2026 Elastic Labs. All rights reserved.',
@@ -310,123 +309,119 @@ export const dictionaries = {
     nav: {
       home: 'Trang chủ',
       services: 'Dịch vụ',
-      expertise: 'Năng lực & Tech stack',
+      expertise: 'Năng lực',
       products: 'Sản phẩm',
       team: 'Đội ngũ',
-      cases: 'Dự án tiêu biểu',
-      process: 'Quy trình hợp tác',
+      cases: 'Dự án',
+      process: 'Quy trình',
       blog: 'Blog',
       contact: 'Liên hệ',
     },
     hero: {
-      title: 'Elastic Labs | Đại lý tích hợp AI-native',
+      title: 'Elastic Labs — Đối tác xây dựng và tích hợp AI',
       subtitle:
-        'Elastic Labs là một đại lý tích hợp AI-native chuyên về Marketing, Kích hoạt Nhà phát triển và Xây dựng Dự án. Chúng tôi giúp các hệ sinh thái blockchain, startup và doanh nghiệp mở rộng quy mô Web3 thông qua tích hợp AI chiến lược và phát triển đổi mới.',
-      cta: 'Đặt lịch tư vấn 30 phút',
-      secondaryCta: 'Xem dịch vụ',
+        'Chúng tôi giúp các đội ngũ xây dựng và mở rộng quy mô bằng AI. Từ việc tự động hóa quy trình lặp đi lặp lại đến triển khai AI Agent chuyên biệt, chúng tôi tập trung vào những giải pháp thực tế và hiệu quả.',
+      cta: 'Đặt lịch trao đổi 30 phút',
+      secondaryCta: 'Xem các dự án',
       usps: [
-        'Triển khai trong vài tuần',
-        'Tập trung giải pháp thực thi, đo được hiệu quả',
-        'Bảo mật, tối ưu hiệu suất và chi phí vận hành',
+        'Triển khai trong vài tuần, không phải vài tháng',
+        'Đảm bảo hiệu suất và bảo mật',
+        'Bàn giao đầy đủ tài liệu và hướng dẫn',
       ],
     },
     vision: {
-      title: 'Tầm nhìn AI Chiến lược',
+      title: 'Cách chúng tôi nghĩ về AI',
       description:
-        'Trong kỷ nguyên số, tăng trưởng bền vững không nhất thiết phải đi đôi với việc gia tăng quy mô nhân sự quá mức, mà nằm ở việc tối ưu hóa đòn bẩy công nghệ. Elastic Labs đóng vai trò là Đối tác Tích hợp AI Chiến lược, giúp doanh nghiệp khai phá những giới hạn mới của chính mình.',
+        'Chúng tôi tin rằng AI là công cụ để mở rộng năng lực con người. Thay vì những lý thuyết phức tạp, chúng tôi tập trung xây dựng các hệ thống giải quyết điểm nghẽn thực tế và giúp đội ngũ của bạn làm việc mượt mà hơn.',
     },
     services: {
-      title: 'Danh mục dịch vụ',
+      title: 'Dịch vụ',
+      header: 'Giải pháp thực thi.',
       description:
-        'Các giải pháp kỹ thuật của chúng tôi được thiết kế để linh hoạt mở rộng cùng sự phát triển của doanh nghiệp bạn.',
+        'Các giải pháp linh hoạt được thiết kế để phù hợp với từng giai đoạn và phát triển cùng doanh nghiệp bạn.',
       items: [
         {
-          title: 'Chiến lược AI & Đánh giá Hiệu suất',
+          title: '1) Chiến lược & Đánh giá AI',
           description:
-            'Chẩn đoán trong 2–4 tuần để xác định điểm AI có thể mang lại ROI tốt nhất. Bàn giao Lộ trình Kỹ thuật (Technical Roadmap) để triển khai nhanh.',
+            'Chẩn đoán trong 2–4 tuần để tìm ra nơi AI có thể giúp ích thực sự. Chúng tôi cung cấp Lộ trình Kỹ thuật rõ ràng để bạn biết chính xác nên xây dựng gì trước.',
           details: [
-            'AI Opportunity Map và ưu tiên theo ROI',
-            'Technical Roadmap theo sprint',
-            'Kế hoạch triển khai nhanh để đo tác động',
+            'Xác định cơ hội ứng dụng AI hiệu quả',
+            'Thiết kế kiến trúc kỹ thuật',
+            'Lập kế hoạch triển khai thực tế',
           ],
         },
         {
-          title: 'Kỹ nghệ & Chuyển đổi AI',
+          title: '2) Triển khai & Tự động hóa AI',
           description:
-            'Ứng dụng AI vào quy trình làm việc, tạo kết nối nhịp nhàng giữa Marketing, Sales, CS để giảm thủ công và tăng độ chính xác.',
+            'Chúng tôi tích hợp AI vào quy trình hiện có của bạn. Dù là Marketing, Sales hay CS, chúng tôi giúp đồng bộ công cụ và tự động hóa các tác vụ thủ công.',
           details: [
-            'Thiết kế lại workflow theo mục tiêu vận hành',
-            'Kết nối dữ liệu và công cụ cho Marketing, Sales, CS',
-            'Governance nhẹ, dễ vận hành và nhân rộng',
+            'Thiết kế lại quy trình để tự động hóa',
+            'Đồng bộ hóa dữ liệu và công cụ',
+            'Thiết lập khung quản trị nhẹ nhàng',
           ],
         },
         {
-          title: 'Phát triển AI Agent (Nhân sự số chuyên biệt)',
+          title: '3) Phát triển AI Agent chuyên biệt',
           description:
-            'Xây dựng các đặc vụ AI hiểu rõ nghiệp vụ, hỗ trợ soạn thảo, phân tích dữ liệu và tương tác khách hàng.',
+            'Xây dựng các đặc vụ AI hiểu rõ quy tắc kinh doanh của bạn. Chúng có thể hỗ trợ soạn thảo, nghiên cứu dữ liệu và xử lý các yêu cầu khách hàng thường gặp.',
           details: [
-            'Thiết kế agent + guardrails theo nghiệp vụ',
-            'Knowledge / RAG (khi cần)',
-            'Monitoring + feedback loop',
+            'Thiết kế Agent kèm rào cản bảo mật',
+            'Tích hợp cơ sở tri thức nội bộ',
+            'Thiết lập vòng lặp phản hồi tin cậy',
           ],
         },
         {
-          title: 'Applied Intelligence Ops',
+          title: '4) Ứng dụng tích hợp AI',
           description:
-            'Xây dựng web/mobile tích hợp AI (RAG, On-device AI). Tối ưu hiệu suất và trải nghiệm.',
+            'Xây dựng các ứng dụng web và mobile có sẵn tính năng AI (RAG, localized AI) để đảm bảo tốc độ và tính hữu dụng.',
         },
         {
-          title: 'Chuyển giao Năng lực & Đào tạo',
-          description: 'Workshop thực chiến, Playbook vận hành và Handover để đội ngũ tự chủ.',
+          title: '5) Đào tạo & Chuyển giao',
+          description:
+            'Chúng tôi không chỉ xây dựng rồi rời đi. Chúng tôi tổ chức workshop và cung cấp playbook để đội ngũ của bạn có thể tự quản lý và phát triển hệ thống.',
         },
       ],
     },
     products: {
       title: 'Sản phẩm',
-      subtitle:
-        'Các công cụ và nền tảng nguồn mở được xây dựng bởi Elastic Labs để thúc đẩy ứng dụng AI.',
+      header: 'Dự án tiêu biểu.',
+      subtitle: 'Các dự án và nền tảng chúng tôi đã xây dựng để việc ứng dụng AI trở nên dễ dàng hơn.',
       items: [
         {
           slug: 'polkadot-agent-kit',
           title: 'Polkadot Agent Kit',
           description:
-            'Bộ công cụ mạnh mẽ để xây dựng các AI agent có thể tương tác mượt mà với hệ sinh thái Polkadot. Nó cho phép các nhà phát triển tạo ra các tác vụ thông minh có khả năng thực hiện các hoạt động on-chain, giám sát các sự kiện mạng và cung cấp các giao diện thân thiện với người dùng cho các tương tác blockchain phức tạp.',
+            'Bộ công cụ xây dựng các AI agent có thể tương tác với hệ sinh thái Polkadot, giúp việc vận hành on-chain và theo dõi dữ liệu trở nên đơn giản hơn.',
           link: 'https://github.com/elasticlabs-org/polkadot-agent-kit',
           banner: '/logo/products/polkadot-agent-kit-banner.png',
           howWeBuild: {
-            title: 'Cách chúng tôi xây dựng Polkadot Agent Kit',
+            title: 'Xây dựng Polkadot Agent Kit',
             description:
-              'Polkadot Agent Kit được thiết kế tập trung vào tính module, bảo mật và trải nghiệm nhà phát triển. Chúng tôi tận dụng những công nghệ AI và blockchain mới nhất để tạo ra cầu nối liền mạch giữa các agent thông minh và mạng lưới phi tập trung, đảm bảo độ tin cậy cao và dễ dàng tích hợp.',
+              'Chúng tôi tập trung vào tính module và bảo mật, giúp nhà phát triển kết nối LLM với các giao thức phi tập trung mà không gặp khó khăn.',
             points: [
               {
-                title: 'Kiến trúc Agentic',
-                description:
-                  'Sử dụng LangChain và các bộ công cụ tùy chỉnh để cho phép LLM tương tác trực tiếp với các chuỗi dựa trên Substrate, cho phép đưa ra quyết định và thực thi tự trị.',
+                title: 'Hạ tầng Agentic',
+                description: 'Sử dụng LangChain và các công cụ Substrate để ra quyết định.',
               },
               {
                 title: 'Bảo mật là trên hết',
-                description:
-                  'Triển khai các rào cản bảo vệ (guardrails) mạnh mẽ, quản lý khóa an toàn và các giao thức ký giao dịch để đảm bảo các hoạt động on-chain an toàn và đáng tin cậy.',
+                description: 'Quản lý khóa an toàn và rào cản cho các hành động on-chain.',
               },
               {
-                title: 'Hướng tới nhà phát triển',
-                description:
-                  'Cung cấp API TypeScript sạch sẽ, tài liệu hướng dẫn toàn diện và các mẫu khởi đầu để nhà phát triển bắt đầu chỉ trong vài phút.',
+                title: 'Thân thiện với nhà phát triển',
+                description: 'API TypeScript sạch sẽ và tài liệu rõ ràng.',
               },
               {
-                title: 'Giám sát thời gian thực',
-                description:
-                  'Tích hợp các bộ lắng nghe sự kiện và kết nối indexer để cung cấp cho các agent trạng thái và dữ liệu blockchain cập nhật từng giây.',
+                title: 'Dữ liệu thời gian thực',
+                description: 'Theo dõi nhanh các thay đổi trạng thái blockchain.',
               },
               {
                 title: 'Hỗ trợ đa chuỗi',
-                description:
-                  'Được thiết kế để hỗ trợ Polkadot, Kusama và nhiều parachain khác, tạo điều kiện thuận lợi cho các tương tác agent đa chuỗi liền mạch.',
+                description: 'Hoạt động với Polkadot, Kusama và các Parachain.',
               },
               {
-                title: 'Thiết kế có thể mở rộng',
-                description:
-                  'Kiến trúc dựa trên plugin cho phép các nhà phát triển dễ dàng thêm các công cụ và khả năng mới cho các AI agent của họ.',
+                title: 'Có thể mở rộng',
+                description: 'Thêm năng lực mới thông qua hệ thống plugin đơn giản.',
               },
             ],
           },
@@ -435,43 +430,37 @@ export const dictionaries = {
           slug: 'speedgrowth-ai',
           title: 'Speedgrowth.ai',
           description:
-            'Nền tảng tăng trưởng dựa trên AI được thiết kế để tự động hóa quy trình marketing và mở rộng quy mô startup hiệu quả. Bằng cách tập trung dữ liệu khách hàng và tận dụng các AI agent tiên tiến, Speedgrowth.ai chuyển đổi các nút thắt vận hành thành các động cơ tăng trưởng tự động.',
+            'Trung tâm điều hành AI giúp startup tự động hóa marketing và mở rộng vận hành bằng cách biến các điểm nghẽn thành động cơ tăng trưởng.',
           link: 'https://speedgrowth.ai',
           banner: '/logo/products/speedgrowth-banner.png',
           howWeBuild: {
-            title: 'Cách chúng tôi xây dựng Speedgrowth.ai',
+            title: 'Xây dựng Speedgrowth.ai',
             description:
-              'Speedgrowth.ai được xây dựng để mở rộng quy mô. Chúng tôi kết hợp các framework web hiệu suất cao với các LLM hàng đầu để tự động hóa các quy trình marketing và bán hàng phức tạp, tập trung vào tỷ lệ chuyển đổi cao và hiệu quả vận hành.',
+              'Chúng tôi kết hợp các web framework hiệu suất cao với việc điều phối LLM tối ưu để xử lý các tác vụ marketing và bán hàng phức tạp.',
             points: [
               {
-                title: 'Next.js & Edge Runtime',
-                description:
-                  'Xây dựng trên Next.js để đạt hiệu suất cực nhanh, tối ưu hóa SEO và khả năng mở rộng toàn cầu bằng edge computing.',
+                title: 'Kiến trúc Next.js Edge',
+                description: 'Hiệu suất nhanh và khả năng mở rộng toàn cầu.',
               },
               {
-                title: 'Tích hợp đa mô hình',
-                description:
-                  'Điều phối nhiều LLM (GPT-4, Claude 3, Gemini) để xử lý các nhiệm vụ chuyên biệt như tạo nội dung, chấm điểm lead và phân tích sắc thái.',
+                title: 'Điều phối đa mô hình',
+                description: 'Sử dụng LLM tốt nhất (GPT-4, Claude, Gemini) cho từng tác vụ.',
               },
               {
-                title: 'Tự động hóa quy trình',
-                description:
-                  'Logic backend tinh vi kết nối các công cụ marketing, CRM và các AI agent một cách liền mạch để tự động hóa toàn bộ hành trình khách hàng.',
+                title: 'Tự động hóa sâu',
+                description: 'Kết nối CRM và marketing stack của bạn với các AI agent.',
               },
               {
-                title: 'Thông tin chi tiết dựa trên dữ liệu',
-                description:
-                  'Bảng điều khiển phân tích nâng cao cung cấp phản hồi thời gian thực về hiệu suất chiến dịch và hiệu quả của agent.',
+                title: 'Phân tích thời gian thực',
+                description: 'Theo dõi hiệu quả của các agent và chiến dịch.',
               },
               {
-                title: 'Vai trò Agent có thể tùy chỉnh',
-                description:
-                  'Xác định các vai trò cụ thể cho AI agent, từ người quản lý mạng xã hội đến đại diện bán hàng, phù hợp với tiếng nói thương hiệu của bạn.',
+                title: 'Vai trò Agent tùy chỉnh',
+                description: 'Định nghĩa vai trò AI phù hợp với tiếng nói thương hiệu.',
               },
               {
-                title: 'Xử lý dữ liệu an toàn',
-                description:
-                  'Các biện pháp bảo mật cấp doanh nghiệp để đảm bảo rằng dữ liệu khách hàng được bảo vệ và sử dụng một cách đạo đức trong các quy trình AI.',
+                title: 'Bảo mật dữ liệu tin cậy',
+                description: 'Giữ dữ liệu khách hàng của bạn luôn an toàn.',
               },
             ],
           },
@@ -479,15 +468,16 @@ export const dictionaries = {
       ],
     },
     team: {
-      title: 'Đội ngũ nòng cốt',
-      subtitle: 'Những kiến trúc sư tự động hóa tại Elastic Labs.',
+      title: 'Đội ngũ',
+      header: 'Những người xây dựng.',
+      subtitle: 'Chúng tôi là những người xây dựng và kiến trúc sư hệ thống, yêu thích việc tự động hóa những thứ phức tạp.',
       readMore: 'Đọc thêm',
       readLess: 'Thu gọn',
       members: [
         {
           name: 'Cris Nguyen',
           role: 'CEO & Founder',
-          bio: 'Cris là một nhà lãnh đạo công nghệ tập trung vào việc nâng tầm trải nghiệm con người thông qua AI và blockchain. Hiện tại, ông là Nhà sáng lập của Elastic Labs, một đại lý tích hợp AI-native, và SpeedGrowth, một trung tâm điều khiển AI giúp tự động hóa quy trình hỗ trợ khách hàng thành kênh doanh thu cho các thương hiệu thương mại điện tử.\n\nNgoài việc xây dựng sản phẩm, Cris còn là một nhà đầu tư thiên thần tích cực tại Guidance Ventures, nơi ông hỗ trợ các dự án như RiseChain, Infinit, Xyber và GRVT.\n\nChuyên môn của ông nằm ở điểm giao thoa giữa vận hành quy mô lớn đa bộ phận và quan hệ đối tác công nghệ mới nổi. Trong ba năm qua, Cris đã dẫn dắt tăng trưởng full-stack cho Polkadot khu vực Đông Nam Á và đội ngũ APAC. Ông đóng vai trò là bộ lọc chính cho chương trình tài trợ của hệ sinh thái, cố vấn cho các đội ngũ phát triển và quản lý một nhóm gồm bảy thành viên để thu hẹp khoảng cách giữa quan hệ nhà phát triển kỹ thuật và mở rộng khu vực.',
+          bio: 'Cris tập trung vào việc sử dụng AI và blockchain để giúp công việc của con người trở nên hiệu quả hơn. Với tư cách là người sáng lập Elastic Labs và SpeedGrowth, ông xây dựng các hệ thống biến các tác vụ vận hành thành kênh tăng trưởng.\n\nÔng cũng là nhà đầu tư thiên thần tại Guidance Ventures, hỗ trợ các dự án như RiseChain và GRVT.\n\nVới kinh nghiệm tăng trưởng cho Polkadot SEA và APAC, ông thu hẹp khoảng cách giữa đổi mới kỹ thuật và mở rộng thị trường thực tế.',
           avatar: '/founders/cris-nguyen-avatar.png',
           linkedin: 'https://www.linkedin.com/in/truongnguyen99/',
           github: 'https://github.com/ngquangtruong',
@@ -495,7 +485,7 @@ export const dictionaries = {
         {
           name: 'Tin Chung',
           role: 'CTO & Co-Founder',
-          bio: 'Tin là một kiến trúc sư hệ thống chuyên về mạng lưới phân tán và hạ tầng dữ liệu hiệu suất cao. Ông có bề dày thành tích trong việc xây dựng các hệ thống lõi từ sơ khai, từ các khung nạp dữ liệu blockchain thời gian thực bằng Rust đến các trình biên dịch DSL tùy chỉnh cho các hoạt động OLAP phức tạp. Trước đây là kỹ sư sáng lập tại Rover và R0GUE, Tin đã tối ưu hóa các mô hình runtime Layer 1 và quản lý các cuộc di chuyển trạng thái quy mô lớn lên tới 60TB+, giúp giảm đáng kể chi phí vận hành hạ tầng. Là tốt nghiệp viên của Polkadot Blockchain Academy và nhà vô địch hackathon từ Safe và Chainlink, chuyên môn của ông trải dài trên Polkadot SDK, Solana và Ethereum. Ông là người đóng góp tích cực cho phần mềm nguồn mở và đóng vai trò là cố vấn kỹ thuật cho cộng đồng nhà phát triển toàn cầu.',
+          bio: 'Tin là kiến trúc sư hệ thống chuyên về hạ tầng dữ liệu hiệu suất cao. Ông đã xây dựng các hệ thống lõi như framework nạp dữ liệu blockchain và các trình biên dịch tùy chỉnh từ đầu.\n\nLà nhà vô địch hackathon và tốt nghiệp Polkadot Blockchain Academy, chuyên môn của ông bao gồm Polkadot SDK, Solana và Ethereum. Ông là người đóng góp tích cực cho phần mềm nguồn mở và là cố vấn kỹ thuật.',
           avatar: '/founders/tin-chung-avatar.png',
           linkedin: 'https://www.linkedin.com/in/chungquantin/',
           github: 'https://github.com/chungquantin',
@@ -503,39 +493,38 @@ export const dictionaries = {
       ],
     },
     whyUs: {
-      title: 'Tại sao nên đồng hành cùng Elastic Labs?',
+      title: 'Đồng hành cùng chúng tôi',
       description:
-        'Thay vì báo cáo lý thuyết, chúng tôi bàn giao giải pháp thực thi. Mục tiêu là giúp bạn thấy tác động trong vài tuần.',
+        'Chúng tôi bỏ qua các báo cáo lý thuyết dài dòng và tập trung vào việc bàn giao các hệ thống thực tế mà đội ngũ của bạn có thể sử dụng ngay.',
       points: [
         {
-          title: 'Thực thi nhanh chóng',
-          description:
-            'Chúng tôi tập trung vào việc triển khai nhanh, giúp doanh nghiệp thấy hiệu quả trong vài tuần thay vì vài tháng.',
+          title: 'Tác động nhanh chóng',
+          description: 'Chúng tôi tập trung vào việc triển khai nhanh các phiên bản thực thi để bạn thấy kết quả sau vài tuần.',
         },
         {
-          title: 'Giải pháp thực thi',
-          description:
-            'Không chỉ là những bản báo cáo, chúng tôi bàn giao hệ thống hoàn chỉnh tích hợp sâu vào quy trình sẵn có.',
+          title: 'Xây dựng để bền vững',
+          description: 'Chúng tôi bàn giao các hệ thống đầy đủ tài liệu, bảo mật và được tích hợp sâu vào hạ tầng sẵn có của bạn.',
         },
       ],
     },
     cases: {
-      title: 'Dự án tiêu biểu',
+      title: 'Dự án',
+      header: 'Đã được kiểm chứng.',
       items: [
         {
           category: 'Bảo hiểm',
-          title: 'Tự động hóa CRM + Customer Support đa kênh',
-          description: 'Tự động hóa tương tác và quản lý dữ liệu khách hàng trên mọi điểm chạm.',
+          title: 'Tự động hóa CRM & Hỗ trợ',
+          description: 'Giúp đồng bộ dữ liệu khách hàng và sử dụng AI để quản lý yêu cầu qua nhiều kênh.',
         },
         {
           category: 'B2B SaaS',
-          title: 'Agent cho Sales Ops',
-          description: 'Quy trình khép kín: lead → báo giá → follow-up.',
+          title: 'Agent vận hành bán hàng',
+          description: 'Tự động hóa lộ trình từ phân loại lead đến các bước follow-up.',
         },
         {
-          category: 'Marketing agency',
-          title: 'Tự động hóa content workflow + reporting',
-          description: 'Tự động hóa quy trình sản xuất nội dung và báo cáo cho đa khách hàng.',
+          category: 'Marketing Agency',
+          title: 'Quy trình nội dung & Báo cáo',
+          description: 'Sử dụng AI để tăng tốc việc tạo nội dung và báo cáo cho khách hàng.',
         },
       ],
     },
@@ -543,7 +532,8 @@ export const dictionaries = {
       title: 'Năng lực Kỹ thuật',
       categories: [
         {
-          title: 'GenAI / LLM',
+          title: 'Generative AI & LLM',
+          description: 'Chúng tôi không chỉ dừng lại ở các prompt cơ bản. Chúng tôi xây dựng hệ thống đa đặc vụ (multi-agent), triển khai RAG cho các tri thức chuyên biệt và tối ưu hiệu suất mô hình bằng các framework như vLLM và SGLang.',
           techs: [
             { name: 'Gemini', logo: '' },
             { name: 'Claude', logo: '' },
@@ -554,7 +544,8 @@ export const dictionaries = {
           ],
         },
         {
-          title: 'Blockchain',
+          title: 'Blockchain & Web3',
+          description: 'Kinh nghiệm xây dựng hạ tầng phi tập trung và các bộ công cụ agent cho các hệ sinh thái như Polkadot và Ethereum. Chúng tôi chuyên về phát triển runtime bằng Rust và tự động hóa on-chain an toàn.',
           techs: [
             { name: 'Polkadot Substrate', logo: '' },
             { name: 'Ethereum', logo: '' },
@@ -562,7 +553,8 @@ export const dictionaries = {
           ],
         },
         {
-          title: 'Software Development',
+          title: 'Kỹ nghệ Full-Stack',
+          description: 'Chúng tôi xây dựng các ứng dụng sẵn sàng cho vận hành thực tế. Từ backend Node.js hiệu suất cao đến frontend React tương tác tốt, chúng tôi đảm bảo giải pháp AI của bạn tin cậy và dễ dùng.',
           techs: [
             { name: 'TypeScript', logo: '/logo/technologies/typescript.png' },
             { name: 'Node.js', logo: '/logo/technologies/nodejs-logo.svg' },
@@ -576,38 +568,33 @@ export const dictionaries = {
       title: 'Năng lực Chuyên sâu',
       items: [
         {
-          title: 'Agentic Engineering',
-          description:
-            'Thiết kế hệ thống đa đặc vụ (Multi-agent) phối hợp nhịp nhàng để tự động hóa các logic kinh doanh phức tạp xuyên suốt các phòng ban.',
+          title: 'Kỹ nghệ Agentic',
+          description: 'Thiết kế các hệ thống AI có khả năng điều phối và thực hiện các tác vụ phức tạp qua nhiều bộ phận.',
         },
         {
           title: 'Hạ tầng Nội bộ',
-          description:
-            'Thiết lập cụm phần cứng tại chỗ (On-premise) and triển khai vận hành/đào tạo mô hình AI nội bộ để doanh nghiệp làm chủ hoàn toàn dữ liệu và bảo mật tuyệt đối.',
+          description: 'Thiết lập phần cứng chuyên dụng và các mô hình AI tại chỗ để bạn toàn quyền kiểm soát dữ liệu.',
         },
         {
           title: 'Tự động hóa Tùy chỉnh',
-          description:
-            'Phát triển các trợ lý điều hành ảo và nền tảng quản trị toàn diện, giúp loại bỏ các rào cản vận hành để đội ngũ của bạn tập trung vào mục tiêu chiến lược.',
+          description: 'Xây dựng các trợ lý ảo và công cụ quản trị giúp loại bỏ các thao tác thủ công trong vận hành hàng ngày.',
         },
       ],
     },
     process: {
-      title: 'Quy trình Hợp tác Tin cậy',
-      subtitle:
-        'Chúng tôi làm việc như một phần trong đội ngũ của bạn, đảm bảo sự thấu hiểu và hỗ trợ kịp thời nhất.',
+      title: 'Cách chúng tôi hợp tác',
+      subtitle: 'Chúng tôi làm việc như một phần trong đội ngũ của bạn, đảm bảo sự thấu hiểu trong từng bước đi.',
     },
     blog: {
-      title: 'Blog của chúng tôi',
-      description: 'Những chia sẻ và góc nhìn từ đội ngũ Elastic Labs.',
-      readMore: 'Đọc thêm',
+      title: 'Blog',
+      description: 'Những chia sẻ của chúng tôi về việc xây dựng với AI và tự động hóa.',
+      readMore: 'Đọc Blog',
     },
     cta: {
-      title: 'Thử thách tiếp theo là của bạn',
-      description:
-        'Hãy cho chúng tôi biết bạn muốn tự động hóa gì. Chúng tôi sẽ đề xuất lộ trình và bước triển khai nhanh nhất.',
+      title: 'Sẵn sàng xây dựng?',
+      description: 'Hãy cho chúng tôi biết bạn muốn tự động hóa hay xây dựng điều gì. Chúng tôi sẽ giúp bạn xác định lộ trình và các bước thực hiện tốt nhất.',
       primary: 'Đặt lịch trao đổi',
-      secondary: 'Gửi yêu cầu dự án',
+      secondary: 'Gửi lời nhắn',
     },
     footer: {
       copyright: '© 2026 Elastic Labs. All rights reserved.',

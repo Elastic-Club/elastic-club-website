@@ -16,9 +16,12 @@ export default function Team({ dict }: { dict: any }) {
       <div className="container mx-auto">
         <div className="mb-24 text-center">
           <div className="section-label mx-auto inline-flex">{dict.nav.team}</div>
-          <h2 className="mb-8 mt-8 text-4xl font-black uppercase leading-[0.9] sm:text-5xl md:text-7xl">
-            The Core <br />
-            <span className="text-gray-700">Team.</span>
+          <h2 className="mb-8 mt-8 font-akira text-4xl font-black uppercase leading-[1.1] sm:text-5xl md:text-6xl">
+            {(dict.team.header || '').split(' ').map((word: string, i: number) => (
+              <span key={i} className={i > 0 ? 'text-gray-500' : ''}>
+                {word}{' '}
+              </span>
+            ))}
           </h2>
           <p className="mx-auto max-w-2xl text-lg leading-relaxed text-gray-400 md:text-xl">
             {dict.team.subtitle}
@@ -29,15 +32,15 @@ export default function Team({ dict }: { dict: any }) {
           {dict.team.members.map((member: any, i: number) => (
             <div key={i} className="group relative">
               {/* Decorative Frame */}
-              <div className="pointer-events-none absolute -inset-2 border border-white/5 transition-colors group-hover:border-cyan-500/20 md:-inset-4" />
+              <div className="pointer-events-none absolute -inset-2 border border-white/5 transition-colors group-hover:border-primary-500/20 md:-inset-4" />
 
               <div className="relative flex flex-col items-center gap-6 overflow-hidden border border-white/10 bg-[#0A0A0A] p-6 sm:p-8 md:flex-row md:items-start md:gap-8">
                 {/* Background Shimmer */}
-                <div className="absolute inset-0 animate-[shimmer_20s_infinite_linear] bg-[linear-gradient(45deg,transparent_25%,rgba(68,68,68,.05)_50%,transparent_75%,transparent_100%)] bg-[length:250%_250%]" />
+                <div className="absolute inset-0 animate-[shimmer_20s_infinite_linear] bg-[linear-gradient(45deg,transparent_25%,rgba(220,31,255,.02)_50%,transparent_75%,transparent_100%)] bg-[length:250%_250%]" />
 
                 <div className="h-32 w-32 shrink-0 border border-white/10 bg-black p-1 md:h-40 md:w-40">
                   <div className="relative h-full w-full overflow-hidden bg-[#111] grayscale transition-all duration-700 hover:grayscale-0">
-                    <div className="absolute inset-0 flex items-center justify-center text-4xl font-black uppercase text-gray-800">
+                    <div className="absolute inset-0 flex items-center justify-center text-4xl font-black uppercase text-gray-700">
                       {member.name
                         .split(' ')
                         .map((n: string) => n[0])
@@ -53,23 +56,23 @@ export default function Team({ dict }: { dict: any }) {
                       }}
                     />
                   </div>
-                  <div className="absolute -left-1 -top-1 h-2 w-2 bg-cyan-500" />
-                  <div className="absolute -bottom-1 -right-1 h-2 w-2 bg-cyan-500" />
+                  <div className="absolute -left-1 -top-1 h-2 w-2 bg-primary-500" />
+                  <div className="absolute -bottom-1 -right-1 h-2 w-2 bg-primary-500" />
                 </div>
 
                 <div className="relative flex flex-col text-center md:text-left">
-                  <span className="mb-2 font-mono text-[10px] uppercase tracking-[0.3em] text-cyan-500">
+                  <span className="mb-2 font-mono text-[10px] uppercase tracking-[0.3em] text-primary-500">
                     {'// '}
                     {member.role}
                   </span>
-                  <h3 className="mb-4 text-3xl font-black uppercase tracking-tighter text-white transition-colors group-hover:text-cyan-400">
+                  <h3 className="mb-4 text-3xl font-black uppercase tracking-tighter text-white transition-colors group-hover:text-solana-gradient">
                     {member.name}
                   </h3>
 
                   <div className="relative mb-6">
                     <p
                       className={clsx(
-                        'text-sm leading-relaxed text-gray-500 transition-all duration-500',
+                        'text-sm leading-relaxed text-gray-400 transition-all duration-500',
                         !expanded[i] && 'line-clamp-3'
                       )}
                     >
@@ -78,7 +81,7 @@ export default function Team({ dict }: { dict: any }) {
                     {member.bio.length > 150 && (
                       <button
                         onClick={() => toggleExpand(i)}
-                        className="mt-2 font-mono text-[10px] uppercase tracking-widest text-cyan-500 transition-colors hover:text-white"
+                        className="mt-2 font-mono text-[10px] uppercase tracking-widest text-primary-500 transition-colors hover:text-white"
                       >
                         {expanded[i] ? `[ ${dict.team.readLess} ]` : `[ ${dict.team.readMore} ]`}
                       </button>
@@ -91,7 +94,7 @@ export default function Team({ dict }: { dict: any }) {
                         href={member.linkedin}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="border-b border-white/5 pb-1 font-mono text-[10px] uppercase tracking-widest text-gray-700 transition-colors hover:text-white"
+                        className="border-b border-white/5 pb-1 font-mono text-[10px] uppercase tracking-widest text-gray-600 transition-colors hover:text-white"
                       >
                         LinkedIn
                       </a>
@@ -101,7 +104,7 @@ export default function Team({ dict }: { dict: any }) {
                         href={member.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="border-b border-white/5 pb-1 font-mono text-[10px] uppercase tracking-widest text-gray-700 transition-colors hover:text-white"
+                        className="border-b border-white/5 pb-1 font-mono text-[10px] uppercase tracking-widest text-gray-600 transition-colors hover:text-white"
                       >
                         GitHub
                       </a>

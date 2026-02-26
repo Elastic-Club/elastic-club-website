@@ -9,9 +9,12 @@ export default function CaseStudies({ dict }: { dict: any }) {
       <div className="container mx-auto">
         <div className="mb-24 text-center">
           <div className="section-label mx-auto inline-flex">{dict.cases.title}</div>
-          <h2 className="mt-8 text-4xl font-black uppercase leading-[0.9] sm:text-5xl md:text-7xl">
-            Battle <br />
-            <span className="text-gray-700">Tested.</span>
+          <h2 className="mt-8 font-akira text-4xl font-black uppercase leading-[1.1] sm:text-5xl md:text-6xl">
+            {(dict.cases.header || '').split(' ').map((word: string, i: number) => (
+              <span key={i} className={i > 0 ? 'text-gray-500' : ''}>
+                {word}{' '}
+              </span>
+            ))}
           </h2>
         </div>
 
@@ -22,26 +25,26 @@ export default function CaseStudies({ dict }: { dict: any }) {
               className="card-base group flex cursor-default flex-col overflow-hidden !p-0"
             >
               <div className="border-b border-white/5 bg-white/[0.01] p-10">
-                <div className="mb-4 font-mono text-[10px] uppercase tracking-[0.3em] text-cyan-500">
+                <div className="mb-4 font-mono text-[10px] uppercase tracking-[0.3em] text-primary-500">
                   {'// '}
                   {item.category}
                 </div>
-                <h3 className="mb-6 text-2xl font-black uppercase tracking-tighter text-white transition-colors group-hover:text-cyan-400">
+                <h3 className="mb-6 text-2xl font-black uppercase tracking-tighter text-white transition-colors group-hover:text-solana-gradient">
                   {item.title}
                 </h3>
-                <p className="text-sm leading-relaxed text-gray-500">{item.description}</p>
+                <p className="text-sm leading-relaxed text-gray-400">{item.description}</p>
               </div>
 
               <div className="mt-auto flex items-center justify-between border-t border-white/5 bg-black p-8">
                 <div className="flex flex-col">
-                  <span className="font-mono text-[10px] uppercase tracking-widest text-gray-700">
+                  <span className="font-mono text-[10px] uppercase tracking-widest text-gray-500">
                     Status
                   </span>
                   <span className="text-xs font-bold uppercase tracking-[0.2em] text-white">
                     Deployed
                   </span>
                 </div>
-                <div className="flex h-8 w-8 items-center justify-center rounded-full border border-white/10 text-gray-600 transition-all group-hover:border-cyan-500/50 group-hover:text-cyan-500">
+                <div className="flex h-8 w-8 items-center justify-center rounded-full border border-white/10 text-gray-400 transition-all group-hover:border-primary-500/50 group-hover:text-primary-500">
                   →
                 </div>
               </div>

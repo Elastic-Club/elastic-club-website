@@ -48,21 +48,21 @@ export default function Hero({ dict, lang }: { dict: any; lang: string }) {
       <div className="container z-20 mx-auto grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
         <div className="order-2 pt-10 lg:order-1">
           <div className="section-label">
-            <span className="mr-2 inline-block animate-pulse">●</span>
+            <span className="mr-2 inline-block animate-pulse text-primary-500">●</span>
             {lang === 'en' ? 'Strategic AI Partner' : 'Đối tác AI Chiến lược'}
           </div>
 
-          <h1 className="mb-8 text-5xl font-black uppercase leading-[0.95] tracking-tighter text-white sm:text-7xl xl:text-8xl">
-            <span className="block bg-gradient-to-br from-white via-white to-gray-700 bg-clip-text text-transparent">
+          <h1 className="mb-8 font-akira text-4xl font-black uppercase leading-[1.1] tracking-tighter text-white sm:text-6xl xl:text-7xl">
+            <span className="block bg-gradient-to-br from-white via-white to-gray-500 bg-clip-text text-transparent">
               {lang === 'en' ? 'Unlocking' : 'Đối tác'}
             </span>
-            <span className="relative">
+            <span className="text-solana-gradient relative">
               {lang === 'en' ? 'New Limits' : 'AI Chiến lược'}
-              <span className="animate-blink absolute -right-4 top-0 h-full w-1 bg-cyan-500" />
+              <span className="animate-blink absolute -right-4 top-0 h-full w-1 bg-primary-500" />
             </span>
           </h1>
 
-          <p className="mb-10 max-w-xl border-l border-white/10 pl-8 text-base leading-relaxed text-gray-400 md:text-lg">
+          <p className="mb-10 max-w-xl border-l border-white/10 pl-8 text-base leading-relaxed text-gray-300 md:text-lg">
             {dict.hero.subtitle}
           </p>
 
@@ -85,9 +85,9 @@ export default function Hero({ dict, lang }: { dict: any; lang: string }) {
             {dict.hero.usps.map((usp: string, i: number) => (
               <div
                 key={i}
-                className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.2em] text-gray-500"
+                className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.2em] text-gray-400"
               >
-                <span className="h-px w-4 bg-cyan-500/50" />
+                <span className="h-px w-4 bg-primary-500/50" />
                 {usp}
               </div>
             ))}
@@ -95,7 +95,7 @@ export default function Hero({ dict, lang }: { dict: any; lang: string }) {
         </div>
 
         <div className="relative order-1 flex justify-center lg:order-2 lg:justify-between">
-          <div className="pointer-events-none absolute inset-0 rounded-full bg-cyan-500/10 blur-[120px]" />
+          <div className="pointer-events-none absolute inset-0 rounded-full bg-primary-500/10 blur-[120px]" />
           <div className="relative aspect-square w-full max-w-[550px]">
             <Image
               src="/images/3D_illustration5.webp"
@@ -109,12 +109,12 @@ export default function Hero({ dict, lang }: { dict: any; lang: string }) {
       </div>
 
       {/* Tech Marquee Strip */}
-      <div className="absolute bottom-0 left-0 right-0 z-20 overflow-hidden border-y border-white/5 bg-white/[0.02] py-6 backdrop-blur-sm">
+      <div className="absolute bottom-0 left-0 right-0 z-20 overflow-hidden border-y border-white/5 bg-white/[0.01] py-6 backdrop-blur-sm">
         <Marquee speed={40} gradient={false} pauseOnHover>
           <div className="flex gap-12 px-6">
             {techStack.map((tech) => (
               <div key={tech.name} className="flex items-center gap-4">
-                <div className="tech-logo-container">
+                <div className="tech-logo-container border border-white/10 bg-white/5">
                   <Image
                     src={tech.logo}
                     alt={tech.name}

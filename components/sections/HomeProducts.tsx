@@ -10,18 +10,21 @@ export default function HomeProducts({ dict, lang }: { dict: any; lang: string }
         <div className="mb-24 flex flex-col items-start justify-between gap-12 lg:flex-row lg:items-end">
           <div className="max-w-2xl">
             <div className="section-label">{dict.nav.products}</div>
-            <h2 className="text-4xl font-black uppercase leading-[0.9] sm:text-5xl md:text-7xl">
-              Advanced <br />
-              <span className="text-gray-700">Open Source.</span>
+            <h2 className="font-akira text-4xl font-black uppercase leading-[1.1] sm:text-5xl md:text-6xl">
+              {(dict.products.header || '').split(' ').map((word: string, i: number) => (
+                <span key={i} className={i > 0 ? 'text-gray-500' : ''}>
+                  {word}{' '}
+                </span>
+              ))}
             </h2>
           </div>
           <div className="flex flex-col items-start gap-6">
-            <p className="max-w-sm border-l border-white/10 pl-8 font-mono text-sm leading-relaxed text-gray-500">
+            <p className="max-w-sm border-l border-white/10 pl-8 font-mono text-sm leading-relaxed text-gray-400">
               {dict.products.subtitle}
             </p>
             <Link
               href={`/${lang}/products`}
-              className="ml-8 text-[10px] font-bold uppercase tracking-[0.3em] text-cyan-500 transition-colors hover:text-white"
+              className="ml-8 text-[10px] font-bold uppercase tracking-[0.3em] text-primary-500 transition-colors hover:text-white"
             >
               Explore All Products <span>→</span>
             </Link>
@@ -47,16 +50,16 @@ export default function HomeProducts({ dict, lang }: { dict: any; lang: string }
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
               </div>
               <div className="p-8 sm:p-10">
-                <div className="mb-4 font-mono text-[10px] uppercase tracking-[0.3em] text-cyan-500">
+                <div className="mb-4 font-mono text-[10px] uppercase tracking-[0.3em] text-primary-500">
                   {'// '}Product.Active
                 </div>
-                <h3 className="mb-6 text-2xl font-black uppercase text-white transition-colors group-hover:text-cyan-400 sm:text-3xl">
+                <h3 className="mb-6 text-2xl font-black uppercase text-white transition-colors group-hover:text-solana-gradient sm:text-3xl">
                   {item.title}
                 </h3>
-                <p className="mb-8 line-clamp-2 text-base leading-relaxed text-gray-500 transition-colors group-hover:text-gray-400 md:text-lg">
+                <p className="mb-8 line-clamp-2 text-base leading-relaxed text-gray-400 transition-colors group-hover:text-gray-200 md:text-lg">
                   {item.description}
                 </p>
-                <div className="flex items-center text-[10px] font-bold uppercase tracking-[0.3em] text-gray-600 transition-colors group-hover:text-white">
+                <div className="flex items-center text-[10px] font-bold uppercase tracking-[0.3em] text-gray-500 transition-colors group-hover:text-white">
                   Launch Project{' '}
                   <span className="ml-4 transition-transform group-hover:translate-x-2">→</span>
                 </div>

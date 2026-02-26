@@ -36,15 +36,15 @@ export default function Layout({
 
       <footer className="relative z-10 border-t border-white/5 bg-black/50 py-12 text-center text-sm text-gray-500 backdrop-blur-md">
         <div className="container mx-auto px-6">
-          <div className="mb-8 flex justify-center gap-8 font-mono text-[10px] uppercase tracking-widest">
-            <a href="#vision" className="transition-colors hover:text-cyan-500">
-              Vision
+          <div className="mb-8 flex justify-center gap-8 font-mono text-[10px] uppercase tracking-widest text-gray-400">
+            <a href="#vision" className="transition-colors hover:text-primary-500">
+              {dict.nav.home}
             </a>
-            <a href="#services" className="transition-colors hover:text-cyan-500">
-              Services
+            <a href="#services" className="transition-colors hover:text-primary-500">
+              {dict.nav.services}
             </a>
-            <a href="#contact" className="transition-colors hover:text-cyan-500">
-              Contact
+            <a href="#contact" className="transition-colors hover:text-primary-500">
+              {dict.nav.contact}
             </a>
           </div>
           <div className="text-gray-600">{dict.footer.copyright}</div>

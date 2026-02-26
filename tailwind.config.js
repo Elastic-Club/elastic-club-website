@@ -29,8 +29,37 @@ module.exports = {
         utm: ['UTM-Avo', 'sans-serif'],
       },
       colors: {
-        primary: colors.pink,
-        gray: colors.gray,
+        primary: {
+          50: '#fef2ff',
+          100: '#fde6ff',
+          200: '#fbc9ff',
+          300: '#f89cff',
+          400: '#f460ff',
+          50: '#fef2ff',
+          500: '#dc1fff', // Solana Purple
+          600: '#c016e6',
+          700: '#a111bf',
+          800: '#85109b',
+          900: '#6f117f',
+          950: '#4a0058',
+        },
+        secondary: {
+          50: '#f0fff9',
+          100: '#dafff0',
+          200: '#b8ffdf',
+          300: '#7effc6',
+          400: '#3cffa2',
+          500: '#14f195', // Solana Green
+          600: '#0bc779',
+          700: '#099d62',
+          800: '#0d7c50',
+          900: '#0c6543',
+          950: '#003924',
+        },
+        accent: {
+          500: '#00FFA3', // Solana Blue/Cyan
+        },
+        gray: colors.zinc,
       },
       typography: ({ theme }) => ({
         DEFAULT: {
