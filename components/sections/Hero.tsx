@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import Marquee from 'react-fast-marquee'
+import siteMetadata from '@/data/siteMetadata'
 
 const techStack = [
   { name: 'Rust', logo: '/logo/technologies/rust-logo.png' },
@@ -66,7 +67,12 @@ export default function Hero({ dict, lang }: { dict: any; lang: string }) {
           </p>
 
           <div className="mb-12 flex flex-col gap-4 sm:flex-row sm:gap-6">
-            <a href="#contact" className="btn-primary group w-full justify-center sm:w-auto">
+            <a
+              href={siteMetadata.consultingUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary group w-full justify-center sm:w-auto"
+            >
               {dict.hero.cta}
               <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
             </a>

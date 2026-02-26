@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import siteMetadata from '@/data/siteMetadata'
 
 export default function Contact({ dict }: { dict: any }) {
   const [formData, setFormData] = useState({
@@ -61,7 +62,12 @@ export default function Contact({ dict }: { dict: any }) {
 
             <div className="space-y-10">
               <div className="group flex flex-col gap-2 text-center sm:text-left">
-                <a href="#contact" className="btn-primary justify-center sm:justify-start">
+                <a
+                  href={siteMetadata.consultingUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary justify-center sm:justify-start"
+                >
                   {dict.cta.primary} <span className="ml-4">→</span>
                 </a>
               </div>
