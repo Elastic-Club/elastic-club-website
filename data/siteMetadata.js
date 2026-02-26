@@ -1,6 +1,7 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'Elastic Labs | AI-native Integration Agency for Marketing, Developer Activation, & Venture Building',
+  title:
+    'Elastic Labs | AI-native Integration Agency for Marketing, Developer Activation, & Venture Building',
   author: 'Elastic Labs',
   headerTitle: 'Elastic Labs',
   description:

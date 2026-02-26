@@ -14,9 +14,13 @@ export async function generateStaticParams() {
   return [{ lang: 'en' }, { lang: 'vn' }]
 }
 
-export async function generateMetadata({ params }: { params: { lang: 'en' | 'vn' } }): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: { lang: 'en' | 'vn' }
+}): Promise<Metadata> {
   const dict = dictionaries[params.lang]
-  
+
   return {
     title: dict.hero.title,
     description: dict.vision.description,
