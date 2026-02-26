@@ -24,7 +24,7 @@ export default function TechStack({ dict }: { dict: any }) {
                   </h3>
                   <span className="font-mono text-xs font-bold text-gray-500">0{idx + 1}</span>
                 </div>
-                
+
                 <p className="mb-10 text-sm leading-relaxed text-gray-400">
                   {category.description}
                 </p>
@@ -61,7 +61,7 @@ export default function TechStack({ dict }: { dict: any }) {
                   ))}
                 </div>
               </div>
-              
+
               <div className="border-t border-white/5 bg-white/[0.01] px-8 py-4">
                 <div className="flex items-center text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500 transition-colors group-hover:text-white">
                   Technical Proficiency <span className="ml-2 text-primary-500">95%</span>

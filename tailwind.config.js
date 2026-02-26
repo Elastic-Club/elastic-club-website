@@ -35,7 +35,6 @@ module.exports = {
           200: '#fbc9ff',
           300: '#f89cff',
           400: '#f460ff',
-          50: '#fef2ff',
           500: '#dc1fff', // Solana Purple
           600: '#c016e6',
           700: '#a111bf',

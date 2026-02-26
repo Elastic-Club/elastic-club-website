@@ -65,7 +65,7 @@ export default function Team({ dict }: { dict: any }) {
                     {'// '}
                     {member.role}
                   </span>
-                  <h3 className="mb-4 text-3xl font-black uppercase tracking-tighter text-white transition-colors group-hover:text-solana-gradient">
+                  <h3 className="group-hover:text-solana-gradient mb-4 text-3xl font-black uppercase tracking-tighter text-white transition-colors">
                     {member.name}
                   </h3>
 

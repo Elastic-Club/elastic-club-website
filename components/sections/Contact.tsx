@@ -103,7 +103,7 @@ export default function Contact({ dict }: { dict: any }) {
 
               {status === 'success' ? (
                 <div className="py-20 text-center">
-                  <div className="text-secondary-500 mb-6 text-5xl">✓</div>
+                  <div className="mb-6 text-5xl text-secondary-500">✓</div>
                   <h3 className="mb-4 text-2xl font-black uppercase text-white">
                     Transmission Successful
                   </h3>

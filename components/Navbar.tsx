@@ -89,7 +89,7 @@ export default function Navbar({ dict, lang }: { dict: any; lang: string }) {
             </Link>
             <Link
               href={`/${lang}#contact`}
-              className="bg-white px-5 py-2 text-sm font-bold uppercase tracking-wide text-black transition-all hover:bg-solana-gradient hover:text-white"
+              className="hover:bg-solana-gradient bg-white px-5 py-2 text-sm font-bold uppercase tracking-wide text-black transition-all hover:text-white"
             >
               {dict.nav.contact}
             </Link>
@@ -129,7 +129,7 @@ export default function Navbar({ dict, lang }: { dict: any; lang: string }) {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-3xl font-akira uppercase tracking-tighter text-white hover:text-primary-400"
+                className="font-akira text-3xl uppercase tracking-tighter text-white hover:text-primary-400"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {link.name}

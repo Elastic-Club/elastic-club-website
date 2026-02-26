@@ -77,7 +77,7 @@ input:-webkit-autofill:focus {
   }
 
   .btn-primary:hover {
-    background: linear-gradient(225deg, #00FFA3 0%, #DC1FFF 48%, #14F195 100%);
+    background: linear-gradient(225deg, #00ffa3 0%, #dc1fff 48%, #14f195 100%);
   }
 
   .btn-secondary {
@@ -87,17 +87,17 @@ input:-webkit-autofill:focus {
 
 /* Solana Gradients */
 .text-solana-gradient {
-  background: linear-gradient(225deg, #00FFA3 0%, #DC1FFF 48%, #14F195 100%);
+  background: linear-gradient(225deg, #00ffa3 0%, #dc1fff 48%, #14f195 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .bg-solana-gradient {
-  background: linear-gradient(225deg, #00FFA3 0%, #DC1FFF 48%, #14F195 100%);
+  background: linear-gradient(225deg, #00ffa3 0%, #dc1fff 48%, #14f195 100%);
 }
 
 .border-solana-gradient {
-  border-image: linear-gradient(225deg, #00FFA3 0%, #DC1FFF 48%, #14F195 100%) 1;
+  border-image: linear-gradient(225deg, #00ffa3 0%, #dc1fff 48%, #14f195 100%) 1;
 }
 
 /* Beam Animation */

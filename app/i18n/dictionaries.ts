@@ -31,8 +31,7 @@ export const dictionaries = {
     services: {
       title: 'Services',
       header: 'Executable Intelligence.',
-      description:
-        'Flexible solutions designed to fit your current stage and grow with you.',
+      description: 'Flexible solutions designed to fit your current stage and grow with you.',
       items: [
         {
           title: '1) AI Strategy & Assessment',
@@ -95,23 +94,19 @@ export const dictionaries = {
             points: [
               {
                 title: 'Agentic Infrastructure',
-                description:
-                  'Uses LangChain and custom Substrate tools for decision-making.',
+                description: 'Uses LangChain and custom Substrate tools for decision-making.',
               },
               {
                 title: 'Security-First',
-                description:
-                  'Safe key management and guardrails for on-chain actions.',
+                description: 'Safe key management and guardrails for on-chain actions.',
               },
               {
                 title: 'Developer Friendly',
-                description:
-                  'Clean TypeScript APIs and clear documentation.',
+                description: 'Clean TypeScript APIs and clear documentation.',
               },
               {
                 title: 'Real-time Data',
-                description:
-                  'Fast monitoring of blockchain state changes.',
+                description: 'Fast monitoring of blockchain state changes.',
               },
               {
                 title: 'Multi-Chain Support',
@@ -175,7 +170,7 @@ export const dictionaries = {
         {
           name: 'Cris Nguyen',
           role: 'CEO & Founder',
-          bio: "Cris focuses on using AI and blockchain to make human work more efficient. As the founder of Elastic Labs and SpeedGrowth, he builds systems that turn operational tasks into growth channels.\n\nHe is also an angel investor with Guidance Ventures, supporting projects like RiseChain and GRVT.\n\nWith a background in growth for Polkadot SEA and APAC, he bridges the gap between technical innovation and practical market expansion.",
+          bio: 'Cris focuses on using AI and blockchain to make human work more efficient. As the founder of Elastic Labs and SpeedGrowth, he builds systems that turn operational tasks into growth channels.\n\nHe is also an angel investor with Guidance Ventures, supporting projects like RiseChain and GRVT.\n\nWith a background in growth for Polkadot SEA and APAC, he bridges the gap between technical innovation and practical market expansion.',
           avatar: '/founders/cris-nguyen-avatar.png',
           linkedin: 'https://www.linkedin.com/in/truongnguyen99/',
           github: 'https://github.com/ngquangtruong',
@@ -234,7 +229,8 @@ export const dictionaries = {
       categories: [
         {
           title: 'Generative AI & LLM',
-          description: 'We go beyond basic prompts. We build custom multi-agent systems, implement RAG (Retrieval-Augmented Generation) for specialized knowledge, and optimize model performance using frameworks like vLLM and SGLang.',
+          description:
+            'We go beyond basic prompts. We build custom multi-agent systems, implement RAG (Retrieval-Augmented Generation) for specialized knowledge, and optimize model performance using frameworks like vLLM and SGLang.',
           techs: [
             { name: 'Gemini', logo: '' },
             { name: 'Claude', logo: '' },
@@ -246,7 +242,8 @@ export const dictionaries = {
         },
         {
           title: 'Blockchain & Web3',
-          description: 'Expertise in building decentralized infrastructure and agentic kit for ecosystems like Polkadot and Ethereum. We specialize in Rust-based runtime development and secure on-chain automation.',
+          description:
+            'Expertise in building decentralized infrastructure and agentic kit for ecosystems like Polkadot and Ethereum. We specialize in Rust-based runtime development and secure on-chain automation.',
           techs: [
             { name: 'Polkadot Substrate', logo: '' },
             { name: 'Ethereum', logo: '' },
@@ -255,7 +252,8 @@ export const dictionaries = {
         },
         {
           title: 'Full-Stack Engineering',
-          description: 'We build production-ready applications that scale. From high-performance Node.js backends to interactive React frontends, we ensure your AI solutions are reliable and user-friendly.',
+          description:
+            'We build production-ready applications that scale. From high-performance Node.js backends to interactive React frontends, we ensure your AI solutions are reliable and user-friendly.',
           techs: [
             { name: 'TypeScript', logo: '/logo/technologies/typescript.png' },
             { name: 'Node.js', logo: '/logo/technologies/nodejs-logo.svg' },
@@ -385,7 +383,8 @@ export const dictionaries = {
     products: {
       title: 'Sản phẩm',
       header: 'Dự án tiêu biểu.',
-      subtitle: 'Các dự án và nền tảng chúng tôi đã xây dựng để việc ứng dụng AI trở nên dễ dàng hơn.',
+      subtitle:
+        'Các dự án và nền tảng chúng tôi đã xây dựng để việc ứng dụng AI trở nên dễ dàng hơn.',
       items: [
         {
           slug: 'polkadot-agent-kit',
@@ -470,7 +469,8 @@ export const dictionaries = {
     team: {
       title: 'Đội ngũ',
       header: 'Những người xây dựng.',
-      subtitle: 'Chúng tôi là những người xây dựng và kiến trúc sư hệ thống, yêu thích việc tự động hóa những thứ phức tạp.',
+      subtitle:
+        'Chúng tôi là những người xây dựng và kiến trúc sư hệ thống, yêu thích việc tự động hóa những thứ phức tạp.',
       readMore: 'Đọc thêm',
       readLess: 'Thu gọn',
       members: [
@@ -499,11 +499,13 @@ export const dictionaries = {
       points: [
         {
           title: 'Tác động nhanh chóng',
-          description: 'Chúng tôi tập trung vào việc triển khai nhanh các phiên bản thực thi để bạn thấy kết quả sau vài tuần.',
+          description:
+            'Chúng tôi tập trung vào việc triển khai nhanh các phiên bản thực thi để bạn thấy kết quả sau vài tuần.',
         },
         {
           title: 'Xây dựng để bền vững',
-          description: 'Chúng tôi bàn giao các hệ thống đầy đủ tài liệu, bảo mật và được tích hợp sâu vào hạ tầng sẵn có của bạn.',
+          description:
+            'Chúng tôi bàn giao các hệ thống đầy đủ tài liệu, bảo mật và được tích hợp sâu vào hạ tầng sẵn có của bạn.',
         },
       ],
     },
@@ -514,7 +516,8 @@ export const dictionaries = {
         {
           category: 'Bảo hiểm',
           title: 'Tự động hóa CRM & Hỗ trợ',
-          description: 'Giúp đồng bộ dữ liệu khách hàng và sử dụng AI để quản lý yêu cầu qua nhiều kênh.',
+          description:
+            'Giúp đồng bộ dữ liệu khách hàng và sử dụng AI để quản lý yêu cầu qua nhiều kênh.',
         },
         {
           category: 'B2B SaaS',
@@ -533,7 +536,8 @@ export const dictionaries = {
       categories: [
         {
           title: 'Generative AI & LLM',
-          description: 'Chúng tôi không chỉ dừng lại ở các prompt cơ bản. Chúng tôi xây dựng hệ thống đa đặc vụ (multi-agent), triển khai RAG cho các tri thức chuyên biệt và tối ưu hiệu suất mô hình bằng các framework như vLLM và SGLang.',
+          description:
+            'Chúng tôi không chỉ dừng lại ở các prompt cơ bản. Chúng tôi xây dựng hệ thống đa đặc vụ (multi-agent), triển khai RAG cho các tri thức chuyên biệt và tối ưu hiệu suất mô hình bằng các framework như vLLM và SGLang.',
           techs: [
             { name: 'Gemini', logo: '' },
             { name: 'Claude', logo: '' },
@@ -545,7 +549,8 @@ export const dictionaries = {
         },
         {
           title: 'Blockchain & Web3',
-          description: 'Kinh nghiệm xây dựng hạ tầng phi tập trung và các bộ công cụ agent cho các hệ sinh thái như Polkadot và Ethereum. Chúng tôi chuyên về phát triển runtime bằng Rust và tự động hóa on-chain an toàn.',
+          description:
+            'Kinh nghiệm xây dựng hạ tầng phi tập trung và các bộ công cụ agent cho các hệ sinh thái như Polkadot và Ethereum. Chúng tôi chuyên về phát triển runtime bằng Rust và tự động hóa on-chain an toàn.',
           techs: [
             { name: 'Polkadot Substrate', logo: '' },
             { name: 'Ethereum', logo: '' },
@@ -554,7 +559,8 @@ export const dictionaries = {
         },
         {
           title: 'Kỹ nghệ Full-Stack',
-          description: 'Chúng tôi xây dựng các ứng dụng sẵn sàng cho vận hành thực tế. Từ backend Node.js hiệu suất cao đến frontend React tương tác tốt, chúng tôi đảm bảo giải pháp AI của bạn tin cậy và dễ dùng.',
+          description:
+            'Chúng tôi xây dựng các ứng dụng sẵn sàng cho vận hành thực tế. Từ backend Node.js hiệu suất cao đến frontend React tương tác tốt, chúng tôi đảm bảo giải pháp AI của bạn tin cậy và dễ dùng.',
           techs: [
             { name: 'TypeScript', logo: '/logo/technologies/typescript.png' },
             { name: 'Node.js', logo: '/logo/technologies/nodejs-logo.svg' },
@@ -569,21 +575,25 @@ export const dictionaries = {
       items: [
         {
           title: 'Kỹ nghệ Agentic',
-          description: 'Thiết kế các hệ thống AI có khả năng điều phối và thực hiện các tác vụ phức tạp qua nhiều bộ phận.',
+          description:
+            'Thiết kế các hệ thống AI có khả năng điều phối và thực hiện các tác vụ phức tạp qua nhiều bộ phận.',
         },
         {
           title: 'Hạ tầng Nội bộ',
-          description: 'Thiết lập phần cứng chuyên dụng và các mô hình AI tại chỗ để bạn toàn quyền kiểm soát dữ liệu.',
+          description:
+            'Thiết lập phần cứng chuyên dụng và các mô hình AI tại chỗ để bạn toàn quyền kiểm soát dữ liệu.',
         },
         {
           title: 'Tự động hóa Tùy chỉnh',
-          description: 'Xây dựng các trợ lý ảo và công cụ quản trị giúp loại bỏ các thao tác thủ công trong vận hành hàng ngày.',
+          description:
+            'Xây dựng các trợ lý ảo và công cụ quản trị giúp loại bỏ các thao tác thủ công trong vận hành hàng ngày.',
         },
       ],
     },
     process: {
       title: 'Cách chúng tôi hợp tác',
-      subtitle: 'Chúng tôi làm việc như một phần trong đội ngũ của bạn, đảm bảo sự thấu hiểu trong từng bước đi.',
+      subtitle:
+        'Chúng tôi làm việc như một phần trong đội ngũ của bạn, đảm bảo sự thấu hiểu trong từng bước đi.',
     },
     blog: {
       title: 'Blog',
@@ -592,7 +602,8 @@ export const dictionaries = {
     },
     cta: {
       title: 'Sẵn sàng xây dựng?',
-      description: 'Hãy cho chúng tôi biết bạn muốn tự động hóa hay xây dựng điều gì. Chúng tôi sẽ giúp bạn xác định lộ trình và các bước thực hiện tốt nhất.',
+      description:
+        'Hãy cho chúng tôi biết bạn muốn tự động hóa hay xây dựng điều gì. Chúng tôi sẽ giúp bạn xác định lộ trình và các bước thực hiện tốt nhất.',
       primary: 'Đặt lịch trao đổi',
       secondary: 'Gửi lời nhắn',
     },

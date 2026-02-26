@@ -29,7 +29,7 @@ export default function CaseStudies({ dict }: { dict: any }) {
                   {'// '}
                   {item.category}
                 </div>
-                <h3 className="mb-6 text-2xl font-black uppercase tracking-tighter text-white transition-colors group-hover:text-solana-gradient">
+                <h3 className="group-hover:text-solana-gradient mb-6 text-2xl font-black uppercase tracking-tighter text-white transition-colors">
                   {item.title}
                 </h3>
                 <p className="text-sm leading-relaxed text-gray-400">{item.description}</p>

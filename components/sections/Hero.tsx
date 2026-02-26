@@ -49,15 +49,15 @@ export default function Hero({ dict, lang }: { dict: any; lang: string }) {
         <div className="order-2 pt-10 lg:order-1">
           <div className="section-label">
             <span className="mr-2 inline-block animate-pulse text-primary-500">●</span>
-            {lang === 'en' ? 'Strategic AI Partner' : 'Đối tác AI Chiến lược'}
+            {lang === 'en' ? 'Unlocking New Limits' : 'Khai phá giới hạn mới'}
           </div>
 
           <h1 className="mb-8 font-akira text-4xl font-black uppercase leading-[1.1] tracking-tighter text-white sm:text-6xl xl:text-7xl">
             <span className="block bg-gradient-to-br from-white via-white to-gray-500 bg-clip-text text-transparent">
-              {lang === 'en' ? 'Unlocking' : 'Đối tác'}
+              {lang === 'en' ? 'Your AI' : 'Đối tác'}
             </span>
             <span className="text-solana-gradient relative">
-              {lang === 'en' ? 'New Limits' : 'AI Chiến lược'}
+              {lang === 'en' ? 'Integration Partner' : 'Tích hợp AI'}
               <span className="animate-blink absolute -right-4 top-0 h-full w-1 bg-primary-500" />
             </span>
           </h1>

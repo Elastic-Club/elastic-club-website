@@ -53,7 +53,7 @@ export default function HomeProducts({ dict, lang }: { dict: any; lang: string }
                 <div className="mb-4 font-mono text-[10px] uppercase tracking-[0.3em] text-primary-500">
                   {'// '}Product.Active
                 </div>
-                <h3 className="mb-6 text-2xl font-black uppercase text-white transition-colors group-hover:text-solana-gradient sm:text-3xl">
+                <h3 className="group-hover:text-solana-gradient mb-6 text-2xl font-black uppercase text-white transition-colors sm:text-3xl">
                   {item.title}
                 </h3>
                 <p className="mb-8 line-clamp-2 text-base leading-relaxed text-gray-400 transition-colors group-hover:text-gray-200 md:text-lg">
