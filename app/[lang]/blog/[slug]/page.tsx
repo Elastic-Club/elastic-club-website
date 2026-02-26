@@ -3,6 +3,14 @@ import { getFileBySlug, getAllFilesFrontMatter } from '@/utils/mdx'
 import { genPageMetadata } from 'app/seo'
 import Image from 'next/image'
 import Link from 'next/link'
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
+import remarkMath from 'remark-math'
+import rehypePrism from 'rehype-prism-plus'
+import rehypeKatex from 'rehype-katex'
+
+import 'katex/dist/katex.min.css'
+import '@/css/prism.css'
 
 export async function generateMetadata({
   params,
@@ -68,7 +76,7 @@ export default async function BlogPostPage({
           </div>
 
           {post.frontmatter.images?.[0] && (
-            <div className="mb-16 aspect-video w-full overflow-hidden border border-white/10 bg-gray-900">
+            <div className="relative mb-16 aspect-video w-full overflow-hidden border border-white/10 bg-gray-900">
               <Image
                 src={post.frontmatter.images[0]}
                 alt={post.frontmatter.title}
@@ -81,10 +89,12 @@ export default async function BlogPostPage({
         </header>
 
         <div className="prose prose-cyan prose-invert max-w-none">
-          {/* Simple rendering for now, in a real scenario we'd use an MDX bundler */}
-          <div className="whitespace-pre-wrap text-lg leading-relaxed text-gray-400">
+          <ReactMarkdown
+            remarkPlugins={[remarkGfm, remarkMath]}
+            rehypePlugins={[rehypePrism, rehypeKatex]}
+          >
             {post.content}
-          </div>
+          </ReactMarkdown>
         </div>
 
         <footer className="mt-20 border-t border-white/5 pt-12">

@@ -51,7 +51,7 @@ export default function Hero({ dict, lang }: { dict: any; lang: string }) {
             {lang === 'en' ? 'Strategic AI Partner' : 'Đối tác AI Chiến lược'}
           </div>
 
-          <h1 className="mb-8 text-5xl font-black uppercase leading-[0.95] tracking-tighter text-white md:text-7xl xl:text-8xl">
+          <h1 className="mb-8 text-5xl font-black uppercase leading-[0.95] tracking-tighter text-white sm:text-7xl xl:text-8xl">
             <span className="block bg-gradient-to-br from-white via-white to-gray-700 bg-clip-text text-transparent">
               {lang === 'en' ? 'Unlocking' : 'Đối tác'}
             </span>
@@ -61,16 +61,16 @@ export default function Hero({ dict, lang }: { dict: any; lang: string }) {
             </span>
           </h1>
 
-          <p className="mb-10 max-w-xl border-l border-white/10 pl-8 text-lg leading-relaxed text-gray-400">
+          <p className="mb-10 max-w-xl border-l border-white/10 pl-8 text-base leading-relaxed text-gray-400 md:text-lg">
             {dict.hero.subtitle}
           </p>
 
-          <div className="mb-12 flex flex-col gap-6 sm:flex-row">
-            <a href="#contact" className="btn-primary group">
+          <div className="mb-12 flex flex-col gap-4 sm:flex-row sm:gap-6">
+            <a href="#contact" className="btn-primary group w-full justify-center sm:w-auto">
               {dict.hero.cta}
               <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
             </a>
-            <a href="#services" className="btn-secondary">
+            <a href="#services" className="btn-secondary w-full justify-center sm:w-auto">
               {dict.hero.secondaryCta}
             </a>
           </div>
@@ -92,7 +92,7 @@ export default function Hero({ dict, lang }: { dict: any; lang: string }) {
           <div className="pointer-events-none absolute inset-0 rounded-full bg-cyan-500/10 blur-[120px]" />
           <div className="relative aspect-square w-full max-w-[550px]">
             <Image
-              src="/images/3D_Illustration5.webp"
+              src="/images/3D_illustration5.webp"
               alt="AI Core"
               fill
               className="animate-float rotate-12 object-contain opacity-90"

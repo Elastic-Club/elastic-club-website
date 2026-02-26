@@ -17,6 +17,14 @@ export default function Navbar({ dict, lang }: { dict: any; lang: string }) {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'unset'
+    }
+  }, [mobileMenuOpen])
+
   const toggleLang = () => {
     const newLang = lang === 'en' ? 'vn' : 'en'
     const segments = pathname?.split('/') || []
@@ -112,29 +120,30 @@ export default function Navbar({ dict, lang }: { dict: any; lang: string }) {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="absolute left-0 right-0 top-full flex h-[calc(100vh-80px)] flex-col border-t border-white/10 bg-[#050505] p-8 md:hidden">
-          <div className="mb-auto flex flex-col gap-6">
+        <div className="fixed inset-0 top-[80px] z-50 flex flex-col bg-[#050505]/95 p-8 backdrop-blur-xl md:hidden">
+          <div className="mb-auto flex flex-col gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-2xl font-bold text-white hover:text-cyan-400"
+                className="text-3xl font-black uppercase tracking-tighter text-white hover:text-cyan-400"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {link.name}
               </Link>
             ))}
           </div>
-          <div className="flex flex-col gap-6 text-center">
+          <div className="flex flex-col gap-8 border-t border-white/10 pt-8 text-center">
             <Link
               href={toggleLang()}
-              className="font-mono text-sm text-gray-500 hover:text-cyan-400"
+              className="font-mono text-xs uppercase tracking-widest text-gray-500 hover:text-cyan-400"
+              onClick={() => setMobileMenuOpen(false)}
             >
               {lang === 'en' ? 'SWITCH TO VIETNAMESE' : 'CHUYỂN SANG TIẾNG ANH'}
             </Link>
             <Link
               href={`/${lang}#contact`}
-              className="bg-white py-4 font-bold uppercase text-black"
+              className="btn-primary justify-center py-4"
               onClick={() => setMobileMenuOpen(false)}
             >
               {dict.nav.contact}

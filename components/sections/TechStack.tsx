@@ -6,29 +6,29 @@ export default function TechStack({ dict }: { dict: any }) {
   return (
     <section id="expertise" className="border-b border-white/5 py-32">
       <div className="container mx-auto px-6">
-        <div className="mb-24 flex flex-col items-center justify-between md:flex-row">
+        <div className="mb-24 flex flex-col items-center justify-between gap-6 md:flex-row">
           <div className="section-label mb-0">{dict.techStack.title}</div>
           <div className="mx-8 hidden h-px flex-1 bg-white/10 md:block" />
-          <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-gray-600">
+          <div className="font-mono text-[8px] uppercase tracking-[0.3em] text-gray-600 md:text-[10px]">
             {'// CONSULTING & INTEGRATION'}
           </div>
         </div>
 
-        <div className="space-y-20">
+        <div className="space-y-16 md:space-y-20">
           {dict.techStack.categories.map((category: any, idx: number) => (
             <div key={idx}>
               <div className="mb-10 flex items-center gap-6">
-                <h3 className="text-xl font-black uppercase tracking-widest text-white">
+                <h3 className="text-lg font-black uppercase tracking-widest text-white md:text-xl">
                   {category.title}
                 </h3>
                 <div className="h-px flex-1 bg-white/5" />
               </div>
 
-              <div className="grid grid-cols-2 gap-px border border-white/10 bg-white/10 md:grid-cols-4 lg:grid-cols-6">
+              <div className="grid grid-cols-2 gap-px border border-white/10 bg-white/10 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
                 {category.techs.map((tech: any, i: number) => (
                   <div
                     key={i}
-                    className="group flex cursor-default flex-col items-center justify-center bg-[#050505] p-10 transition-all duration-500 hover:bg-[#080808]"
+                    className="group flex cursor-default flex-col items-center justify-center bg-[#050505] p-6 transition-all duration-500 hover:bg-[#080808] sm:p-10"
                   >
                     {tech.logo ? (
                       <div className="tech-logo-container mb-6">

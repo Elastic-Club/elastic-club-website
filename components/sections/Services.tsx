@@ -17,7 +17,7 @@ export default function Services({ dict }: { dict: any }) {
         <div className="mb-24 flex flex-col gap-12 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-2xl">
             <div className="section-label">{dict.services.title}</div>
-            <h2 className="text-5xl font-black uppercase leading-[0.9] md:text-7xl">
+            <h2 className="text-4xl font-black uppercase leading-[0.9] sm:text-5xl md:text-7xl">
               Executable <br />
               <span className="text-gray-700">Intelligence.</span>
             </h2>
@@ -33,7 +33,7 @@ export default function Services({ dict }: { dict: any }) {
             return (
               <div
                 key={i}
-                className="card-base group cursor-default !border-0 !border-b border-r border-white/10 !bg-transparent p-12"
+                className="card-base group cursor-default !border-0 !border-b border-r border-white/10 !bg-transparent p-8 sm:p-12"
               >
                 <div className="absolute left-0 top-0 h-[1px] w-full overflow-hidden bg-cyan-500/0 transition-colors group-hover:bg-cyan-500/50">
                   <div className="beam-line h-full w-full opacity-50" />

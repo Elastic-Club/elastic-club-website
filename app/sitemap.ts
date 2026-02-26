@@ -17,10 +17,22 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ])
 
-  const routes = ['', 'en', 'vn', 'en/blog', 'vn/blog'].map((route) => ({
+  const productSlugs = ['polkadot-agent-kit', 'speedgrowth-ai']
+  const productRoutes = productSlugs.flatMap((slug) => [
+    {
+      url: `${siteUrl}/en/products/${slug}`,
+      lastModified: new Date().toISOString().split('T')[0],
+    },
+    {
+      url: `${siteUrl}/vn/products/${slug}`,
+      lastModified: new Date().toISOString().split('T')[0],
+    },
+  ])
+
+  const routes = ['', 'en', 'vn', 'en/blog', 'vn/blog', 'en/products', 'vn/products'].map((route) => ({
     url: `${siteUrl}/${route}`,
     lastModified: new Date().toISOString().split('T')[0],
   }))
 
-  return [...routes, ...blogRoutes]
+  return [...routes, ...blogRoutes, ...productRoutes]
 }

@@ -16,22 +16,22 @@ export default function Team({ dict }: { dict: any }) {
       <div className="container mx-auto">
         <div className="mb-24 text-center">
           <div className="section-label mx-auto inline-flex">{dict.nav.team}</div>
-          <h2 className="mb-8 mt-8 text-5xl font-black uppercase leading-[0.9] md:text-7xl">
+          <h2 className="mb-8 mt-8 text-4xl font-black uppercase leading-[0.9] sm:text-5xl md:text-7xl">
             The Core <br />
             <span className="text-gray-700">Team.</span>
           </h2>
-          <p className="mx-auto max-w-2xl text-xl leading-relaxed text-gray-400">
+          <p className="mx-auto max-w-2xl text-lg leading-relaxed text-gray-400 md:text-xl">
             {dict.team.subtitle}
           </p>
         </div>
 
-        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-16 md:grid-cols-2">
+        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-12 md:gap-16 lg:grid-cols-2">
           {dict.team.members.map((member: any, i: number) => (
             <div key={i} className="group relative">
               {/* Decorative Frame */}
-              <div className="pointer-events-none absolute -inset-4 border border-white/5 transition-colors group-hover:border-cyan-500/20" />
+              <div className="pointer-events-none absolute -inset-2 border border-white/5 transition-colors group-hover:border-cyan-500/20 md:-inset-4" />
 
-              <div className="relative flex flex-col items-center gap-8 overflow-hidden border border-white/10 bg-[#0A0A0A] p-8 md:flex-row md:items-start">
+              <div className="relative flex flex-col items-center gap-6 overflow-hidden border border-white/10 bg-[#0A0A0A] p-6 sm:p-8 md:flex-row md:items-start md:gap-8">
                 {/* Background Shimmer */}
                 <div className="absolute inset-0 animate-[shimmer_20s_infinite_linear] bg-[linear-gradient(45deg,transparent_25%,rgba(68,68,68,.05)_50%,transparent_75%,transparent_100%)] bg-[length:250%_250%]" />
 

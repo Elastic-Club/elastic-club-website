@@ -9,7 +9,7 @@ export default function CaseStudies({ dict }: { dict: any }) {
       <div className="container mx-auto">
         <div className="mb-24 text-center">
           <div className="section-label mx-auto inline-flex">{dict.cases.title}</div>
-          <h2 className="mt-8 text-5xl font-black uppercase leading-[0.9] md:text-7xl">
+          <h2 className="mt-8 text-4xl font-black uppercase leading-[0.9] sm:text-5xl md:text-7xl">
             Battle <br />
             <span className="text-gray-700">Tested.</span>
           </h2>

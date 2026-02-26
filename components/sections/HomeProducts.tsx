@@ -7,10 +7,10 @@ export default function HomeProducts({ dict, lang }: { dict: any; lang: string }
   return (
     <section id="products" className="border-b border-white/5 bg-[#080808] px-6 py-32">
       <div className="container mx-auto">
-        <div className="mb-24 flex flex-col items-end justify-between gap-12 lg:flex-row">
+        <div className="mb-24 flex flex-col items-start justify-between gap-12 lg:flex-row lg:items-end">
           <div className="max-w-2xl">
             <div className="section-label">{dict.nav.products}</div>
-            <h2 className="text-5xl font-black uppercase leading-[0.9] md:text-7xl">
+            <h2 className="text-4xl font-black uppercase leading-[0.9] sm:text-5xl md:text-7xl">
               Advanced <br />
               <span className="text-gray-700">Open Source.</span>
             </h2>
@@ -28,7 +28,7 @@ export default function HomeProducts({ dict, lang }: { dict: any; lang: string }
           </div>
         </div>
 
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-8 md:gap-12 md:grid-cols-2">
           {dict.products.items.map((item: any, i: number) => (
             <Link
               key={i}
@@ -46,14 +46,14 @@ export default function HomeProducts({ dict, lang }: { dict: any; lang: string }
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
               </div>
-              <div className="p-10">
+              <div className="p-8 sm:p-10">
                 <div className="mb-4 font-mono text-[10px] uppercase tracking-[0.3em] text-cyan-500">
                   {'// '}Product.Active
                 </div>
-                <h3 className="mb-6 text-3xl font-black uppercase text-white transition-colors group-hover:text-cyan-400">
+                <h3 className="mb-6 text-2xl font-black uppercase text-white transition-colors group-hover:text-cyan-400 sm:text-3xl">
                   {item.title}
                 </h3>
-                <p className="mb-8 line-clamp-2 text-lg leading-relaxed text-gray-500 transition-colors group-hover:text-gray-400">
+                <p className="mb-8 line-clamp-2 text-base leading-relaxed text-gray-500 transition-colors group-hover:text-gray-400 md:text-lg">
                   {item.description}
                 </p>
                 <div className="flex items-center text-[10px] font-bold uppercase tracking-[0.3em] text-gray-600 transition-colors group-hover:text-white">

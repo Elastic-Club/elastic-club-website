@@ -8,9 +8,9 @@ export default function Expertise({ dict }: { dict: any }) {
       <div className="container mx-auto">
         <div className="flex flex-col gap-24 lg:flex-row">
           <div className="lg:w-1/2">
-            <div className="sticky top-32">
+            <div className="lg:sticky lg:top-32">
               <div className="section-label">{dict.expertise.title}</div>
-              <h2 className="mb-12 text-5xl font-black uppercase leading-[0.85] md:text-8xl">
+              <h2 className="mb-12 text-4xl font-black uppercase leading-[0.85] sm:text-5xl md:text-7xl">
                 {dict.process.title.split(' ').map((word: string, i: number) => (
                   <span key={i} className={i > 1 ? 'text-gray-700' : ''}>
                     {word} {i === 1 && <br />}
