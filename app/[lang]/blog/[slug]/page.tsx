@@ -90,8 +90,8 @@ export default async function BlogPostPage({
 
         <div className="prose prose-cyan prose-invert max-w-none">
           <ReactMarkdown
-            remarkPlugins={[remarkGfm, remarkMath]}
-            rehypePlugins={[rehypePrism, rehypeKatex]}
+            remarkPlugins={[remarkGfm as any, remarkMath as any]}
+            rehypePlugins={[rehypePrism as any, rehypeKatex as any]}
           >
             {post.content}
           </ReactMarkdown>

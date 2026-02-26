@@ -7,20 +7,14 @@ export async function POST(request: Request) {
 
     // Validate inputs
     if (!name || !email || !message) {
-      return NextResponse.json(
-        { error: 'Missing required fields' },
-        { status: 400 }
-      )
+      return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
     }
 
     const sheetyUrl = process.env.SHEETY_API_URL
 
     if (!sheetyUrl) {
       console.error('SHEETY_API_URL is not defined in environment variables')
-      return NextResponse.json(
-        { error: 'Server configuration error' },
-        { status: 500 }
-      )
+      return NextResponse.json({ error: 'Server configuration error' }, { status: 500 })
     }
 
     // Sheety expects the root key to be the singular form of your sheet name
@@ -31,7 +25,7 @@ export async function POST(request: Request) {
         email,
         message,
         date: new Date().toLocaleString('en-US', { timeZone: 'UTC' }),
-      }
+      },
     }
 
     const response = await fetch(sheetyUrl, {
@@ -56,9 +50,6 @@ export async function POST(request: Request) {
     )
   } catch (error) {
     console.error('API Error:', error)
-    return NextResponse.json(
-      { error: 'Internal Server Error' },
-      { status: 500 }
-    )
+    return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 })
   }
 }

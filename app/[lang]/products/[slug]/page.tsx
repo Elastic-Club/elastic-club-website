@@ -5,7 +5,7 @@ import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
 
 export async function generateStaticParams() {
-  const params = []
+  const params: { lang: string; slug: string }[] = []
   for (const lang of ['en', 'vn']) {
     const dict = dictionaries[lang as 'en' | 'vn']
     for (const item of dict.products.items) {
@@ -15,10 +15,10 @@ export async function generateStaticParams() {
   return params
 }
 
-export async function generateMetadata({ 
-  params 
-}: { 
-  params: { lang: 'en' | 'vn'; slug: string } 
+export async function generateMetadata({
+  params,
+}: {
+  params: { lang: 'en' | 'vn'; slug: string }
 }): Promise<Metadata> {
   const dict = dictionaries[params.lang]
   const product = dict.products.items.find((p: any) => p.slug === params.slug)
@@ -36,10 +36,10 @@ export async function generateMetadata({
   }
 }
 
-export default async function ProductDetailPage({ 
-  params 
-}: { 
-  params: { lang: 'en' | 'vn'; slug: string } 
+export default async function ProductDetailPage({
+  params,
+}: {
+  params: { lang: 'en' | 'vn'; slug: string }
 }) {
   const dict = dictionaries[params.lang]
   const product = dict.products.items.find((p: any) => p.slug === params.slug)
@@ -51,21 +51,15 @@ export default async function ProductDetailPage({
   return (
     <div className="px-6 py-32">
       <div className="container mx-auto max-w-4xl">
-        <Link 
+        <Link
           href={`/${params.lang}/products`}
-          className="mb-12 inline-flex items-center font-mono text-[10px] font-bold uppercase tracking-[0.3em] text-gray-500 hover:text-cyan-500 transition-colors"
+          className="mb-12 inline-flex items-center font-mono text-[10px] font-bold uppercase tracking-[0.3em] text-gray-500 transition-colors hover:text-cyan-500"
         >
           <span className="mr-4">←</span> Back to Products
         </Link>
 
         <div className="relative mb-16 aspect-video w-full overflow-hidden rounded-2xl border border-white/5 bg-[#0A0A0A]">
-          <Image
-            src={product.banner}
-            alt={product.title}
-            fill
-            className="object-cover"
-            priority
-          />
+          <Image src={product.banner} alt={product.title} fill className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
         </div>
 
@@ -74,13 +68,11 @@ export default async function ProductDetailPage({
           <h1 className="mb-8 text-4xl font-black uppercase leading-[0.9] sm:text-5xl md:text-7xl">
             {product.title}
           </h1>
-          <p className="text-lg leading-relaxed text-gray-400 md:text-xl">
-            {product.description}
-          </p>
+          <p className="text-lg leading-relaxed text-gray-400 md:text-xl">{product.description}</p>
           <div className="mt-12 md:mt-20">
-            <a 
-              href={product.link} 
-              target="_blank" 
+            <a
+              href={product.link}
+              target="_blank"
               rel="noopener noreferrer"
               className="btn-primary flex w-full justify-center sm:inline-flex sm:w-auto"
             >
@@ -106,9 +98,7 @@ export default async function ProductDetailPage({
                   <h3 className="mb-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white">
                     {point.title}
                   </h3>
-                  <p className="text-sm leading-relaxed text-gray-500">
-                    {point.description}
-                  </p>
+                  <p className="text-sm leading-relaxed text-gray-500">{point.description}</p>
                 </div>
               ))}
             </div>

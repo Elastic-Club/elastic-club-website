@@ -37,7 +37,9 @@ export default function Vision({ dict }: { dict: any }) {
                       <h3 className="mb-3 text-lg uppercase tracking-tight text-white md:text-xl">
                         {point.title}
                       </h3>
-                      <p className="text-sm leading-relaxed text-gray-400 md:text-base">{point.description}</p>
+                      <p className="text-sm leading-relaxed text-gray-400 md:text-base">
+                        {point.description}
+                      </p>
                     </div>
                   </div>
                 </div>

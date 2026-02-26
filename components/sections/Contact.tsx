@@ -87,7 +87,7 @@ export default function Contact({ dict }: { dict: any }) {
             <div className="absolute -bottom-4 -left-4 h-2 w-2 bg-gray-800 md:-bottom-10 md:-left-10" />
             <div className="absolute -bottom-4 -right-4 h-2 w-2 bg-gray-800 md:-bottom-10 md:-right-10" />
 
-            <form 
+            <form
               onSubmit={handleSubmit}
               className="relative overflow-hidden border border-white/10 bg-[#0A0A0A] p-8 sm:p-12"
             >
@@ -98,9 +98,13 @@ export default function Contact({ dict }: { dict: any }) {
               {status === 'success' ? (
                 <div className="py-20 text-center">
                   <div className="mb-6 text-5xl">✓</div>
-                  <h3 className="mb-4 text-2xl font-black uppercase text-white">Transmission Successful</h3>
-                  <p className="text-gray-500">We have received your request and will get back to you within 24 hours.</p>
-                  <button 
+                  <h3 className="mb-4 text-2xl font-black uppercase text-white">
+                    Transmission Successful
+                  </h3>
+                  <p className="text-gray-500">
+                    We have received your request and will get back to you within 24 hours.
+                  </p>
+                  <button
                     type="button"
                     onClick={() => setStatus('idle')}
                     className="mt-10 text-[10px] font-bold uppercase tracking-[0.3em] text-cyan-500"
@@ -165,8 +169,8 @@ export default function Contact({ dict }: { dict: any }) {
                     ></textarea>
                   </div>
 
-                  <button 
-                    type="submit" 
+                  <button
+                    type="submit"
                     disabled={status === 'loading'}
                     className="btn-primary group w-full justify-center disabled:opacity-50"
                   >

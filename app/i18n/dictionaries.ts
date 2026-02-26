@@ -88,34 +88,41 @@ export const dictionaries = {
           banner: '/logo/products/polkadot-agent-kit-banner.png',
           howWeBuild: {
             title: 'How we build Polkadot Agent Kit',
-            description: 'The Polkadot Agent Kit is engineered with a focus on modularity, security, and developer experience. We leverage the latest in AI and blockchain technologies to create a seamless bridge between intelligent agents and decentralized networks, ensuring high reliability and ease of integration.',
+            description:
+              'The Polkadot Agent Kit is engineered with a focus on modularity, security, and developer experience. We leverage the latest in AI and blockchain technologies to create a seamless bridge between intelligent agents and decentralized networks, ensuring high reliability and ease of integration.',
             points: [
               {
                 title: 'Agentic Architecture',
-                description: 'Utilizing LangChain and custom toolsets to allow LLMs to interact directly with Substrate-based chains, enabling autonomous decision-making and execution.'
+                description:
+                  'Utilizing LangChain and custom toolsets to allow LLMs to interact directly with Substrate-based chains, enabling autonomous decision-making and execution.',
               },
               {
                 title: 'Security First',
-                description: 'Implementing robust guardrails, secure key management, and transaction signing protocols for safe and reliable on-chain operations.'
+                description:
+                  'Implementing robust guardrails, secure key management, and transaction signing protocols for safe and reliable on-chain operations.',
               },
               {
                 title: 'Developer Focused',
-                description: 'Providing clean TypeScript APIs, comprehensive documentation, and starter templates to get developers up and running in minutes.'
+                description:
+                  'Providing clean TypeScript APIs, comprehensive documentation, and starter templates to get developers up and running in minutes.',
               },
               {
                 title: 'Real-time Monitoring',
-                description: 'Integrated event listeners and indexer connections to provide agents with up-to-the-second blockchain state and data.'
+                description:
+                  'Integrated event listeners and indexer connections to provide agents with up-to-the-second blockchain state and data.',
               },
               {
                 title: 'Cross-Chain Support',
-                description: 'Designed to support Polkadot, Kusama, and various parachains, facilitating seamless multi-chain agent interactions.'
+                description:
+                  'Designed to support Polkadot, Kusama, and various parachains, facilitating seamless multi-chain agent interactions.',
               },
               {
                 title: 'Extensible Design',
-                description: 'A plugin-based architecture that allows developers to easily add new tools and capabilities to their AI agents.'
-              }
-            ]
-          }
+                description:
+                  'A plugin-based architecture that allows developers to easily add new tools and capabilities to their AI agents.',
+              },
+            ],
+          },
         },
         {
           slug: 'speedgrowth-ai',
@@ -126,34 +133,41 @@ export const dictionaries = {
           banner: '/logo/products/speedgrowth-banner.png',
           howWeBuild: {
             title: 'How we build Speedgrowth.ai',
-            description: 'Speedgrowth.ai is built to scale. We combine high-performance web frameworks with cutting-edge LLMs to automate complex marketing and sales workflows, focusing on high conversion rates and operational efficiency.',
+            description:
+              'Speedgrowth.ai is built to scale. We combine high-performance web frameworks with cutting-edge LLMs to automate complex marketing and sales workflows, focusing on high conversion rates and operational efficiency.',
             points: [
               {
                 title: 'Next.js & Edge Runtime',
-                description: 'Built on Next.js for lightning-fast performance, SEO optimization, and global scalability using edge computing.'
+                description:
+                  'Built on Next.js for lightning-fast performance, SEO optimization, and global scalability using edge computing.',
               },
               {
                 title: 'Multi-Model Integration',
-                description: 'Orchestrating multiple LLMs (GPT-4, Claude 3, Gemini) to handle specialized tasks like content generation, lead scoring, and sentiment analysis.'
+                description:
+                  'Orchestrating multiple LLMs (GPT-4, Claude 3, Gemini) to handle specialized tasks like content generation, lead scoring, and sentiment analysis.',
               },
               {
                 title: 'Workflow Automation',
-                description: 'Sophisticated backend logic that connects marketing tools, CRM, and AI agents seamlessly to automate the entire customer journey.'
+                description:
+                  'Sophisticated backend logic that connects marketing tools, CRM, and AI agents seamlessly to automate the entire customer journey.',
               },
               {
                 title: 'Data-Driven Insights',
-                description: 'Advanced analytics dashboards that provide real-time feedback on campaign performance and agent effectiveness.'
+                description:
+                  'Advanced analytics dashboards that provide real-time feedback on campaign performance and agent effectiveness.',
               },
               {
                 title: 'Customizable Agent Roles',
-                description: 'Define specific roles for AI agents, from social media managers to sales representatives, tailored to your brand voice.'
+                description:
+                  'Define specific roles for AI agents, from social media managers to sales representatives, tailored to your brand voice.',
               },
               {
                 title: 'Secure Data Handling',
-                description: 'Enterprise-grade security measures to ensure that customer data is protected and used ethically within AI workflows.'
-              }
-            ]
-          }
+                description:
+                  'Enterprise-grade security measures to ensure that customer data is protected and used ethically within AI workflows.',
+              },
+            ],
+          },
         },
       ],
     },
@@ -381,34 +395,41 @@ export const dictionaries = {
           banner: '/logo/products/polkadot-agent-kit-banner.png',
           howWeBuild: {
             title: 'Cách chúng tôi xây dựng Polkadot Agent Kit',
-            description: 'Polkadot Agent Kit được thiết kế tập trung vào tính module, bảo mật và trải nghiệm nhà phát triển. Chúng tôi tận dụng những công nghệ AI và blockchain mới nhất để tạo ra cầu nối liền mạch giữa các agent thông minh và mạng lưới phi tập trung, đảm bảo độ tin cậy cao và dễ dàng tích hợp.',
+            description:
+              'Polkadot Agent Kit được thiết kế tập trung vào tính module, bảo mật và trải nghiệm nhà phát triển. Chúng tôi tận dụng những công nghệ AI và blockchain mới nhất để tạo ra cầu nối liền mạch giữa các agent thông minh và mạng lưới phi tập trung, đảm bảo độ tin cậy cao và dễ dàng tích hợp.',
             points: [
               {
                 title: 'Kiến trúc Agentic',
-                description: 'Sử dụng LangChain và các bộ công cụ tùy chỉnh để cho phép LLM tương tác trực tiếp với các chuỗi dựa trên Substrate, cho phép đưa ra quyết định và thực thi tự trị.'
+                description:
+                  'Sử dụng LangChain và các bộ công cụ tùy chỉnh để cho phép LLM tương tác trực tiếp với các chuỗi dựa trên Substrate, cho phép đưa ra quyết định và thực thi tự trị.',
               },
               {
                 title: 'Bảo mật là trên hết',
-                description: 'Triển khai các rào cản bảo vệ (guardrails) mạnh mẽ, quản lý khóa an toàn và các giao thức ký giao dịch để đảm bảo các hoạt động on-chain an toàn và đáng tin cậy.'
+                description:
+                  'Triển khai các rào cản bảo vệ (guardrails) mạnh mẽ, quản lý khóa an toàn và các giao thức ký giao dịch để đảm bảo các hoạt động on-chain an toàn và đáng tin cậy.',
               },
               {
                 title: 'Hướng tới nhà phát triển',
-                description: 'Cung cấp API TypeScript sạch sẽ, tài liệu hướng dẫn toàn diện và các mẫu khởi đầu để nhà phát triển bắt đầu chỉ trong vài phút.'
+                description:
+                  'Cung cấp API TypeScript sạch sẽ, tài liệu hướng dẫn toàn diện và các mẫu khởi đầu để nhà phát triển bắt đầu chỉ trong vài phút.',
               },
               {
                 title: 'Giám sát thời gian thực',
-                description: 'Tích hợp các bộ lắng nghe sự kiện và kết nối indexer để cung cấp cho các agent trạng thái và dữ liệu blockchain cập nhật từng giây.'
+                description:
+                  'Tích hợp các bộ lắng nghe sự kiện và kết nối indexer để cung cấp cho các agent trạng thái và dữ liệu blockchain cập nhật từng giây.',
               },
               {
                 title: 'Hỗ trợ đa chuỗi',
-                description: 'Được thiết kế để hỗ trợ Polkadot, Kusama và nhiều parachain khác, tạo điều kiện thuận lợi cho các tương tác agent đa chuỗi liền mạch.'
+                description:
+                  'Được thiết kế để hỗ trợ Polkadot, Kusama và nhiều parachain khác, tạo điều kiện thuận lợi cho các tương tác agent đa chuỗi liền mạch.',
               },
               {
                 title: 'Thiết kế có thể mở rộng',
-                description: 'Kiến trúc dựa trên plugin cho phép các nhà phát triển dễ dàng thêm các công cụ và khả năng mới cho các AI agent của họ.'
-              }
-            ]
-          }
+                description:
+                  'Kiến trúc dựa trên plugin cho phép các nhà phát triển dễ dàng thêm các công cụ và khả năng mới cho các AI agent của họ.',
+              },
+            ],
+          },
         },
         {
           slug: 'speedgrowth-ai',
@@ -419,34 +440,41 @@ export const dictionaries = {
           banner: '/logo/products/speedgrowth-banner.png',
           howWeBuild: {
             title: 'Cách chúng tôi xây dựng Speedgrowth.ai',
-            description: 'Speedgrowth.ai được xây dựng để mở rộng quy mô. Chúng tôi kết hợp các framework web hiệu suất cao với các LLM hàng đầu để tự động hóa các quy trình marketing và bán hàng phức tạp, tập trung vào tỷ lệ chuyển đổi cao và hiệu quả vận hành.',
+            description:
+              'Speedgrowth.ai được xây dựng để mở rộng quy mô. Chúng tôi kết hợp các framework web hiệu suất cao với các LLM hàng đầu để tự động hóa các quy trình marketing và bán hàng phức tạp, tập trung vào tỷ lệ chuyển đổi cao và hiệu quả vận hành.',
             points: [
               {
                 title: 'Next.js & Edge Runtime',
-                description: 'Xây dựng trên Next.js để đạt hiệu suất cực nhanh, tối ưu hóa SEO và khả năng mở rộng toàn cầu bằng edge computing.'
+                description:
+                  'Xây dựng trên Next.js để đạt hiệu suất cực nhanh, tối ưu hóa SEO và khả năng mở rộng toàn cầu bằng edge computing.',
               },
               {
                 title: 'Tích hợp đa mô hình',
-                description: 'Điều phối nhiều LLM (GPT-4, Claude 3, Gemini) để xử lý các nhiệm vụ chuyên biệt như tạo nội dung, chấm điểm lead và phân tích sắc thái.'
+                description:
+                  'Điều phối nhiều LLM (GPT-4, Claude 3, Gemini) để xử lý các nhiệm vụ chuyên biệt như tạo nội dung, chấm điểm lead và phân tích sắc thái.',
               },
               {
                 title: 'Tự động hóa quy trình',
-                description: 'Logic backend tinh vi kết nối các công cụ marketing, CRM và các AI agent một cách liền mạch để tự động hóa toàn bộ hành trình khách hàng.'
+                description:
+                  'Logic backend tinh vi kết nối các công cụ marketing, CRM và các AI agent một cách liền mạch để tự động hóa toàn bộ hành trình khách hàng.',
               },
               {
                 title: 'Thông tin chi tiết dựa trên dữ liệu',
-                description: 'Bảng điều khiển phân tích nâng cao cung cấp phản hồi thời gian thực về hiệu suất chiến dịch và hiệu quả của agent.'
+                description:
+                  'Bảng điều khiển phân tích nâng cao cung cấp phản hồi thời gian thực về hiệu suất chiến dịch và hiệu quả của agent.',
               },
               {
                 title: 'Vai trò Agent có thể tùy chỉnh',
-                description: 'Xác định các vai trò cụ thể cho AI agent, từ người quản lý mạng xã hội đến đại diện bán hàng, phù hợp với tiếng nói thương hiệu của bạn.'
+                description:
+                  'Xác định các vai trò cụ thể cho AI agent, từ người quản lý mạng xã hội đến đại diện bán hàng, phù hợp với tiếng nói thương hiệu của bạn.',
               },
               {
                 title: 'Xử lý dữ liệu an toàn',
-                description: 'Các biện pháp bảo mật cấp doanh nghiệp để đảm bảo rằng dữ liệu khách hàng được bảo vệ và sử dụng một cách đạo đức trong các quy trình AI.'
-              }
-            ]
-          }
+                description:
+                  'Các biện pháp bảo mật cấp doanh nghiệp để đảm bảo rằng dữ liệu khách hàng được bảo vệ và sử dụng một cách đạo đức trong các quy trình AI.',
+              },
+            ],
+          },
         },
       ],
     },
