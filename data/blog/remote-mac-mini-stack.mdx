@@ -1,0 +1,52 @@
+---
+title: 'The High-Performance Remote Dev Stack for AI Engineers'
+date: '2026-02-27'
+tags: ['Apple Silicon', 'AI', 'Remote Work', 'Infrastructure', 'Consulting']
+draft: false
+summary: 'How Elastic Labs leverages the Mac Mini M4 and local-first architecture to deliver zero-latency AI development environments.'
+images: ['/images/mac-mini-banner.png']
+---
+
+Most remote development environments fail because they treat the remote machine as a desktop rather than a high-performance execution node. 
+
+At Elastic Labs, we specialize in building AI-native infrastructure that eliminates the "Cloud Tax." To do that, we optimize for data gravity: the principle that compute should live as close to the memory and data as possible. 
+
+Here is how we set up our high-performance remote execution environments using the M4 Mac Mini.
+
+### The Silicon: Apple M4 Unified Architecture
+The bottleneck for enterprise AI isn't just GPU compute; it's memory bandwidth. 
+
+We utilize Mac Mini M4 nodes with 48GB of unified memory as dedicated inference and development servers. Unlike traditional setups where the CPU and GPU are separated by a PCIe bus, Apple’s unified memory architecture allows for near-instantaneous data sharing. 
+
+For our clients, this means we can prototype 7B-9B parameter models with massive context windows locally, ensuring data sovereignty and zero-latency feedback loops before moving to the cloud.
+
+### The Private Mesh: Enterprise-Grade Connectivity
+Exposing development servers to the public internet is an unacceptable security risk. 
+
+We use [Tailscale](https://tailscale.com) to build encrypted, zero-config WireGuard meshes (tailnets) across our internal nodes and client environments. This allows our engineers to access high-performance compute from any location—whether a satellite office or a mobile hotspot—without the overhead of traditional VPNs or the risks of open ports.
+
+### Session Persistence: Decoupling UI from Execution
+Remote work shouldn't be fragile. 
+
+We use a combination of VibeTunnel for session persistence and [Zellij](https://zellij.dev) for workspace management. This ensures that even if a network connection drops, the execution state on the server remains intact. 
+
+Our engineers can switch between devices or handle connection jitter without losing a single line of terminal history or interrupting a long-running training job.
+
+### Local Inference: Eliminating API Latency
+The most significant friction in AI development is the round-trip latency of centralized APIs. 
+
+By running models like GLM-4.7-Flash locally via [Ollama](https://ollama.com), we achieve token-per-second speeds that exceed commercial APIs. We leverage agentic layers like Codex to handle planning and shell execution, all running on the same local bus as the data. 
+
+This local-first approach is what allows us to ship high-quality AI integrations faster than teams relying on cloud-only workflows.
+
+### Monitoring and Optimization: asitop
+Precision engineering requires real-time telemetry. 
+
+We use tools like [asitop](https://github.com/tlkh/asitop) to monitor the thermal and memory pressure on our Apple Silicon nodes. This allows us to optimize our model quantization and memory allocation strategies, ensuring that we’re getting the maximum performance out of the hardware.
+
+### Scaling Your AI Infrastructure
+The goal of a modern AI-native agency is to maximize technical throughput while minimizing cost and latency. 
+
+By treating local-first compute as a first-class citizen in our stack, we provide our clients with more secure, more responsive, and more cost-effective AI solutions. 
+
+If your team is still struggling with cloud latency or "black box" API costs, you’re building on a bottleneck. Elastic Labs helps you own your infrastructure.

@@ -226,6 +226,8 @@ export const dictionaries = {
     },
     techStack: {
       title: 'Technical Capabilities',
+      summary: 'We don’t just use AI; we build the infrastructure that powers it. From local-first inference nodes to complex multi-agent orchestrations, our stack is optimized for performance, security, and data gravity.',
+      viewArticle: 'Read about our Tech Strategy',
       categories: [
         {
           title: 'Generative AI & LLM',
@@ -238,16 +240,19 @@ export const dictionaries = {
             { name: 'CrewAI', logo: '/logo/technologies/crewai-logo.png' },
             { name: 'vLLM', logo: '/logo/technologies/vllm-logo.png' },
             { name: 'SGLang', logo: '/logo/technologies/sglang-logo.png' },
+            { name: 'LangChain', logo: '/logo/technologies/langchain-logo.png' },
+            { name: 'LangSmith', logo: '/logo/technologies/langsmith-logo.png' },
           ],
         },
         {
-          title: 'Blockchain & Web3',
+          title: 'Infrastructure & Automation',
           description:
-            'Expertise in building decentralized infrastructure and agentic kit for ecosystems like Polkadot and Ethereum. We specialize in Rust-based runtime development and secure on-chain automation.',
+            'High-performance compute and seamless workflow orchestration. We specialize in low-latency infrastructure, custom automated pipelines, and cloud-native scaling.',
           techs: [
-            { name: 'Polkadot Substrate', logo: '' },
-            { name: 'Ethereum', logo: '' },
-            { name: 'Rust', logo: '/logo/technologies/rust-logo.png' },
+            { name: 'AWS', logo: '/logo/technologies/aws-logo.png' },
+            { name: 'Railway', logo: '/logo/technologies/railway-logo.png' },
+            { name: 'n8n', logo: '/logo/technologies/n8n-logo.jpg' },
+            { name: 'NVIDIA CUDA', logo: '/logo/technologies/nvidia-cuda-logo.jpg' },
           ],
         },
         {
@@ -258,7 +263,7 @@ export const dictionaries = {
             { name: 'TypeScript', logo: '/logo/technologies/typescript.png' },
             { name: 'Node.js', logo: '/logo/technologies/nodejs-logo.svg' },
             { name: 'React', logo: '/logo/technologies/react-logo.png' },
-            { name: 'Python', logo: '' },
+            { name: 'Rust', logo: '/logo/technologies/rust-logo.png' },
           ],
         },
       ],
@@ -533,6 +538,8 @@ export const dictionaries = {
     },
     techStack: {
       title: 'Năng lực Kỹ thuật',
+      summary: 'Chúng tôi không chỉ sử dụng AI; chúng tôi xây dựng hạ tầng vận hành nó. Từ các nút suy luận cục bộ (local-first) đến các hệ thống đa đặc vụ phức tạp, hệ thống của chúng tôi được tối ưu cho hiệu suất, bảo mật và chủ quyền dữ liệu.',
+      viewArticle: 'Đọc về Chiến lược Kỹ thuật của chúng tôi',
       categories: [
         {
           title: 'Generative AI & LLM',
@@ -545,16 +552,19 @@ export const dictionaries = {
             { name: 'CrewAI', logo: '/logo/technologies/crewai-logo.png' },
             { name: 'vLLM', logo: '/logo/technologies/vllm-logo.png' },
             { name: 'SGLang', logo: '/logo/technologies/sglang-logo.png' },
+            { name: 'LangChain', logo: '/logo/technologies/langchain-logo.png' },
+            { name: 'LangSmith', logo: '/logo/technologies/langsmith-logo.png' },
           ],
         },
         {
-          title: 'Blockchain & Web3',
+          title: 'Hạ tầng & Tự động hóa',
           description:
-            'Kinh nghiệm xây dựng hạ tầng phi tập trung và các bộ công cụ agent cho các hệ sinh thái như Polkadot và Ethereum. Chúng tôi chuyên về phát triển runtime bằng Rust và tự động hóa on-chain an toàn.',
+            'Tính toán hiệu năng cao và điều phối quy trình liền mạch. Chúng tôi chuyên về hạ tầng độ trễ thấp, các quy trình tự động hóa tùy chỉnh và mở rộng quy mô trên cloud.',
           techs: [
-            { name: 'Polkadot Substrate', logo: '' },
-            { name: 'Ethereum', logo: '' },
-            { name: 'Rust', logo: '/logo/technologies/rust-logo.png' },
+            { name: 'AWS', logo: '/logo/technologies/aws-logo.png' },
+            { name: 'Railway', logo: '/logo/technologies/railway-logo.png' },
+            { name: 'n8n', logo: '/logo/technologies/n8n-logo.jpg' },
+            { name: 'NVIDIA CUDA', logo: '/logo/technologies/nvidia-cuda-logo.jpg' },
           ],
         },
         {
@@ -565,7 +575,7 @@ export const dictionaries = {
             { name: 'TypeScript', logo: '/logo/technologies/typescript.png' },
             { name: 'Node.js', logo: '/logo/technologies/nodejs-logo.svg' },
             { name: 'React', logo: '/logo/technologies/react-logo.png' },
-            { name: 'Python', logo: '' },
+            { name: 'Rust', logo: '/logo/technologies/rust-logo.png' },
           ],
         },
       ],

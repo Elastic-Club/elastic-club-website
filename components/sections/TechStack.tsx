@@ -1,16 +1,32 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link'
 
-export default function TechStack({ dict }: { dict: any }) {
+export default function TechStack({ dict, lang }: { dict: any; lang: string }) {
   return (
     <section id="expertise" className="border-b border-white/5 py-32">
       <div className="container mx-auto px-6">
-        <div className="mb-24 flex flex-col items-center justify-between gap-6 md:flex-row">
+        <div className="mb-16 flex flex-col items-center justify-between gap-6 md:flex-row">
           <div className="section-label mb-0">{dict.techStack.title}</div>
           <div className="mx-8 hidden h-px flex-1 bg-white/10 md:block" />
           <div className="font-mono text-[8px] uppercase tracking-[0.3em] text-gray-500 md:text-[10px]">
             {'// CONSULTING & INTEGRATION'}
+          </div>
+        </div>
+
+        <div className="mb-24 max-w-3xl">
+          <p className="text-xl leading-relaxed text-gray-400 sm:text-2xl">
+            {dict.techStack.summary}
+          </p>
+          <div className="mt-10">
+            <Link
+              href={`/${lang}/blog/future-of-ai`}
+              className="group flex w-fit items-center gap-4 border border-white/10 bg-white/5 px-8 py-4 font-mono text-[10px] font-bold uppercase tracking-[0.3em] text-white transition-all hover:border-primary-500/50 hover:bg-primary-500/5"
+            >
+              {dict.techStack.viewArticle}
+              <span className="transition-transform group-hover:translate-x-2">→</span>
+            </Link>
           </div>
         </div>
 

@@ -43,7 +43,7 @@ export default function Page({ params }: { params: { lang: 'en' | 'vn' } }) {
       <CaseStudies dict={dict} />
       <Team dict={dict} />
       <Vision dict={dict} />
-      <TechStack dict={dict} />
+      <TechStack dict={dict} lang={params.lang} />
       <Contact dict={dict} />
     </>
   )
