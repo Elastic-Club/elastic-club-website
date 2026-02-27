@@ -43,8 +43,8 @@
 
 Flag and replace any of the following "AI-isms" with Tin's direct voice:
 
-- *“In the fast-paced world of...”* → **"Most runtimes fail at [X] scale."**
-- *“It’s essential to remember...”* → **"The bottleneck is usually [Y]."**
-- *“Unlock the potential of...”* → **"Optimize for [Z]."**
+- _“In the fast-paced world of...”_ → **"Most runtimes fail at [X] scale."**
+- _“It’s essential to remember...”_ → **"The bottleneck is usually [Y]."**
+- _“Unlock the potential of...”_ → **"Optimize for [Z]."**
 
 From now on, when I tell you to generate a blog post for Elastic Labs by Tin Chung, use the brand.

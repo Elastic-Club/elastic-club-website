@@ -226,7 +226,8 @@ export const dictionaries = {
     },
     techStack: {
       title: 'Technical Capabilities',
-      summary: 'We don’t just use AI; we build the infrastructure that powers it. From local-first inference nodes to complex multi-agent orchestrations, our stack is optimized for performance, security, and data gravity.',
+      summary:
+        'We don’t just use AI; we build the infrastructure that powers it. From local-first inference nodes to complex multi-agent orchestrations, our stack is optimized for performance, security, and data gravity.',
       viewArticle: 'Read about our Tech Strategy',
       categories: [
         {
@@ -538,7 +539,8 @@ export const dictionaries = {
     },
     techStack: {
       title: 'Năng lực Kỹ thuật',
-      summary: 'Chúng tôi không chỉ sử dụng AI; chúng tôi xây dựng hạ tầng vận hành nó. Từ các nút suy luận cục bộ (local-first) đến các hệ thống đa đặc vụ phức tạp, hệ thống của chúng tôi được tối ưu cho hiệu suất, bảo mật và chủ quyền dữ liệu.',
+      summary:
+        'Chúng tôi không chỉ sử dụng AI; chúng tôi xây dựng hạ tầng vận hành nó. Từ các nút suy luận cục bộ (local-first) đến các hệ thống đa đặc vụ phức tạp, hệ thống của chúng tôi được tối ưu cho hiệu suất, bảo mật và chủ quyền dữ liệu.',
       viewArticle: 'Đọc về Chiến lược Kỹ thuật của chúng tôi',
       categories: [
         {

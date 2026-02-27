@@ -13,9 +13,9 @@ If your "AI transformation" is just a wrapper around a centralized API with no t
 
 ### The Bottleneck: Data Gravity
 
-Intelligence is cheap; context is expensive. Moving terabytes of enterprise data to a third-party model is a performance and security failure. 
+Intelligence is cheap; context is expensive. Moving terabytes of enterprise data to a third-party model is a performance and security failure.
 
-We optimize for data gravity. The network hop is the enemy of performance. By deploying [local-first architectures](https://localfirstweb.com/) and high-performance embedded databases, we bring the compute to the data. 
+We optimize for data gravity. The network hop is the enemy of performance. By deploying [local-first architectures](https://localfirstweb.com/) and high-performance embedded databases, we bring the compute to the data.
 
 This reduces the round-trip latency to the speed of the local bus. In a [RAG (Retrieval-Augmented Generation)](https://aws.amazon.com/what-is/retrieval-augmented-generation/) pipeline, the difference between a 300ms network request and a 10ms local vector lookup is the difference between an "agent" that feels like a chatbot and one that operates as a core system component.
 
@@ -31,7 +31,7 @@ A high-performance AI integration requires:
 
 ### The Non-Deterministic Execution Environment
 
-Code is usually binary—it works or it doesn't. AI is probabilistic. 
+Code is usually binary—it works or it doesn't. AI is probabilistic.
 
 To bridge this gap, we implement "Guardrail Layers" that monitor the drift in model responses. We use local, smaller "Judge" models to verify the output of larger reasoning models. This creates a verification loop that doesn't rely on human-in-the-loop for every trivial task.
 
@@ -39,7 +39,7 @@ We optimize for "Reasoning Throughput"—the number of correct architectural dec
 
 ### Shipping over Dreaming
 
-The goal isn't "AGI"; it's a 10x multiplier on your existing technical throughput. 
+The goal isn't "AGI"; it's a 10x multiplier on your existing technical throughput.
 
 We don't provide theoretical reports. We ship the infrastructure, the models, and the integration layer. Whether it's a [Polkadot-native agent kit](https://github.com/OpenGuild-Labs/polkadot-agent-kit) or a high-performance data pipeline, the code is the documentation.
 
