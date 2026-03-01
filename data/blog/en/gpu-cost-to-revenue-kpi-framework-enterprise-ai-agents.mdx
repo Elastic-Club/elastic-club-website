@@ -1,0 +1,254 @@
+---
+title: 'From GPU Cost to Revenue Impact: A KPI Framework for Enterprise AI Agents'
+date: '2026-03-01'
+tags: ['Enterprise AI', 'KPI Framework', 'GPU Cost Optimization', 'AI Operations']
+draft: false
+summary: 'A practical KPI framework for business teams running AI agents: connect GPU and model spend to cycle time, quality, conversion, and revenue impact with clear operating metrics.'
+images: ['/images/gpu-banner.webp']
+---
+
+Most enterprise AI programs fail to prove value because they measure model behavior, not business outcomes.
+
+Teams celebrate prompt quality scores while CFOs ask a different question: did this system increase output, reduce cost, or create measurable revenue lift?
+
+If you cannot answer that question with operational data, your AI initiative becomes a budget line item instead of a growth engine.
+
+At Elastic Labs, we use a KPI framework that links AI agent activity to business results through three layers: infrastructure efficiency, workflow performance, and commercial impact.
+
+### Why GPU cost alone is the wrong conversation
+
+A common anti-pattern is reducing the AI discussion to token price or hourly GPU rates.
+
+Low inference cost with low completion quality is still expensive. High model accuracy with unstable latency is also expensive when it blocks sales or support teams.
+
+The right question is not “How cheap is inference?”
+
+The right question is “How much reliable business output do we get per dollar of compute?”
+
+### The three-layer KPI model
+
+A useful measurement system separates signal by decision layer.
+
+Layer 1: Infrastructure efficiency
+
+- Cost per 1,000 agent calls
+- GPU utilization rate
+- Queue wait time
+- Median and p95 latency by model route
+
+Layer 2: Workflow performance
+
+- Task completion rate
+- Escalation-to-human rate
+- Rework rate after agent output
+- Time-to-completion by workflow stage
+
+Layer 3: Commercial impact
+
+- Lead response time improvement
+- Conversion lift on assisted workflows
+- Revenue per rep or per operator
+- Retention or churn movement in supported segments
+
+This structure prevents teams from mistaking fast infrastructure metrics for actual business progress.
+
+### Define one business owner per workflow
+
+Metrics fail when ownership is vague.
+
+Each AI workflow should have:
+
+- one business owner accountable for outcomes
+- one technical owner accountable for system reliability
+- one shared scorecard reviewed weekly
+
+Without this, teams optimize local metrics and miss cross-functional bottlenecks.
+
+Example: a support triage agent might show excellent latency, but if escalation quality is poor, resolution time gets worse. Only joint ownership catches this quickly.
+
+### Build baseline before optimization
+
+Many teams skip baseline measurement and lose credibility later.
+
+Before deploying AI agents in production, capture 2-4 weeks of pre-AI metrics:
+
+- baseline cycle time
+- baseline error or rework rate
+- baseline labor cost per task
+- baseline conversion or retention metrics
+
+Then compare AI-assisted workflows against this baseline, not against assumptions.
+
+This simple discipline turns AI reporting from narrative to evidence.
+
+### Cost-per-completed-task is the core metric
+
+If you need one anchor metric, use cost per completed task.
+
+Formula:
+
+Cost per completed task = (Compute cost + orchestration cost + human review cost) / successful task completions
+
+This metric exposes hidden inefficiencies that token-level dashboards miss.
+
+Two systems can have identical model spend but very different cost-per-completed-task due to retries, invalid outputs, or excessive human review.
+
+### Add quality gates to protect revenue metrics
+
+AI-assisted revenue workflows fail when quality controls are weak.
+
+Use explicit gates:
+
+- Schema validity gate: output must match contract.
+- Policy gate: output must satisfy legal/compliance rules.
+- Confidence gate: low-confidence outputs escalate.
+- Outcome gate: action completes only after verification.
+
+These controls reduce bad downstream actions that distort revenue attribution and damage trust.
+
+### Attribution model for AI impact
+
+Revenue impact is often real but hard to attribute unless you define rules upfront.
+
+Use a simple attribution model:
+
+- Direct impact: workflows fully executed by agents with minimal human intervention.
+- Assisted impact: workflows where agents reduce cycle time or increase quality for human operators.
+- Indirect impact: improvements in response speed or consistency that influence conversion over time.
+
+Track all three, but keep them separate in reporting. Mixing them inflates claims and weakens decision quality.
+
+### KPI targets by function
+
+Different teams need different targets.
+
+Sales operations:
+
+- lead qualification time
+- first-response SLA adherence
+- meeting-to-opportunity conversion
+
+Marketing operations:
+
+- campaign launch cycle time
+- content production throughput
+- qualified pipeline contribution
+
+Customer support:
+
+- first-response time
+- average resolution time
+- ticket deflection with quality threshold
+
+Trying to force one universal KPI across all teams usually produces noise.
+
+### GPU routing policy as a financial control
+
+Model routing is not only technical. It is financial governance.
+
+A practical policy:
+
+- Small models for classification, extraction, and formatting.
+- Mid-size models for summarization and structured drafting.
+- Premium models for high-ambiguity, high-value decisions.
+
+Combine this with monthly route-level audits:
+
+- Which tasks were over-provisioned?
+- Where did premium model usage not improve outcomes?
+- Which workflows can shift to private baseline GPU capacity?
+
+This creates continuous margin improvement without reducing delivery quality.
+
+### Dashboard design that executives actually use
+
+Most AI dashboards are unreadable to business stakeholders.
+
+Keep executive reporting simple:
+
+- 5-7 KPIs max
+- one trend view over 4-12 weeks
+- one variance explanation per KPI
+- one action owner per variance
+
+A good dashboard answers three questions quickly:
+
+- Are we improving throughput?
+- Are we protecting quality?
+- Is the unit economics trend acceptable?
+
+If it cannot answer these, it is not an operating dashboard.
+
+### Quarterly operating cadence
+
+KPI frameworks fail without cadence.
+
+Use this review cycle:
+
+Weekly:
+
+- workflow reliability review
+- escalation and failure analysis
+- rapid routing adjustments
+
+Monthly:
+
+- cost-per-completed-task by workflow
+- model and GPU route optimization decisions
+- policy and guardrail updates
+
+Quarterly:
+
+- business impact review against baseline
+- expand, hold, or retire workflows
+- budget reallocation by proven ROI
+
+Cadence is what turns metrics into decisions.
+
+### Common KPI mistakes in enterprise AI
+
+1. Reporting model-level accuracy without workflow-level outcomes.
+2. Ignoring human review cost in unit economics.
+3. Using averages while hiding p95 latency failures.
+4. Claiming revenue lift without pre-AI baseline.
+5. Tracking too many KPIs and acting on none.
+
+Avoiding these mistakes is usually more important than adding another model vendor.
+
+### A practical 90-day KPI rollout
+
+Days 1-15:
+
+- Select one high-volume workflow.
+- Assign business and technical owners.
+- Define baseline and target KPI ranges.
+
+Days 16-45:
+
+- Launch controlled AI-assisted version.
+- Instrument infrastructure and workflow metrics.
+- Apply quality gates and escalation policy.
+
+Days 46-75:
+
+- Optimize routing and GPU usage by task class.
+- Reduce rework and unnecessary escalation.
+- Publish weekly performance memo.
+
+Days 76-90:
+
+- Quantify commercial impact with attribution model.
+- Decide whether to scale to adjacent workflows.
+- Lock next-quarter budget to measured ROI.
+
+This sequence gives leaders a defensible path from pilot to operating model.
+
+### Final principle
+
+Enterprise AI success is not a model benchmark story. It is an operating discipline story.
+
+When your KPI framework connects GPU spend to workflow reliability and commercial output, AI becomes a controllable business system.
+
+If it does not, you are still funding experiments.
+
+In your current program, which metric is still missing the financial link: compute efficiency, workflow quality, or revenue attribution?

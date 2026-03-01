@@ -4,18 +4,21 @@ import { getAllFilesFrontMatter } from '@/utils/mdx'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const siteUrl = siteMetadata.siteUrl
-  const posts = await getAllFilesFrontMatter('blog')
+  const [enPosts, vnPosts] = await Promise.all([
+    getAllFilesFrontMatter('blog', 'en'),
+    getAllFilesFrontMatter('blog', 'vn'),
+  ])
 
-  const blogRoutes = posts.flatMap((post) => [
-    {
+  const blogRoutes = [
+    ...enPosts.map((post) => ({
       url: `${siteUrl}/en/blog/${post.slug}`,
       lastModified: post.date || new Date().toISOString().split('T')[0],
-    },
-    {
+    })),
+    ...vnPosts.map((post) => ({
       url: `${siteUrl}/vn/blog/${post.slug}`,
       lastModified: post.date || new Date().toISOString().split('T')[0],
-    },
-  ])
+    })),
+  ]
 
   const productSlugs = ['polkadot-agent-kit', 'speedgrowth-ai']
   const productRoutes = productSlugs.flatMap((slug) => [

@@ -1,0 +1,256 @@
+---
+title: 'Single Agent vs Multi-Agent: The Decision Matrix for Business Workflows'
+date: '2026-03-01'
+tags: ['AI Architecture', 'Multi-Agent Systems', 'Enterprise Automation', 'GPU Planning']
+draft: false
+summary: 'A practical framework to decide when one AI agent is enough, when multi-agent architecture is justified, and how to budget GPU and reliability costs for each path.'
+images: ['/images/single-agent-vs-multi-agent.webp']
+---
+
+Most teams adopt multi-agent systems too early.
+
+They split one workflow into five agents before proving that the single-agent version is stable. The result is predictable: higher latency, harder debugging, and costs that grow faster than business value.
+
+The right question is not “Can we build multi-agent?”
+
+The right question is “Which architecture gives reliable output for this workflow at acceptable cost?”
+
+At Elastic Labs, we use a decision matrix to choose between single-agent and multi-agent design based on complexity, risk, and throughput requirements.
+
+### Why this decision matters
+
+Architecture choice determines three things immediately:
+
+- how fast a workflow can respond
+- how expensive each completed task becomes
+- how hard it is to maintain quality over time
+
+A single agent is usually faster to launch and easier to control.
+
+A multi-agent system can outperform it, but only when the workflow has real branching logic, higher ambiguity, and strict quality requirements that justify extra orchestration.
+
+### Start with workflow shape, not model size
+
+Before choosing architecture, classify the workflow.
+
+Ask:
+
+- Is the workflow mostly linear or deeply branching?
+- Are outputs highly structured or mostly free-form?
+- Is failure recoverable or high-impact?
+- How often does policy/compliance logic change?
+
+If the workflow is linear, structured, and low risk, single-agent usually wins.
+
+If the workflow is branching, cross-domain, and high risk, multi-agent may be worth the overhead.
+
+### The practical decision matrix
+
+Use this as a working default.
+
+Choose single-agent when:
+
+- one prompt plus tools can complete the task reliably
+- output schema is stable and narrow
+- escalation volume is low and predictable
+- p95 latency target is strict
+- team needs speed-to-production
+
+Choose multi-agent when:
+
+- workflow has multiple specialized reasoning steps
+- evidence retrieval and execution logic should be isolated
+- quality requires independent verification before action
+- failure modes differ by stage and need targeted retries
+- auditability requirements are high
+
+This matrix keeps architecture grounded in operational need, not trend pressure.
+
+### Single-agent strengths and limits
+
+Single-agent architecture is underrated for business operations.
+
+Strengths:
+
+- lower orchestration overhead
+- faster end-to-end latency
+- easier prompt/version management
+- simpler observability setup
+
+Limits:
+
+- one prompt often carries too many responsibilities
+- harder to isolate failure causes
+- less modular when workflows evolve rapidly
+
+A good rule: if your single-agent prompt keeps growing every sprint, you are likely approaching the point where role separation is justified.
+
+### Multi-agent strengths and limits
+
+Multi-agent architecture is powerful when used for real decomposition.
+
+Strengths:
+
+- role-level specialization improves control
+- independent verification improves reliability
+- better resilience for complex workflows
+- easier incremental tuning per role
+
+Limits:
+
+- higher latency from additional model calls
+- greater cost from orchestration and retries
+- more complex state and error handling
+- larger testing surface
+
+Use multi-agent only when the quality or risk benefit exceeds the coordination tax.
+
+### GPU and memory budget implications
+
+Architecture choice directly changes compute budget.
+
+Single-agent patterns typically favor:
+
+- fewer model calls per task
+- lower total token overhead
+- simpler route-level budgeting
+
+Multi-agent patterns typically require:
+
+- more frequent inference calls per task
+- higher aggregate token consumption
+- stricter GPU route control by role
+
+If you move to multi-agent without compute policy, budget drift is almost guaranteed.
+
+### A route policy that keeps costs stable
+
+Whether single or multi-agent, define route classes.
+
+- Class C tasks: classify, extract, normalize. Use smaller models.
+- Class B tasks: summarize, draft, transform. Use mid-size models.
+- Class A tasks: ambiguous, high-impact decisions. Use stronger models with verification.
+
+In multi-agent workflows, assign class policy per agent role, not per workflow name.
+
+This makes GPU optimization measurable and repeatable.
+
+### Reliability design by architecture
+
+Single-agent reliability controls:
+
+- strict schema validation at output boundary
+- confidence threshold with selective escalation
+- deterministic tool allowlist
+
+Multi-agent reliability controls:
+
+- schema validation at every inter-agent boundary
+- role-specific timeout and retry policy
+- judge agent or rule engine before external side effects
+
+The architecture changes, but the principle stays the same: probabilistic reasoning must terminate in deterministic contracts.
+
+### Observability requirements
+
+Single-agent minimum telemetry:
+
+- prompt version
+- tool calls
+- completion latency
+- invalid output rate
+
+Multi-agent minimum telemetry:
+
+- all of the above, plus per-agent traces
+- handoff latency between roles
+- retry reason by stage
+- failure propagation path
+
+If you cannot see where errors emerge, you cannot choose architecture rationally.
+
+### Business KPI impact comparison
+
+Single-agent tends to improve:
+
+- speed-to-launch
+- cycle time for straightforward tasks
+- cost per completed task in low-complexity workflows
+
+Multi-agent tends to improve:
+
+- quality stability in complex workflows
+- policy compliance in sensitive operations
+- recovery from partial failures
+
+Compare these improvements against one shared metric: cost per successful business outcome.
+
+That prevents teams from choosing complexity for its own sake.
+
+### A migration path that avoids disruption
+
+Do not jump from simple to complex in one release.
+
+Use staged migration:
+
+Phase 1:
+
+- launch single-agent baseline
+- instrument quality, latency, and cost
+- identify recurring failure clusters
+
+Phase 2:
+
+- split one specialized role only where failures cluster
+- keep the rest single-agent
+- measure whether split reduces rework or risk
+
+Phase 3:
+
+- add judge or verification role if high-impact actions exist
+- expand decomposition only where metrics justify
+
+This avoids over-architecture and keeps delivery momentum.
+
+### Common anti-patterns
+
+1. Building multi-agent because competitors mention it.
+2. Splitting roles without clear contracts.
+3. Running premium models in every role.
+4. Measuring only accuracy and ignoring throughput.
+5. Expanding architecture before baseline instrumentation.
+
+Most expensive AI programs contain at least two of these mistakes.
+
+### 60-day implementation checklist
+
+Week 1-2:
+
+- choose one business workflow
+- define architecture choice hypothesis
+- set target KPI ranges
+
+Week 3-4:
+
+- deploy single-agent baseline with full telemetry
+- log failure categories and escalation reasons
+
+Week 5-6:
+
+- test one targeted role split if needed
+- compare KPI delta against baseline
+
+Week 7-8:
+
+- finalize architecture by measured performance
+- document runbook and ownership
+
+By day 60, you should know whether complexity is paying for itself.
+
+### Final principle
+
+Single-agent is not “less advanced.” Multi-agent is not “automatically better.”
+
+The best architecture is the one that delivers reliable business throughput with controlled cost and explicit accountability.
+
+In your highest-volume workflow today, are you under-architected, over-architected, or simply under-instrumented?

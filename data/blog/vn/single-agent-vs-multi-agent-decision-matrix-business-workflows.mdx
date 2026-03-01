@@ -1,0 +1,236 @@
+---
+title: 'Single Agent Hay Multi-Agent: Ma Trận Quyết Định Cho Workflow Doanh Nghiệp'
+date: '2026-03-01'
+tags: ['Kiến trúc AI', 'Multi-Agent', 'Tự động hóa doanh nghiệp', 'Lập kế hoạch GPU']
+draft: false
+summary: 'Framework thực tế giúp doanh nghiệp quyết định khi nào dùng single agent, khi nào nên tách multi-agent, và cách kiểm soát ngân sách GPU cùng độ ổn định vận hành.'
+images: ['/images/single-agent-vs-multi-agent.webp']
+---
+
+Phần lớn team áp dụng multi-agent quá sớm.
+
+Họ tách một workflow thành nhiều agent trước khi chứng minh phiên bản single agent đã ổn định. Kết quả rất dễ đoán: độ trễ tăng, debug khó hơn và chi phí tăng nhanh hơn giá trị kinh doanh.
+
+Câu hỏi đúng không phải là “chúng ta có thể làm multi-agent không?”
+
+Câu hỏi đúng là “kiến trúc nào cho đầu ra ổn định với chi phí chấp nhận được cho workflow này?”
+
+Tại Elastic Labs, chúng tôi dùng một ma trận quyết định để chọn giữa single agent và multi-agent dựa trên độ phức tạp, rủi ro và yêu cầu thông lượng.
+
+### Vì sao quyết định này quan trọng
+
+Lựa chọn kiến trúc ảnh hưởng ba thứ:
+
+- tốc độ phản hồi của workflow
+- chi phí trên mỗi tác vụ hoàn thành
+- mức độ khó khi duy trì chất lượng
+
+Single agent thường triển khai nhanh và kiểm soát dễ hơn.
+
+Multi-agent có thể tốt hơn, nhưng chỉ khi workflow có phân nhánh thật, độ mơ hồ cao và yêu cầu chất lượng nghiêm ngặt đủ để biện minh cho overhead điều phối.
+
+### Bắt đầu từ hình dạng workflow, không phải kích thước model
+
+Trước khi chọn kiến trúc, hãy phân loại workflow.
+
+Đặt câu hỏi:
+
+- Workflow chủ yếu tuyến tính hay phân nhánh sâu?
+- Output có cấu trúc rõ hay phần lớn là văn bản tự do?
+- Nếu lỗi xảy ra thì có thể phục hồi dễ hay tác động cao?
+- Logic policy/compliance có thay đổi thường xuyên không?
+
+Nếu workflow tuyến tính, output có cấu trúc và rủi ro thấp, single agent thường là lựa chọn tốt.
+
+Nếu workflow phân nhánh mạnh, liên quan nhiều miền kiến thức và rủi ro cao, multi-agent có thể đáng để đầu tư.
+
+### Ma trận quyết định thực tế
+
+Dùng ma trận này làm mặc định ban đầu.
+
+Chọn single agent khi:
+
+- một prompt và bộ tool có thể hoàn thành tác vụ ổn định
+- schema output hẹp và ít thay đổi
+- tỷ lệ escalation thấp và dự đoán được
+- mục tiêu p95 latency rất chặt
+- team cần tốc độ ra production
+
+Chọn multi-agent khi:
+
+- workflow có nhiều bước suy luận chuyên biệt
+- retrieval và execution cần tách để kiểm soát tốt hơn
+- cần bước kiểm chứng độc lập trước khi thực thi hành động
+- lỗi ở từng chặng có tính chất khác nhau và cần retry riêng
+- yêu cầu auditability cao
+
+Ma trận này giúp giữ quyết định kiến trúc dựa trên nhu cầu vận hành thay vì chạy theo xu hướng.
+
+### Điểm mạnh và giới hạn của single agent
+
+Single agent thường bị đánh giá thấp trong vận hành doanh nghiệp.
+
+Điểm mạnh:
+
+- overhead điều phối thấp
+- độ trễ đầu-cuối nhanh hơn
+- quản lý prompt/version đơn giản hơn
+- thiết lập observability gọn hơn
+
+Giới hạn:
+
+- một prompt dễ phải gánh quá nhiều trách nhiệm
+- khó cô lập nguyên nhân lỗi
+- kém mô-đun khi workflow thay đổi nhanh
+
+Một quy tắc đơn giản: nếu prompt single agent tăng độ dài liên tục qua mỗi sprint, bạn đang tiến gần điểm cần tách vai trò.
+
+### Điểm mạnh và giới hạn của multi-agent
+
+Multi-agent rất hiệu quả khi tách vai trò có chủ đích.
+
+Điểm mạnh:
+
+- chuyên môn hóa theo vai trò giúp kiểm soát tốt hơn
+- kiểm chứng độc lập giúp tăng độ tin cậy
+- bền vững hơn với workflow phức tạp
+- dễ tinh chỉnh dần theo từng vai trò
+
+Giới hạn:
+
+- độ trễ tăng do nhiều lượt gọi model
+- chi phí tăng do điều phối và retry
+- quản lý state/error phức tạp hơn
+- bề mặt kiểm thử lớn hơn
+
+Chỉ nên dùng multi-agent khi lợi ích về chất lượng hoặc rủi ro lớn hơn “thuế điều phối”.
+
+### Tác động lên ngân sách GPU và bộ nhớ
+
+Lựa chọn kiến trúc thay đổi trực tiếp ngân sách compute.
+
+Mẫu single agent thường có:
+
+- ít lượt gọi model trên mỗi tác vụ
+- tổng token overhead thấp hơn
+- ngân sách route dễ kiểm soát hơn
+
+Mẫu multi-agent thường cần:
+
+- số lượt inference nhiều hơn
+- tổng token tiêu thụ cao hơn
+- chính sách route GPU chặt hơn theo từng vai trò
+
+Nếu chuyển sang multi-agent mà không có policy compute rõ ràng, lệch ngân sách rất dễ xảy ra.
+
+### Chính sách route để giữ chi phí ổn định
+
+Dù single hay multi-agent, hãy định nghĩa lớp tác vụ.
+
+- Class C: phân loại, trích xuất, chuẩn hóa. Dùng model nhỏ.
+- Class B: tóm tắt, soạn thảo, chuyển đổi. Dùng model tầm trung.
+- Class A: quyết định mơ hồ, tác động cao. Dùng model mạnh kèm kiểm chứng.
+
+Với multi-agent, gán policy theo vai trò agent thay vì theo tên workflow.
+
+Cách này giúp tối ưu GPU có thể đo lường và lặp lại.
+
+### Thiết kế độ tin cậy theo từng kiến trúc
+
+Kiểm soát cho single agent:
+
+- validate schema nghiêm ngặt ở biên output
+- ngưỡng confidence và escalation có chọn lọc
+- allowlist tool mang tính xác định
+
+Kiểm soát cho multi-agent:
+
+- validate schema ở mọi biên giao tiếp giữa agent
+- timeout và retry policy theo từng vai trò
+- judge agent hoặc rule engine trước khi tạo side effect ra hệ thống ngoài
+
+Kiến trúc có thể khác, nhưng nguyên tắc không đổi: suy luận phi xác định phải kết thúc bằng contract xác định.
+
+### So sánh tác động KPI kinh doanh
+
+Single agent thường cải thiện:
+
+- tốc độ ra mắt
+- cycle time cho tác vụ đơn giản
+- chi phí trên mỗi tác vụ trong workflow ít phức tạp
+
+Multi-agent thường cải thiện:
+
+- độ ổn định chất lượng trong workflow phức tạp
+- tuân thủ policy ở quy trình nhạy cảm
+- khả năng phục hồi khi lỗi cục bộ xảy ra
+
+So sánh hai hướng bằng một chỉ số chung: chi phí trên mỗi kết quả kinh doanh thành công.
+
+Nhờ vậy team tránh tăng độ phức tạp chỉ để “trông hiện đại”.
+
+### Lộ trình chuyển đổi không gây gián đoạn
+
+Đừng nhảy từ đơn giản sang phức tạp trong một lần phát hành.
+
+Hãy đi theo từng pha:
+
+Pha 1:
+
+- chạy baseline single agent
+- gắn đo lường chất lượng, độ trễ, chi phí
+- xác định cụm lỗi lặp lại
+
+Pha 2:
+
+- chỉ tách một vai trò chuyên biệt ở nơi lỗi tập trung
+- giữ phần còn lại ở single agent
+- đo xem việc tách vai trò có giảm rework hoặc giảm rủi ro không
+
+Pha 3:
+
+- thêm judge hoặc lớp kiểm chứng nếu có hành động tác động cao
+- chỉ mở rộng decomposition ở nơi chỉ số đã chứng minh hiệu quả
+
+Cách này tránh over-architecture và vẫn giữ tốc độ triển khai.
+
+### Các anti-pattern phổ biến
+
+1. Làm multi-agent vì đối thủ đang nói về nó.
+2. Tách vai trò nhưng không định nghĩa contract rõ.
+3. Dùng model cao cấp cho mọi vai trò.
+4. Chỉ đo accuracy mà bỏ qua throughput.
+5. Mở rộng kiến trúc trước khi có baseline instrumentation.
+
+Phần lớn chương trình AI tốn kém đều mắc ít nhất hai lỗi này.
+
+### Checklist triển khai 60 ngày
+
+Tuần 1-2:
+
+- chọn một workflow kinh doanh
+- đặt giả thuyết kiến trúc cần dùng
+- xác định biên mục tiêu KPI
+
+Tuần 3-4:
+
+- triển khai baseline single agent có telemetry đầy đủ
+- ghi nhận nhóm lỗi và lý do escalation
+
+Tuần 5-6:
+
+- thử tách một vai trò nếu dữ liệu cho thấy cần
+- so sánh chênh lệch KPI với baseline
+
+Tuần 7-8:
+
+- chốt kiến trúc theo hiệu năng đã đo
+- chuẩn hóa runbook và ownership
+
+### Nguyên tắc cuối cùng
+
+Single agent không có nghĩa là “kém tiên tiến”. Multi-agent cũng không mặc định “tốt hơn”.
+
+Kiến trúc tốt nhất là kiến trúc tạo thông lượng kinh doanh ổn định với chi phí kiểm soát được và trách nhiệm rõ ràng.
+
+Trong workflow có lưu lượng cao nhất hiện tại, bạn đang thiếu kiến trúc, thừa kiến trúc, hay chỉ thiếu đo lường?

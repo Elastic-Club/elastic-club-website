@@ -1,0 +1,210 @@
+---
+title: 'Lập Kế Hoạch Năng Lực GPU Cho Đội AI: Khi Nào Scale Up, Scale Out, Hay Giữ Hybrid'
+date: '2026-03-01'
+tags: ['Hạ tầng GPU', 'AI vận hành', 'Capacity planning', 'AI doanh nghiệp']
+draft: false
+summary: 'Hướng dẫn thực tế cho đội AI: chọn scale up, scale out hay hybrid dựa trên mức sử dụng, độ trễ SLO, kiểu workload và tác động kinh doanh.'
+images: ['/images/3D_illustration5.webp']
+---
+
+Phần lớn đội AI gặp bài toán GPU trước khi cạn ý tưởng sản phẩm.
+
+Nhu cầu tăng nhanh, độ trễ dao động, thời gian chờ queue dài hơn, và bộ phận tài chính đặt câu hỏi vì sao chi phí compute tăng nhanh hơn đầu ra kinh doanh.
+
+Đây thường không phải vấn đề model. Đây là vấn đề capacity planning.
+
+Tại Elastic Labs, chúng tôi xem lập kế hoạch GPU là kỷ luật vận hành gắn trực tiếp với thông lượng, độ tin cậy và unit economics, không phải quyết định mua hạ tầng một lần.
+
+### Bắt đầu bằng phân đoạn workload
+
+Capacity planning sẽ thất bại nếu mọi tác vụ AI bị gom vào một nhóm.
+
+Hãy phân đoạn trước:
+
+- Workflow tương tác: phản hồi trực tiếp cho người dùng, yêu cầu độ trễ thấp.
+- Workflow vận hành: tự động hóa nội bộ, chấp nhận độ trễ trung bình.
+- Workflow batch: tác vụ bất đồng bộ, có cửa sổ chạy linh hoạt.
+- Workflow rủi ro cao: yêu cầu kiểm chứng chặt và sai số thấp.
+
+Mỗi nhóm cần chính sách compute khác nhau. Không phân đoạn thì mọi quyết định mở rộng đều mang tính cảm tính.
+
+### Đặt mức dịch vụ trước khi mua năng lực
+
+Đừng bắt đầu bằng danh sách phần cứng.
+
+Hãy bắt đầu bằng mục tiêu dịch vụ:
+
+- mục tiêu latency median
+- ngưỡng latency p95
+- giới hạn thời gian chờ queue
+- mục tiêu tỷ lệ hoàn thành
+- ngưỡng escalation
+
+Các mục tiêu này quyết định workload nào cần năng lực chuyên dụng độ trễ thấp và workload nào có thể chạy trên năng lực chia sẻ.
+
+### Ba lựa chọn mở rộng chính
+
+Đội AI thường đứng trước ba hướng.
+
+Scale up:
+
+- tăng cấu hình trên node lớn hơn với GPU và bộ nhớ mạnh hơn
+- điều phối đơn giản hơn
+- phù hợp workload nặng tập trung vào ít model
+
+Scale out:
+
+- thêm nhiều node nhỏ hơn, phân phối theo queue hoặc dịch vụ
+- cô lập lỗi tốt hơn
+- phù hợp workload đa dạng và đồng thời cao
+
+Hybrid:
+
+- năng lực nền private/local kết hợp cloud overflow
+- unit economics ổn định cho tải thường xuyên
+- co giãn cho traffic đột biến hoặc tác vụ ngữ cảnh dài
+
+Câu trả lời đúng hiếm khi mang tính “niềm tin công nghệ”. Nó phụ thuộc vào hình dạng workload và rủi ro kinh doanh.
+
+### Khi nào nên ưu tiên scale up
+
+Scale up thường phù hợp khi:
+
+- một hoặc hai workflow trọng yếu chiếm phần lớn tải
+- inference đòi hỏi footprint VRAM lớn
+- độ ổn định latency quan trọng hơn tính linh hoạt đa nhóm
+- đội platform còn nhỏ và cần đơn giản hóa vận hành
+
+Rủi ro lớn nhất là phụ thuộc node đơn.
+
+### Khi nào nên ưu tiên scale out
+
+Scale out thường phù hợp khi:
+
+- workload đa dạng cao
+- nhiều request cỡ trung bình đến liên tục
+- các đội cần biên cô lập rõ theo dịch vụ
+- cần phân bổ chi phí chi tiết theo từng mảng
+
+Đổi lại, độ phức tạp vận hành tăng lên. Nhiều node hơn đồng nghĩa với nhiều logic điều phối, observability và failure mode hơn.
+
+Nếu đội platform chưa sẵn sàng, scale out có thể làm độ tin cậy giảm trước khi tăng.
+
+### Khi nào hybrid là lựa chọn tốt hơn
+
+Hybrid thường phù hợp khi:
+
+- tải nền tương đối ổn định nhưng đột biến xảy ra thường xuyên
+- workflow nhạy cảm cần giữ trong hạ tầng kiểm soát được
+- model cloud cao cấp chỉ cần cho một số tình huống ngoại lệ
+- tài chính cần mức chi nền dự đoán được nhưng vẫn giữ khả năng bùng tải
+
+Hybrid hiệu quả vì cân bằng được độ bền vận hành và kỷ luật ngân sách.
+
+### Trigger năng lực buộc phải hành động
+
+Kế hoạch năng lực nên dựa trên trigger rõ, không dựa trên cảm giác.
+
+Dùng các ngưỡng cụ thể:
+
+- GPU utilization vượt 75-80% trong khoảng thời gian duy trì
+- p95 latency vượt mục tiêu qua hai chu kỳ review liên tiếp
+- thời gian chờ queue tiếp tục tăng dù đã tối ưu routing
+- cost per completed task tăng qua ba chu kỳ
+- escalation tăng nhưng chất lượng không cải thiện
+
+Khi có từ hai trigger trở lên cùng xuất hiện, chiến lược năng lực cần được điều chỉnh.
+
+### Lập ngân sách compute theo lớp workload
+
+Mô hình hiệu quả là chia ngân sách theo lớp tác vụ.
+
+- Class A: workflow giá trị cao, mơ hồ cao. Cho phép route chi phí cao hơn.
+- Class B: workflow độ phức tạp trung bình. Route chi phí kiểm soát.
+- Class C: tác vụ lặp lại và xác định. Route chi phí thấp nhất.
+
+Cách này ngăn GPU premium bị tiêu tốn cho tác vụ đơn giản.
+
+### Routing policy là một phần của capacity planning
+
+Năng lực không chỉ là phần cứng. Năng lực còn là kỷ luật routing.
+
+Thiết lập các quy tắc như:
+
+- mặc định route model nhỏ trước
+- chỉ nâng lên model mạnh khi confidence thấp hoặc có điều kiện policy
+- giới hạn retry theo loại lỗi
+- tách queue riêng cho job ngữ cảnh dài
+
+Các kiểm soát này có thể trì hoãn nhu cầu mở rộng phần cứng mà vẫn giữ trải nghiệm ổn định.
+
+### Lập kế hoạch theo bộ nhớ và context window
+
+Nhiều team chỉ nhìn số lượng GPU mà bỏ qua hành vi bộ nhớ.
+
+Trong production, áp lực bộ nhớ thường gây mất ổn định nhanh hơn mức sử dụng compute trung bình.
+
+Cần theo dõi:
+
+- đỉnh sử dụng bộ nhớ theo workflow
+- phân bố độ dài context
+- tốc độ tăng token theo chuỗi nhiều bước
+- tỷ lệ cache hit cho truy xuất lặp lại
+
+Quyết định năng lực nên có chính sách headroom bộ nhớ rõ ràng.
+
+### Dashboard KPI cho quyết định năng lực
+
+Dashboard năng lực nên gọn và phục vụ quyết định.
+
+Theo dõi:
+
+- utilization theo lớp tác vụ (A/B/C)
+- latency p50 và p95 theo queue
+- xu hướng thời gian chờ queue
+- cost per completed task
+- overflow ratio (với mô hình hybrid)
+
+Bộ chỉ số này đủ để ra quyết định hàng tháng về scale up, scale out hay tối ưu routing.
+
+### Các lỗi lập kế hoạch phổ biến
+
+1. Mở rộng GPU trước khi sửa routing kém hiệu quả.
+2. Chỉ nhìn latency trung bình và bỏ qua p95 cùng queue spike.
+3. Xem mọi workflow có cùng mức ưu tiên.
+4. Dùng model premium không có guardrail ngân sách.
+5. Đổi topology nhưng không cập nhật quy trình xử lý sự cố.
+
+### Lộ trình 90 ngày cho capacity planning
+
+Ngày 1-20:
+
+- phân đoạn workload và định nghĩa mục tiêu SLO
+- thiết lập dashboard KPI baseline
+- lập bản đồ hành vi routing hiện tại
+
+Ngày 21-45:
+
+- áp dụng routing policy theo lớp tác vụ
+- tách queue cho workflow ngữ cảnh dài và rủi ro cao
+- giảm đường route premium không cần thiết
+
+Ngày 46-70:
+
+- mô phỏng kịch bản tăng trưởng nhu cầu
+- kiểm thử giả định failover cho scale up và scale out
+- lượng hóa economics của overflow trong mô hình hybrid
+
+Ngày 71-90:
+
+- chốt kế hoạch năng lực cho quý tiếp theo
+- khóa ngân sách theo lớp workload
+- ban hành playbook vận hành và ownership model
+
+### Nguyên tắc cuối cùng
+
+Quyết định mở rộng nên đi theo dữ liệu workload, không đi theo xu hướng hạ tầng.
+
+Scale up khi tải tập trung và áp lực bộ nhớ chiếm ưu thế. Scale out khi tải đồng thời và nhu cầu cô lập chiếm ưu thế. Giữ hybrid khi biến động kinh doanh cao nhưng vẫn cần kỷ luật ngân sách.
+
+Trong môi trường hiện tại của bạn, điểm nghẽn nào đang làm chi phí tăng trước: workload chưa phân đoạn, routing policy yếu, hay phản ứng chậm với trigger năng lực?

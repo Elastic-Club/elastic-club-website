@@ -10,7 +10,7 @@ export async function generateStaticParams() {
 
 export default async function BlogPage({ params }: { params: { lang: 'en' | 'vn' } }) {
   const dict = dictionaries[params.lang]
-  const posts = await getAllFilesFrontMatter('blog')
+  const posts = await getAllFilesFrontMatter('blog', params.lang)
 
   return (
     <>

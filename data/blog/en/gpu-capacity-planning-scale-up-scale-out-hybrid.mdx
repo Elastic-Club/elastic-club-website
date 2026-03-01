@@ -1,0 +1,260 @@
+---
+title: 'GPU Capacity Planning for AI Teams: When to Scale Up, Scale Out, or Stay Hybrid'
+date: '2026-03-01'
+tags: ['GPU Infrastructure', 'AI Operations', 'Capacity Planning', 'Enterprise AI']
+draft: false
+summary: 'A practical capacity planning guide for AI teams: how to choose scale-up, scale-out, or hybrid architecture using utilization, latency SLOs, workload shape, and business impact.'
+images: ['/images/3D_illustration5.webp']
+---
+
+Most AI teams run into GPU problems long before they run out of ideas.
+
+The demand curve rises, latency gets unstable, queue times increase, and finance asks why compute spend keeps climbing faster than business output.
+
+This is usually not a model problem. It is a capacity planning problem.
+
+At Elastic Labs, we treat GPU planning as an operating discipline tied to throughput, reliability, and unit economics, not as a one-time infrastructure purchase.
+
+### Start with workload segmentation
+
+Capacity planning fails when all AI tasks are treated as one pool.
+
+Segment workloads first:
+
+- Interactive workflows: user-facing responses with strict latency expectations.
+- Operational workflows: internal automations with moderate latency tolerance.
+- Batch workflows: asynchronous jobs with flexible scheduling windows.
+- High-risk workflows: tasks that require stronger verification and lower error tolerance.
+
+Each segment needs a different compute policy. Without segmentation, scaling decisions become guesswork.
+
+### Define service levels before buying capacity
+
+Do not start with hardware shopping.
+
+Start with service targets:
+
+- median latency target
+- p95 latency ceiling
+- queue wait limit
+- success rate target
+- escalation threshold
+
+These SLO-like targets define whether a workload needs dedicated low-latency capacity or can run on shared burst infrastructure.
+
+### The three scaling choices
+
+AI teams usually choose among three approaches.
+
+Scale up:
+
+- larger single nodes with stronger GPU and memory profiles
+- simpler orchestration
+- strong for single-model heavy workloads
+
+Scale out:
+
+- multiple smaller nodes distributed by queue or service
+- better fault isolation
+- stronger for mixed workload concurrency
+
+Hybrid:
+
+- baseline private/local capacity plus cloud overflow
+- stable unit economics for normal volume
+- elasticity for spikes and long-context exceptions
+
+The correct answer is rarely ideological. It depends on workload shape and business risk.
+
+### When scale up is the better choice
+
+Scale up is often right when:
+
+- one or two critical workloads dominate usage
+- memory-heavy inference requires larger VRAM footprint
+- latency consistency is more important than multi-tenant flexibility
+- team size is small and orchestration simplicity matters
+
+The main risk is single-node dependency. If the node degrades, impact is immediate.
+
+Mitigate this with failover paths and clear incident runbooks.
+
+### When scale out is the better choice
+
+Scale out is often right when:
+
+- workload diversity is high
+- many concurrent medium-size requests arrive continuously
+- different teams need isolation boundaries
+- you need granular cost attribution by service
+
+The tradeoff is operational complexity. More nodes mean more scheduling logic, observability overhead, and failure modes.
+
+If your platform team is not ready for this complexity, scale-out can reduce reliability before it improves it.
+
+### When hybrid is the better choice
+
+Hybrid is often right when:
+
+- base demand is predictable but spikes are common
+- sensitive workloads should stay on controlled infrastructure
+- premium cloud models are needed only for specific edge cases
+- finance needs predictable baseline spend with controlled burst exposure
+
+Hybrid works well in business environments because it balances resilience with budget discipline.
+
+### Capacity triggers that should force action
+
+Planning should be trigger-based, not emotional.
+
+Use concrete thresholds:
+
+- GPU utilization above 75-80% for sustained windows
+- p95 latency above target for two consecutive review periods
+- queue wait time trending upward despite routing optimization
+- cost per completed task increasing for three cycles
+- escalation volume rising without quality gain
+
+When two or more triggers fire together, capacity strategy needs adjustment.
+
+### Compute budget by workload class
+
+A useful model is to budget compute by task class.
+
+- Class A: high-value, high-ambiguity workflows. Higher-cost routing allowed.
+- Class B: medium complexity workflows. Controlled-cost routing.
+- Class C: repetitive deterministic tasks. Lowest-cost routing.
+
+This prevents premium GPU resources from being consumed by low-complexity tasks that could run cheaply elsewhere.
+
+### Routing policy is part of capacity planning
+
+Capacity is not only hardware. It is also routing discipline.
+
+Establish rules such as:
+
+- default smaller model route first
+- escalate to stronger model only on low confidence or policy conditions
+- cap retries by failure type
+- isolate long-context jobs in separate queues
+
+These controls can delay or reduce hardware expansion while preserving user experience.
+
+### Memory and context window planning
+
+Many teams focus on GPU count and ignore memory behavior.
+
+In production, memory pressure often drives instability faster than raw compute utilization.
+
+Track:
+
+- peak memory by workflow
+- context-length distribution
+- token growth over multi-step chains
+- cache hit rates for repeated retrieval
+
+Capacity decisions should include memory headroom policy, not only average utilization numbers.
+
+### Reliability design for each scaling mode
+
+Scale-up reliability priorities:
+
+- proactive thermal and memory monitoring
+- warm standby strategy
+- strict change control on shared nodes
+
+Scale-out reliability priorities:
+
+- queue isolation by service class
+- automated health checks and drain logic
+- cross-node tracing for failure localization
+
+Hybrid reliability priorities:
+
+- deterministic failover order (private to cloud, or cloud to private)
+- route audit logs for cost and compliance
+- policy engine to prevent uncontrolled premium model spillover
+
+Reliability design should be selected with the same rigor as hardware selection.
+
+### KPI dashboard for capacity decisions
+
+Keep the capacity dashboard small and decision-oriented.
+
+Track:
+
+- utilization by class (A/B/C)
+- p50 and p95 latency by queue
+- queue wait trend
+- cost per completed task
+- overflow ratio (for hybrid)
+
+This set is enough to support monthly decisions on scale-up, scale-out, or routing optimization.
+
+### A practical quarterly review loop
+
+Monthly operations review:
+
+- inspect trigger thresholds
+- review routing efficiency
+- identify high-cost low-value workloads
+
+Quarterly capacity review:
+
+- compare forecast vs actual demand
+- evaluate whether current architecture met SLOs
+- decide: optimize routing, add node capacity, or rebalance hybrid mix
+
+Annual infrastructure strategy review:
+
+- reassess vendor mix and procurement
+- evaluate depreciation vs cloud elasticity tradeoffs
+- align capacity strategy with product roadmap
+
+Without review cadence, even good architecture drifts into inefficiency.
+
+### Common planning mistakes
+
+1. Expanding GPU capacity before fixing routing inefficiency.
+2. Using average latency while ignoring p95 and queue spikes.
+3. Treating all workflows as equal priority.
+4. Running premium model paths without budget guardrails.
+5. Scaling topology without updating incident procedures.
+
+Most overspending cases involve at least three of these mistakes.
+
+### 90-day capacity planning rollout
+
+Days 1-20:
+
+- segment workloads and define SLO targets
+- establish baseline KPI dashboard
+- map current routing behavior
+
+Days 21-45:
+
+- enforce class-based routing policy
+- isolate long-context and high-risk queues
+- reduce unnecessary premium route usage
+
+Days 46-70:
+
+- simulate demand growth scenarios
+- test scale-up and scale-out failover assumptions
+- quantify hybrid overflow economics
+
+Days 71-90:
+
+- finalize next-quarter capacity plan
+- lock budget by workload class
+- publish operating playbook and ownership model
+
+This sequence turns infrastructure planning into an evidence-driven operating system.
+
+### Final principle
+
+Scaling decisions should follow workload evidence, not infrastructure fashion.
+
+Scale up when concentration and memory pressure dominate. Scale out when concurrency and isolation dominate. Stay hybrid when business volatility and budget control both matter.
+
+In your current environment, which bottleneck is driving cost today: under-segmented workloads, weak routing policy, or delayed capacity action?

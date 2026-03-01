@@ -18,21 +18,32 @@ export async function generateMetadata({
 }: {
   params: { lang: 'en' | 'vn'; slug: string }
 }) {
-  const post = await getFileBySlug('blog', params.slug)
+  const post = await getFileBySlug('blog', params.slug, params.lang)
   if (!post) return
   return genPageMetadata({
     title: post.frontmatter.title,
     description: post.frontmatter.summary,
     image: post.frontmatter.images?.[0],
+    alternates: {
+      canonical: `/${params.lang}/blog/${params.slug}`,
+      languages: {
+        en: `/en/blog/${params.slug}`,
+        vn: `/vn/blog/${params.slug}`,
+      },
+    },
   })
 }
 
 export async function generateStaticParams() {
-  const posts = await getAllFilesFrontMatter('blog')
-  return posts.flatMap((post) => [
-    { lang: 'en', slug: post.slug },
-    { lang: 'vn', slug: post.slug },
+  const [enPosts, vnPosts] = await Promise.all([
+    getAllFilesFrontMatter('blog', 'en'),
+    getAllFilesFrontMatter('blog', 'vn'),
   ])
+
+  return [
+    ...enPosts.map((post) => ({ lang: 'en' as const, slug: post.slug })),
+    ...vnPosts.map((post) => ({ lang: 'vn' as const, slug: post.slug })),
+  ]
 }
 
 export default async function BlogPostPage({
@@ -40,7 +51,7 @@ export default async function BlogPostPage({
 }: {
   params: { lang: 'en' | 'vn'; slug: string }
 }) {
-  const post = await getFileBySlug('blog', params.slug)
+  const post = await getFileBySlug('blog', params.slug, params.lang)
   const dict = dictionaries[params.lang]
 
   if (!post) return <div>Post not found</div>
